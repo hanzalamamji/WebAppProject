@@ -1,0 +1,282 @@
+﻿
+@{
+    ViewBag.Title = "Question3";
+}
+
+<link href="~/Content/css/Style.css" rel="stylesheet" />
+<style>
+    .dropdown_menu {
+        font-size: 16px; /* Adjust the font size as needed */
+        padding-right: 15px; /* Add some right padding to create space for the larger icon */
+        background-image: url('../../Content/Images/Categories/chevron-down.png'); /* Replace with the path to your icon image */
+        background-size: 20px; /* Adjust the size of the icon */
+        background-position: calc(100% - 25px) center; /* Position the icon slightly left of the right edge and center vertically */
+        background-repeat: no-repeat; /* Prevent the icon from repeating */
+        appearance: none; /* Remove default appearance styles */
+        -webkit-appearance: none; /* Remove default appearance styles for Safari */
+    }
+
+    .Custom_List {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1px;
+    }
+
+        .Custom_List li {
+            background: rgba(86, 167, 222, 0.20);
+            padding: 10px;
+            border-radius: 20px;
+            opacity: 0.8;
+            width: fit-content;
+            margin: 5px;
+            display: flex;
+            align-items: center;
+        }
+
+    .icon-container_f {
+        margin-left: auto;
+    }
+
+    .true-icon {
+        font-size: 16px;
+        color: #01853D;
+    }
+</style>
+@*Banner Start*@
+<div class="Category_image-container">
+    <div class="Category_image-overlay">
+        <div class="Banner-content">
+            <h2 class="Category_banner-title ">Enhance Your Energy</h2>
+            <h2 class="Category_banner-title ">Efficiency !</h2>
+            <div class="Category_banner_about_div">
+                <p class="Category_banner_about">Take the quiz and get valuable energy saving tips based on your result</p>
+            </div>
+
+        </div>
+    </div>
+</div>
+@*Banner End*@
+<div class="Bar_main_div2 container-fluid mt-5" style="color: black; display: flex; align-items: center;">
+    <p style="margin: 15px 0 15px 15px;">
+        Question 3 of 4:
+    </p>
+    <div class="progress_bar_container" style="background: #E3E8EC;">
+        <div class="progress-bar bg-success"style="width:75%">
+        </div>
+    </div>
+</div>
+<script>
+    // Check the screen width when the page loads and when it resizes
+    function checkScreenSize() {
+        var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+        // Define the breakpoint for mobile screens (e.g., width <= 768 pixels)
+        var mobileBreakpoint = 768;
+
+        // Get the Bar_main_div2 element
+        var barMainDiv2 = document.querySelector('.Bar_main_div2');
+
+        // Hide or show the element based on screen width
+        if (screenWidth <= mobileBreakpoint) {
+            // Hide the element on mobile screens
+            barMainDiv2.style.display = 'none';
+        } else {
+            // Show the element on larger screens
+            barMainDiv2.style.display = 'flex';
+        }
+    }
+
+    // Call the function when the page loads
+    window.onload = checkScreenSize;
+
+    // Call the function when the window resizes
+    window.addEventListener('resize', checkScreenSize);
+</script>
+@*Question No.3 Div Start*@
+<div id="Third_Question_Div">
+
+
+    <div class="container-fluid">
+        <h1 class="Heading_Kitchen_Applaince">
+            Water Appliances
+        </h1>
+
+        <div class="Selected_List">
+            <ul class="Custom_List">
+                <li>
+                    <span class="item-name">Shower</span>
+                    <div class="icon-container">
+
+                    </div>
+                </li>
+                <li style="border-radius: 20px;opacity: 0.4;background: rgba(86, 167, 222, 0.20); ">
+                    <span class="item-name">Bathtub</span>
+                    <div class="icon-container">
+
+                    </div>
+                </li>
+                <li style="border-radius: 20px;opacity: 0.4;background: rgba(86, 167, 222, 0.20); ">
+                    <span class="item-name">Sink</span>
+                    <div class="icon-container">
+
+                    </div>
+                </li>
+                <li style="border-radius: 20px;opacity: 0.4;background: rgba(86, 167, 222, 0.20); ">
+                    <span class="item-name">Toilet</span>
+                    <div class="icon-container">
+
+                    </div>
+                </li>
+                <li style="border-radius: 20px; opacity: 0.4; background: rgba(86, 167, 222, 0.20);">
+                    <span class="item-name">Water dispenser</span>
+                    <div class="icon-container">
+
+                    </div>
+                </li>
+                <li style="border-radius: 20px; opacity: 0.4; background: rgba(86, 167, 222, 0.20);">
+                    <span class="item-name">Humidifier</span>
+                    <div class="icon-container">
+
+                    </div>
+                </li>
+                <li style="border-radius: 20px; opacity: 0.4; background: rgba(86, 167, 222, 0.20);">
+                    <span class="item-name">Outdoor sprinkler system</span>
+                    <div class="icon-container">
+
+                    </div>
+                </li>
+                <li style="border-radius: 20px; opacity: 0.4; background: rgba(86, 167, 222, 0.20);">
+                    <span class="item-name">Pool</span>
+                    <div class="icon-container">
+
+                    </div>
+                </li>
+                <li style="border-radius: 20px; opacity: 0.4; background: rgba(86, 167, 222, 0.20);">
+                    <span class="item-name">Jacuzzi</span>
+                    <div class="icon-container">
+
+                    </div>
+                </li>
+                <li style="border-radius: 20px; opacity: 0.4; background: rgba(86, 167, 222, 0.20);">
+                    <span class="item-name">Bidet</span>
+                    <div class="icon-container">
+
+                    </div>
+                </li>
+                <li style="border-radius: 20px; opacity: 0.4; background: rgba(86, 167, 222, 0.20);">
+                    <span class="item-name">Showerhead</span>
+                    <div class="icon-container">
+
+                    </div>
+                </li>
+                <li style="border-radius: 20px; opacity: 0.4; background: rgba(86, 167, 222, 0.20);">
+                    <span class="item-name">Faucet</span>
+                    <div class="icon-container">
+
+                    </div>
+                </li>
+
+                <li style="border-radius: 20px; opacity: 0.4; background: rgba(86, 167, 222, 0.20);">
+                    <span class="item-name">Lawn sprinkler system</span>
+                    <div class="icon-container">
+                    </div>
+                </li>
+                <li style="border-radius: 20px; opacity: 0.4; background: rgba(86, 167, 222, 0.20);">
+                    <span class="item-name" style="display:flex;">Refrigerator</span>
+                    <div class="icon-container">
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    @*Microwave Question Start*@
+    @using (Html.BeginForm("QuestionUpdate", "Shower", FormMethod.Post))
+    {
+        <div class="container-fluid" style="background: #F2FAFF; padding-bottom:30px; " id="autoscrolltodiv">
+            <div class="refStartDiv">
+                <a href="@Url.Action("Question2", "Shower")" style="text-decoration:none;color:#444444;"><i class="fas fa-arrow-left"></i></a>
+                <h1>
+                    Shower
+                </h1>
+                <img src="~/Content/Images/Categories Icons/shower.png" alt="" class="img-fluid">
+                <p class="Que_Paragraph">
+                    <span class="Que_Span">
+                        Question no 3 :
+                    </span>
+                    Model of your Shower?
+                </p>
+
+                @for (int i = 1; i <= ViewBag.NoOfRefrigilators; i++)
+                {
+                    <div class="Que_2_div2">
+                        <h6 class="R2_Title" style="margin-top: 10px;">
+                            S @i Model
+                        </h6>
+                        <select class="dropdown_menu" name="makes">
+
+                            @if (i == 1) // Check if it's the 2nd dropdown
+                            {
+                                foreach (var name in ViewBag.RefrigeratorNames)
+                                {
+                                    <option value="@name">@name</option>
+                                }
+                            }
+
+
+                            @if (i == 2) // Check if it's the 2nd dropdown
+                            {
+                                foreach (var name in ViewBag.RefrigeratorNames2)
+                                {
+                                    <option value="@name">@name</option>
+                                }
+                            }
+
+                            @if (i == 3) // Check if it's the 3rd dropdown
+                            {
+                                foreach (var name in ViewBag.NewOptionsForThirdDropdown)
+                                {
+                                    <option value="@name">@name</option>
+                                }
+                            }
+                        </select>
+                    </div>
+                }
+
+                <input type="hidden" name="username" value="11" />
+                <!-- Replace with your actual username -->
+
+            </div>
+
+            <div class="row mt-3">
+                <div class="col-lg-12 col-md-12 col-sm-12 mt-5 text-center-mobile" style="gap:6px;">
+                    <a id="Leave_btn_1" class="btn btn-primary rounded-pill">Leave quiz</a>
+                    <button id="Next_btn_1" type="submit" class="btn btn-secondary rounded-pill">Next</button>
+                </div>
+            </div>
+
+        </div>
+    }
+
+
+    @*Microwave Question End*@
+
+    @*Microwave Bar Start*@
+    <div class="Bar_main_div container-fluid mt-5 d-md-none fixed-bottom">
+        <p>
+            Question 3 of 4 :
+        </p>
+        <div class="progress_bar_container">
+            <div class="progress-bar bg-success" style="width:75%">
+
+            </div>
+        </div>
+    </div>
+</div>
+@*Microwave Bar End*@
+
+@*Question No.3 Div End*@
+

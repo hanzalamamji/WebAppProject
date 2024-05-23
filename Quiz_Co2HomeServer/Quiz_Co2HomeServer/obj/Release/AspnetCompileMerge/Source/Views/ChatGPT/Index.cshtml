@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "Refrigerator Names";
+}
+
+<h2>Refrigerator Names</h2>
+
+@if (ViewBag.ErrorMessage != null)
+{
+    <p>@ViewBag.ErrorMessage</p>
+}
+else
+{
+    <form>
+        <div class="form-group">
+            <label for="refrigeratorDropdown">Select a Refrigerator:</label>
+            <select class="form-control" id="refrigeratorDropdown" style="width: 900px;">
+                 Adjust the width as needed 
+                <option value="">Select</option>
+                @foreach (var name in ViewBag.RefrigeratorNames)
+                {
+                    <option value="@name">@name</option>
+                }
+            </select>
+
+        </div>
+    </form>
+}

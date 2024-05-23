@@ -1,0 +1,108 @@
+﻿/* Modal CSS Start */
+.CloseModalBtn {
+    background-color: gray;
+    color: #FFFFFF;
+    line-height: 25px;
+    position: absolute;
+    right: -12px;
+    text-align: center;
+    top: -10px;
+    width: 45px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 1px 1px 3px #000;
+    transition: all .3s;
+    height: 45px;
+    border-radius: 50%;
+    font-size: 29px;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.modal-content {
+    background-color: #fff !important;
+    border-radius: 16px !important;
+    box-shadow: 0 2.8px 2.2px rgb(0 0 0 / 3%), 0 6.7px 5.3px rgb(0 0 0 / 5%), 0 12.5px 10px rgb(0 0 0 / 6%), 0 22.3px 17.9px rgb(0 0 0 / 7%), 0 41.8px 33.4px rgb(255 255 255 / 9%), 0 100px 80px rgb(255 255 255 / 12%);
+    width: 70%;
+    margin: 0 auto;
+}
+
+.modal-header {
+    background-color: #337eb2;
+    border-bottom: none !important;
+    justify-content: center !important;
+}
+
+.modal-title {
+    color: white;
+    font-weight: bolder !important;
+    font-size: 24px;
+    /* padding-top: 12px;
+        padding-bottom: 4px;*/
+    display: inline-block;
+}
+
+.modaltxt {
+    font-family: 'Poppins', sans-serif;
+    color: #99abb4;
+    font-weight: bold;
+    color: black;
+    font-size: 17px;
+    text-align: center;
+}
+
+.modal-footer {
+    border-top: none !important;
+    align-content: center;
+    text-align: center;
+}
+
+.modal-dialog .modal-content .modal-body {
+    overflow: hidden;
+}
+
+@media (min-width: 820px) {
+    .modal-dialog {
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 425px) {
+    .modal-title {
+        font-size: 18px !important;
+    }
+
+    .modal-body p {
+        font-size: 14px !important;
+    }
+
+    .modal-footer {
+        justify-content: center;
+    }
+}
+
+@media (min-width: 375px) {
+    .modal-title {
+        font-size: 18px !important;
+    }
+
+    .modal-body p {
+        font-size: 14px !important;
+    }
+}
+
+@media (min-width: 320px) {
+    .modal-title {
+        font-size: 15px !important;
+    }
+
+    .modal-body p {
+        font-size: 14px !important;
+    }
+
+    .modal-footer {
+        justify-content: center;
+    }
+}
+
+/* Modal CSS End */

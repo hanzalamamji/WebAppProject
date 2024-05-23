@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e879ce7bb57e413d8670c5fb515d6b5a" Name="Diagram1" ZoomLevel="10">
+        <EntityTypeShape EntityType="db_Co2HomeSaversModel.sysdiagram" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="db_Co2HomeSaversModel.tbl_AffilaiteLink" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="db_Co2HomeSaversModel.tbl_Barbecue" Width="1.5" PointX="3" PointY="222.625" />
+        <EntityTypeShape EntityType="db_Co2HomeSaversModel.tbl_Bathtubr" Width="1.5" PointX="3" PointY="106.5" />
+        <EntityTypeShape EntityType="db_Co2HomeSaversModel.tbl_Bidet" Width="1.5" PointX="3" PointY="36.75" />
+        <EntityTypeShape EntityType="db_Co2HomeSaversModel.tbl_Category" Width="1.5" PointX="0.75" PointY="136" />
+        <EntityTypeShape EntityType="db_Co2HomeSaversModel.tbl_Computer" Width="1.5" PointX="3" PointY="176.125" />
+        <EntityTypeShape EntityType="db_Co2HomeSaversModel.tbl_Cooktop" Width="1.5" PointX="3" PointY="251.625" />
+        <EntityTypeShape EntityType="db_Co2HomeSaversModel.tbl_Dishwashere" Width="1.5" PointX="3" PointY="54.25" />
+        <EntityTypeShape EntityType="db_Co2HomeSaversModel.tbl_Dryer" Width="1.5" PointX="3" PointY="31" />
+        <EntityTypeShape EntityType="db_Co2HomeSaversModel.tbl_Electriccarcharger" Width="1.5" PointX="3" PointY="170.375" />
+        <EntityTypeShape EntityType="db_Co2HomeSaversModel.tbl_Faucet" Width="1.5" PointX="3" PointY="199.375" />
+        <EntityTypeShape EntityType="db_Co2HomeSaversModel.tbl_Fireplace" Width="1.5" PointX="3" PointY="152.875" />
+        <EntityTypeShape EntityType="db_Co2HomeSaversModel.tbl_Freezer" Width="1.5" PointX="3" PointY="135.5" />
+        <EntityTypeShape EntityType="db_Co2HomeSaversModel.tbl_Furnance" Width="1.5" PointX="3" PointY="228.375" />
+        <EntityTypeShape EntityType="db_Co2HomeSaversModel.tbl_GamingConsole" Width="1.5" PointX="3" PointY="158.75" />
+        <EntityTypeShape EntityType="db_Co2HomeSaversModel.tbl_GasDryer" Width="1.5" PointX="3" PointY="19.375" />
+        <EntityTypeShape EntityType="db_Co2HomeSaversModel.tbl_GasOven" Width="1.5" PointX="3" PointY="234.25" />
+        <EntityTypeShape EntityType="db_Co2HomeSaversModel.tbl_Generator" Width="1.5" PointX="3" PointY="89" />
+        <EntityTypeShape EntityType="db_Co2HomeSaversModel.tbl_healthiestlightbulbs" Width="1.5" PointX="3" PointY="182" />
+        <EntityTypeShape EntityType="db_Co2HomeSaversModel.tbl_Humidifier" Width="1.5" PointX="3" PointY="42.625" />
+        <EntityTypeShape EntityType="db_Co2HomeSaversModel.tbl_Jacuzzi" Width="1.5" PointX="3" PointY="123.875" />
+        <EntityTypeShape EntityType="db_Co2HomeSaversModel.tbl_Laptop" Width="1.5" PointX="3" PointY="193.625" />
+        <EntityTypeShape EntityType="db_Co2HomeSaversModel.tbl_Lawnsprinklersystem" Width="1.5" PointX="3" PointY="60" />
+        <EntityTypeShape EntityType="db_Co2HomeSaversModel.tbl_Microwave" Width="1.5" PointX="3" PointY="100.625" />
+        <EntityTypeShape EntityType="db_Co2HomeSaversModel.tbl_Modem" Width="1.5" PointX="3" PointY="187.75" />
+        <EntityTypeShape EntityType="db_Co2HomeSaversModel.tbl_Outdoorsprinklersystem" Width="1.5" PointX="3" PointY="216.75" />
+        <EntityTypeShape EntityType="db_Co2HomeSaversModel.tbl_Oven" Width="1.5" PointX="3" PointY="13.625" />
+        <EntityTypeShape EntityType="db_Co2HomeSaversModel.tbl_Pool" Width="1.5" PointX="3" PointY="205.25" />
+        <EntityTypeShape EntityType="db_Co2HomeSaversModel.tbl_Programmablethermostat" Width="1.5" PointX="3" PointY="147.125" />
+        <EntityTypeShape EntityType="db_Co2HomeSaversModel.tbl_Refrigilator" Width="1.5" PointX="3" PointY="77.5" />
+        <EntityTypeShape EntityType="db_Co2HomeSaversModel.tbl_ResutImages" Width="1.5" PointX="0.75" PointY="3.75" />
+        <EntityTypeShape EntityType="db_Co2HomeSaversModel.tbl_Router" Width="1.5" PointX="3" PointY="48.375" />
+        <EntityTypeShape EntityType="db_Co2HomeSaversModel.tbl_Shower" Width="1.5" PointX="3" PointY="112.25" />
+        <EntityTypeShape EntityType="db_Co2HomeSaversModel.tbl_Showerhead" Width="1.5" PointX="3" PointY="71.625" />
+        <EntityTypeShape EntityType="db_Co2HomeSaversModel.tbl_Sink" Width="1.5" PointX="3" PointY="118.125" />
+        <EntityTypeShape EntityType="db_Co2HomeSaversModel.tbl_Smartphone" Width="1.5" PointX="3" PointY="129.75" />
+        <EntityTypeShape EntityType="db_Co2HomeSaversModel.tbl_Smartpowerstrip" Width="1.5" PointX="3" PointY="164.5" />
+        <EntityTypeShape EntityType="db_Co2HomeSaversModel.tbl_SmartSpeaker" Width="1.5" PointX="3" PointY="257.5" />
+        <EntityTypeShape EntityType="db_Co2HomeSaversModel.tbl_Solarpanels" Width="1.5" PointX="3" PointY="65.875" />
+        <EntityTypeShape EntityType="db_Co2HomeSaversModel.tbl_Stove" Width="1.5" PointX="3" PointY="240" />
+        <EntityTypeShape EntityType="db_Co2HomeSaversModel.tbl_Television" Width="1.5" PointX="3" PointY="245.875" />
+        <EntityTypeShape EntityType="db_Co2HomeSaversModel.tbl_Toilet" Width="1.5" PointX="3" PointY="263.25" />
+        <EntityTypeShape EntityType="db_Co2HomeSaversModel.tbl_User" Width="1.5" PointX="2.75" PointY="3.75" />
+        <EntityTypeShape EntityType="db_Co2HomeSaversModel.tbl_WashingMachine" Width="1.5" PointX="3" PointY="25.125" />
+        <EntityTypeShape EntityType="db_Co2HomeSaversModel.tbl_WaterAC" Width="1.5" PointX="3" PointY="141.375" />
+        <EntityTypeShape EntityType="db_Co2HomeSaversModel.tbl_Waterdispenser" Width="1.5" PointX="3" PointY="94.875" />
+        <EntityTypeShape EntityType="db_Co2HomeSaversModel.tbl_WaterHeater" Width="1.5" PointX="3" PointY="211" />
+        <EntityTypeShape EntityType="db_Co2HomeSaversModel.tbl_WRefrigilator" Width="1.5" PointX="3" PointY="83.25" />
+        <AssociationConnector Association="db_Co2HomeSaversModel.FK__tbl_Barbe__Categ__038683F8" />
+        <AssociationConnector Association="db_Co2HomeSaversModel.FK__tbl_Batht__Categ__3B0BC30C" />
+        <AssociationConnector Association="db_Co2HomeSaversModel.FK__tbl_Bidet__Categ__61316BF4" />
+        <AssociationConnector Association="db_Co2HomeSaversModel.FK__tbl_Compu__Categ__14E61A24" />
+        <AssociationConnector Association="db_Co2HomeSaversModel.FK__tbl_Cookt__Categ__79FD19BE" />
+        <AssociationConnector Association="db_Co2HomeSaversModel.FK__tbl_Dishw__Categ__671F4F74" />
+        <AssociationConnector Association="db_Co2HomeSaversModel.FK__tbl_Dryer__Categ__4F47C5E3" />
+        <AssociationConnector Association="db_Co2HomeSaversModel.FK__tbl_Elect__Categ__2022C2A6" />
+        <AssociationConnector Association="db_Co2HomeSaversModel.FK__tbl_Fauce__Categ__6ABAD62E" />
+        <AssociationConnector Association="db_Co2HomeSaversModel.FK__tbl_Firep__Categ__370627FE" />
+        <AssociationConnector Association="db_Co2HomeSaversModel.FK__tbl_Freez__Categ__4A8310C6" />
+        <AssociationConnector Association="db_Co2HomeSaversModel.FK__tbl_Furna__Categ__324172E1" />
+        <AssociationConnector Association="db_Co2HomeSaversModel.FK__tbl_Gamin__Categ__27F8EE98" />
+        <AssociationConnector Association="db_Co2HomeSaversModel.FK__tbl_GasDr__Categ__7EC1CEDB" />
+        <AssociationConnector Association="db_Co2HomeSaversModel.FK__tbl_GasOv__Categ__0D0FEE32" />
+        <AssociationConnector Association="db_Co2HomeSaversModel.FK__tbl_Gener__Categ__084B3915" />
+        <AssociationConnector Association="db_Co2HomeSaversModel.FK__tbl_healt__Categ__28B808A7" />
+        <AssociationConnector Association="db_Co2HomeSaversModel.FK__tbl_Humid__Categ__4E1E9780" />
+        <AssociationConnector Association="db_Co2HomeSaversModel.FK__tbl_Jacuz__Categ__5C6CB6D7" />
+        <AssociationConnector Association="db_Co2HomeSaversModel.FK__tbl_Lapto__Categ__19AACF41" />
+        <AssociationConnector Association="db_Co2HomeSaversModel.FK__tbl_Lawns__Categ__7073AF84" />
+        <AssociationConnector Association="db_Co2HomeSaversModel.FK__tbl_Micro__Categ__540C7B00" />
+        <AssociationConnector Association="db_Co2HomeSaversModel.FK__tbl_Modem__Categ__318258D2" />
+        <AssociationConnector Association="db_Co2HomeSaversModel.FK__tbl_Outdo__Categ__52E34C9D" />
+        <AssociationConnector Association="db_Co2HomeSaversModel.FK__tbl_Oven__Catego__58D1301D" />
+        <AssociationConnector Association="db_Co2HomeSaversModel.FK__tbl_Pool__Catego__57A801BA" />
+        <AssociationConnector Association="db_Co2HomeSaversModel.FK__tbl_Progr__Categ__11D4A34F" />
+        <AssociationConnector Association="db_Co2HomeSaversModel.FK__tbl_Refri__Categ__02FC7413" />
+        <AssociationConnector Association="db_Co2HomeSaversModel.FK__tbl_Route__Categ__2CBDA3B5" />
+        <AssociationConnector Association="db_Co2HomeSaversModel.FK__tbl_Showe__Categ__36470DEF" />
+        <AssociationConnector Association="db_Co2HomeSaversModel.FK__tbl_Showe__Categ__65F62111" />
+        <AssociationConnector Association="db_Co2HomeSaversModel.FK__tbl_Sink__Catego__3FD07829" />
+        <AssociationConnector Association="db_Co2HomeSaversModel.FK__tbl_Smart__Categ__1B5E0D89" />
+        <AssociationConnector Association="db_Co2HomeSaversModel.FK__tbl_Smart__Categ__1E6F845E" />
+        <AssociationConnector Association="db_Co2HomeSaversModel.FK__tbl_Smart__Categ__2334397B" />
+        <AssociationConnector Association="db_Co2HomeSaversModel.FK__tbl_Solar__Categ__1699586C" />
+        <AssociationConnector Association="db_Co2HomeSaversModel.FK__tbl_Stove__Categ__5D95E53A" />
+        <AssociationConnector Association="db_Co2HomeSaversModel.FK__tbl_Telev__Categ__10216507" />
+        <AssociationConnector Association="db_Co2HomeSaversModel.FK__tbl_Toile__Categ__44952D46" />
+        <AssociationConnector Association="db_Co2HomeSaversModel.FK__tbl_Washi__Categ__625A9A57" />
+        <AssociationConnector Association="db_Co2HomeSaversModel.FK__tbl_Water__Categ__0B5CAFEA" />
+        <AssociationConnector Association="db_Co2HomeSaversModel.FK__tbl_Water__Categ__2D7CBDC4" />
+        <AssociationConnector Association="db_Co2HomeSaversModel.FK__tbl_Water__Categ__4959E263" />
+        <AssociationConnector Association="db_Co2HomeSaversModel.FK__tbl_WRefr__Categ__753864A1" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,193 @@
+﻿
+@{
+    ViewBag.Title = "R_Index";
+}
+
+
+<link href="~/Content/css/Style.css" rel="stylesheet" />
+
+<style>
+    .Appliances_Info {
+        margin-left: 0px;
+    }
+</style>
+
+@*Banner Start*@
+<div class="Category_image-container">
+    <div class="Category_image-overlay">
+        <div class="Banner-content">
+            <h2 class="Category_banner-title ">Enhance Your Energy</h2>
+            <h2 class="Category_banner-title ">Efficiency !</h2>
+            <div class="Category_banner_about_div">
+                <p class="Category_banner_about">Take the quiz and get valuable energy saving tips based on your result</p>
+            </div>
+
+        </div>
+    </div>
+</div>
+@*Banner End*@
+<div id="Tips_Container">
+    <div class="Gif_div container" id="autoscrolltodiv">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 text-center">
+                <img src="~/Content/Images/Gif/splash.gif" alt="GIF" width="100%;">
+            </div>
+
+        </div>
+    </div>
+</div>
+
+@*Appliances Div Start*@
+<div class="Tips_Div container-fluid" style=" background: #F2FAFF; height:100%; display:none;">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 mt-5 text-center">
+            <img src="~/Content/Images/Award/ribbon-star.png">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 mt-2 text-center">
+            <h2 class="Appliances_Heading">
+                Top 3 Lowest Energy Appliances
+            </h2>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row Awards_Container">
+            <div class="First_Awards_Div col-lg-3 col-md-6 col-sm-12 mb-5">
+                <div class="row">
+                    <div class="col-6">
+                        <img src="~/Content/Images/Award/computer.png" class="content-img">
+                        <p class="content-title">@ViewBag.LowestRecord.Appliance</p>
+                        <p class="content-description">Kitchen Appliance</p>
+                        <p class="rating-div">
+                            <img src="~/Content/Images/Award/Star 1.png" class="rating-star">
+                            <span class="rating-text">4.5</span>
+                        </p>
+                    </div>
+                    <div class="col-6">
+                        <img src="~/Content/Images/Award/1.png" class="badge-image">
+                        <p class="energy-usage">@ViewBag.LowestRecord.TotalWatts</p>
+                        <p class="Kwh-unit">kwh/year</p>
+                    </div>
+                </div>
+                <hr class="line" />
+                <div class="row">
+                    <p class="Appliances_Info">
+                        <img src="~/Content/Images/Award/Check.png" class="Check-icon" alt="Check icon">
+                        <span class="Appliance-text"></span>
+                        @ViewBag.LowestRecord.Tip1
+                    </p>
+                </div>
+                <div class="row">
+                    <p class="Appliances_Info">
+                        <img src="~/Content/Images/Award/Check.png" class="Check-icon" alt="Check icon">
+                        <span class="Appliance-text"></span>
+                        @ViewBag.LowestRecord.Tip2
+                    </p>
+                </div>
+                <div class="row">
+                    <p class="Appliances_Info">
+                        <img src="~/Content/Images/Award/Check.png" class="Check-icon" alt="Check icon">
+                        <span class="Appliance-text"></span>
+                        @ViewBag.LowestRecord.Tip3
+                    </p>
+                </div>
+                <button class="btn btn-primary rounded-pill" id="S_Pbtn">See similar products</button>
+            </div>
+            <div class="Second_Awards_Div col-lg-3 col-md-6 col-sm-12 mb-5">
+                <div class="row">
+                    <div class="col-6">
+                        <img src="~/Content/Images/Award/Freezer2.png" class="content-img2">
+                        <p class="content-title">@ViewBag.SecondLowestRecord.Appliance</p>
+                        <p class="content-description">Kitchen Appliance</p>
+                        <p class="rating-div">
+                            <img src="~/Content/Images/Award/Star 1.png" class="rating-star">
+                            <span class="rating-text">4.5</span>
+                        </p>
+                    </div>
+                    <div class="col-6">
+                        <img src="~/Content/Images/Award/2.png" class="badge-image">
+                        <p class="energy-usage2">@ViewBag.SecondLowestRecord.TotalWatts</p>
+                        <p class="Kwh-unit2">kwh/year</p>
+                    </div>
+                </div>
+                <hr class="line" />
+                <div class="row">
+                    <p class="Appliances_Info">
+                        <img src="~/Content/Images/Award/Check.png" class="Check-icon" alt="Check icon">
+                        <span class="Appliance-text"></span>
+                        @ViewBag.SecondLowestRecord.Tip1
+                    </p>
+                </div>
+                <div class="row">
+                    <p class="Appliances_Info">
+                        <img src="~/Content/Images/Award/Check.png" class="Check-icon" alt="Check icon">
+                        <span class="Appliance-text"></span>
+                        @ViewBag.SecondLowestRecord.Tip2
+                    </p>
+                </div>
+                <div class="row">
+                    <p class="Appliances_Info">
+                        <img src="~/Content/Images/Award/Check.png" class="Check-icon" alt="Check icon">
+                        <span class="Appliance-text"></span>
+                        @ViewBag.SecondLowestRecord.Tip3
+                    </p>
+                </div>
+                <button class="btn btn-primary rounded-pill" id="S_Pbtn">See similar products</button>
+            </div>
+            <div class="Third_Awards_Div col-lg-3 col-md-6 col-sm-12 mb-5">
+                <div class="row">
+                    <div class="col-6">
+                        <img src="~/Content/Images/Award/Freezer2.png" class="content-img3">
+                        <p class="content-title">@ViewBag.ThirdLowestRecord.Tip3</p>
+                        <p class="content-description">Kitchen Appliance</p>
+                        <p class="rating-div">
+                            <img src="~/Content/Images/Award/Star 1.png" class="rating-star">
+                            <span class="rating-text">4.5</span>
+                        </p>
+                    </div>
+                    <div class="col-6">
+                        <img src="~/Content/Images/Award/3.png" class="badge-image">
+                        <p class="energy-usage3">@ViewBag.ThirdLowestRecord.TotalWatts</p>
+                        <p class="Kwh-unit3">kwh/year</p>
+                    </div>
+                </div>
+                <hr class="line" />
+                <div class="row">
+                    <p class="Appliances_Info">
+                        <img src="~/Content/Images/Award/Check.png" class="Check-icon" alt="Check icon">
+                        <span class="Appliance-text"></span>
+                        @ViewBag.ThirdLowestRecord.Tip1
+                    </p>
+                </div>
+                <div class="row">
+                    <p class="Appliances_Info">
+                        <img src="~/Content/Images/Award/Check.png" class="Check-icon" alt="Check icon">
+                        <span class="Appliance-text"></span>
+                        @ViewBag.ThirdLowestRecord.Tip2
+                    </p>
+                </div>
+                <div class="row">
+                    <p class="Appliances_Info">
+                        <img src="~/Content/Images/Award/Check.png" class="Check-icon" alt="Check icon">
+                        <span class="Appliance-text"></span>
+                        @ViewBag.ThirdLowestRecord.Tip3
+                    </p>
+                </div>
+                <button class="btn btn-primary rounded-pill" id="S_Pbtn">See similar products</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    setTimeout(function () {
+        document.querySelector('.Gif_div').style.display = 'none';
+        document.querySelector('.Tips_Div').style.display = 'block';
+    }, 3000);
+</script>
+
+
+

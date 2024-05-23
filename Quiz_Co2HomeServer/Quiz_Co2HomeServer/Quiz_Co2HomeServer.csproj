@@ -1,0 +1,1083 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3CCEB1B4-1D87-4F61-BEF2-1B25D42213A7}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Quiz_Co2HomeServer</RootNamespace>
+    <AssemblyName>Quiz_Co2HomeServer</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication>
+    </IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>
+    </IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>4.3</TypeScriptToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.1.1.1\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Extensions.Configuration, Version=2.1.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.2.1.0\lib\netstandard2.0\Microsoft.Extensions.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Abstractions, Version=2.1.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.Abstractions.2.1.0\lib\netstandard2.0\Microsoft.Extensions.Configuration.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Binder, Version=2.1.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.Binder.2.1.0\lib\netstandard2.0\Microsoft.Extensions.Configuration.Binder.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=2.1.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.2.1.0\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Http, Version=2.1.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Http.2.1.0\lib\netstandard2.0\Microsoft.Extensions.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging, Version=2.1.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.2.1.0\lib\netstandard2.0\Microsoft.Extensions.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=2.1.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.Abstractions.2.1.0\lib\netstandard2.0\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Options, Version=2.1.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Options.2.1.0\lib\netstandard2.0\Microsoft.Extensions.Options.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Primitives, Version=2.1.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Primitives.2.1.0\lib\netstandard2.0\Microsoft.Extensions.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenAI_API, Version=1.7.2.0, Culture=neutral, PublicKeyToken=1b0a4c0430762146, processorArchitecture=MSIL">
+      <HintPath>..\packages\OpenAI.1.7.2\lib\netstandard2.0\OpenAI_API.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.4.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Memory, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.0\lib\netstandard2.0\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.4.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AlternateElectricityResultController.cs" />
+    <Compile Include="Controllers\BarbecueController.cs" />
+    <Compile Include="Controllers\BathtubController.cs" />
+    <Compile Include="Controllers\BidetController.cs" />
+    <Compile Include="Controllers\CategoryController.cs" />
+    <Compile Include="Controllers\ComputerController.cs" />
+    <Compile Include="Controllers\CooktopController.cs" />
+    <Compile Include="Controllers\DefaultController.cs" />
+    <Compile Include="Controllers\DishwasherController.cs" />
+    <Compile Include="Controllers\DryerController.cs" />
+    <Compile Include="Controllers\FaucetController.cs" />
+    <Compile Include="Controllers\FireplaceController.cs" />
+    <Compile Include="Controllers\FreezerController.cs" />
+    <Compile Include="Controllers\FurnanceController.cs" />
+    <Compile Include="Controllers\GamingConsoleController.cs" />
+    <Compile Include="Controllers\GasAppliancesController.cs" />
+    <Compile Include="Controllers\GasDryerController.cs" />
+    <Compile Include="Controllers\GasOvenController.cs" />
+    <Compile Include="Controllers\GeneratorController.cs" />
+    <Compile Include="Controllers\GeothermalHeatPumpController.cs" />
+    <Compile Include="Controllers\healthiestlightbulbsController.cs" />
+    <Compile Include="Controllers\HeatingAndCoolingResultController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\HomeEntertainmentResultController.cs" />
+    <Compile Include="Controllers\HumidifierController.cs" />
+    <Compile Include="Controllers\icemakerController.cs" />
+    <Compile Include="Controllers\JacuzziController.cs" />
+    <Compile Include="Controllers\KitchenResultController.cs" />
+    <Compile Include="Controllers\LaptopController.cs" />
+    <Compile Include="Controllers\LawnsprinklersystemController.cs" />
+    <Compile Include="Controllers\MicrowaveController.cs" />
+    <Compile Include="Controllers\ModemController.cs" />
+    <Compile Include="Controllers\OutdoorsprinklersystemController.cs" />
+    <Compile Include="Controllers\OvenController.cs" />
+    <Compile Include="Controllers\PhotovoltaicSolarPanelsController.cs" />
+    <Compile Include="Controllers\PoolController.cs" />
+    <Compile Include="Controllers\RefrigeratorController.cs" />
+    <Compile Include="Controllers\ResultController.cs" />
+    <Compile Include="Controllers\RouterController.cs" />
+    <Compile Include="Controllers\ShowerController.cs" />
+    <Compile Include="Controllers\ShowerheadController.cs" />
+    <Compile Include="Controllers\SinkController.cs" />
+    <Compile Include="Controllers\SmartphoneController.cs" />
+    <Compile Include="Controllers\SmartSpeakerController.cs" />
+    <Compile Include="Controllers\SolarWaterHeaterController.cs" />
+    <Compile Include="Controllers\StoveorcooktopController.cs" />
+    <Compile Include="Controllers\TabletController.cs" />
+    <Compile Include="Controllers\TelevisionController.cs" />
+    <Compile Include="Controllers\testController.cs" />
+    <Compile Include="Controllers\ToiletController.cs" />
+    <Compile Include="Controllers\WashingmachineController.cs" />
+    <Compile Include="Controllers\WaterACController.cs" />
+    <Compile Include="Controllers\WaterApplianceResultController.cs" />
+    <Compile Include="Controllers\WaterdispenserController.cs" />
+    <Compile Include="Controllers\WaterHeaterController.cs" />
+    <Compile Include="Controllers\WindTurbineController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\db_Co2HomeSavers.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>db_Co2HomeSavers.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\db_Co2HomeSavers.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\db_Co2HomeSavers.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>db_Co2HomeSavers.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GetLowestTotalWattsRecords_Result.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GetSecondLowestTotalWattsRecords_Result.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GetThirdHighestTotalWattsRecords_Result.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GetWattsRecords1_Result.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GetWattsRecords2_Result.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GetWattsRecords3_Result.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GetWattsRecords4_Result.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GetWattsRecords5_Result.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GetWattsRecords6_Result.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GetWattsRecords7_Result.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GetWattsRecords8_Result.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GetWattsRecords9_Result.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GetWattsRecordsForAlternateElectricityAppliancePages_Result.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GetWattsRecordsForAlternateElectricityAppliancePage_Result.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GetWattsRecordsForAlternateElectricityAppliances_Result.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GetWattsRecordsForAlternateElectricity_Result.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GetWattsRecordsForGasAppliances1_Result.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GetWattsRecordsForGasAppliances_Result.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GetWattsRecordsForGasAppliance_Result.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GetWattsRecordsForHeatingAndCooling1_Result.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GetWattsRecordsForHeatingAndCoolingAppliance1_Result.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GetWattsRecordsForHeatingAndCoolingAppliancesPage_Result.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GetWattsRecordsForHeatingAndCoolingAppliances_Result.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GetWattsRecordsForHeatingAndCoolingAppliance_Result.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GetWattsRecordsForHeatingAndCooling_Result.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GetWattsRecordsForHomeEntertainmentAppliances_Result.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GetWattsRecordsForHomeEntertainmentAppliance_Result.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GetWattsRecordsForHomeEntertainment_Result.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GetWattsRecordsForKitchen1_Result.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GetWattsRecordsForKitchenResults_Result.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GetWattsRecordsForKitchenResult_Result.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GetWattsRecordsForKitchen_Result.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GetWattsRecordsForWaterAppliances1_Result.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GetWattsRecordsForWaterAppliances_Result.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GetWattsRecordsForWaterAppliance_Result.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GetWattsRecords_Result.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_helpdiagrams_Result.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbl_AffilaiteLink.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbl_Barbecue.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbl_Bathtubr.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbl_Bidet.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbl_Category.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbl_Computer.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbl_Cooktop.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbl_Dishwashere.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbl_Dryer.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbl_Electriccarcharger.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbl_Faucet.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbl_Fireplace.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbl_Freezer.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbl_Furnance.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbl_GamingConsole.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbl_GasDryer.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbl_GasOven.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbl_Generator.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbl_healthiestlightbulbs.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbl_Humidifier.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbl_Jacuzzi.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbl_Laptop.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbl_Lawnsprinklersystem.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbl_Microwave.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbl_Modem.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbl_Outdoorsprinklersystem.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbl_Oven.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbl_Pool.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbl_Programmablethermostat.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbl_Refrigilator.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbl_ResutImages.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbl_Router.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbl_Shower.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbl_Showerhead.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbl_Sink.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbl_Smartphone.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbl_Smartpowerstrip.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbl_SmartSpeaker.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbl_Solarpanels.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbl_Stove.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbl_Television.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbl_Toilet.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbl_User.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbl_WashingMachine.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbl_WaterAC.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbl_Waterdispenser.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbl_WaterHeater.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbl_WRefrigilator.cs">
+      <DependentUpon>db_Co2HomeSavers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\all.min.css" />
+    <Content Include="Content\bootstrap-grid.css" />
+    <Content Include="Content\bootstrap-grid.min.css" />
+    <Content Include="Content\bootstrap-grid.rtl.css" />
+    <Content Include="Content\bootstrap-grid.rtl.min.css" />
+    <Content Include="Content\bootstrap-reboot.css" />
+    <Content Include="Content\bootstrap-reboot.min.css" />
+    <Content Include="Content\bootstrap-reboot.rtl.css" />
+    <Content Include="Content\bootstrap-reboot.rtl.min.css" />
+    <Content Include="Content\bootstrap-utilities.css" />
+    <Content Include="Content\bootstrap-utilities.min.css" />
+    <Content Include="Content\bootstrap-utilities.rtl.css" />
+    <Content Include="Content\bootstrap-utilities.rtl.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bootstrap.rtl.css" />
+    <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Content\css\Layout_Style.css" />
+    <Content Include="Content\css\Modal.css" />
+    <Content Include="Content\css\Style.css" />
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\fontawesome.min.css" />
+    <Content Include="Content\Images\Banner\banner.png" />
+    <Content Include="Content\Images\Categories Icons\bulb.png" />
+    <Content Include="Content\Images\Categories Icons\Freezer.png" />
+    <Content Include="Content\Images\Categories Icons\Microwave.png" />
+    <Content Include="Content\Images\Categories Icons\Refeigerator.png" />
+    <Content Include="Content\Images\Categories\1.png" />
+    <Content Include="Content\Images\Categories\2.png" />
+    <Content Include="Content\Images\Categories\3.png" />
+    <Content Include="Content\Images\Categories\4.png" />
+    <Content Include="Content\Images\Categories\5.png" />
+    <Content Include="Content\Images\Categories\6.png" />
+    <Content Include="Content\Images\Gif\splash.gif" />
+    <Content Include="Content\Images\logo\Logo.png" />
+    <Content Include="Content\Images\Products\Bitmap.png" />
+    <Content Include="Content\Images\Products\Bulb.png" />
+    <Content Include="Content\Images\Products\House Counstruction.png" />
+    <Content Include="Content\Images\Products\House Ready.png" />
+    <Content Include="Content\Images\Products\Line.png" />
+    <Content Include="Content\Images\Products\Money.png" />
+    <Content Include="Content\Images\Products\Soloar Panel.png" />
+    <Content Include="Content\Images\Products\youtube-logo.png" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Models\db_Co2HomeSavers.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>db_Co2HomeSavers.edmx</DependentUpon>
+      <LastGenOutput>db_Co2HomeSavers.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\db_Co2HomeSavers.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>db_Co2HomeSavers.edmx</DependentUpon>
+      <LastGenOutput>db_Co2HomeSavers.cs</LastGenOutput>
+    </Content>
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap.esm.js" />
+    <Content Include="Scripts\bootstrap.esm.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\bootstrap.min.js.map" />
+    <Content Include="Scripts\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap.esm.min.js.map" />
+    <Content Include="Scripts\bootstrap.esm.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Content\bootstrap.rtl.min.css.map" />
+    <Content Include="Content\bootstrap.rtl.css.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-utilities.rtl.css.map" />
+    <Content Include="Content\bootstrap-utilities.min.css.map" />
+    <Content Include="Content\bootstrap-utilities.css.map" />
+    <Content Include="Content\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.rtl.css.map" />
+    <Content Include="Content\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.css.map" />
+    <Content Include="Content\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-grid.rtl.css.map" />
+    <Content Include="Content\bootstrap-grid.min.css.map" />
+    <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="Scripts\esm\popper-utils.js" />
+    <Content Include="Scripts\esm\popper-utils.min.js" />
+    <Content Include="Scripts\esm\popper.js" />
+    <Content Include="Scripts\esm\popper.min.js" />
+    <Content Include="Scripts\index.js.flow" />
+    <Content Include="Scripts\esm\popper.min.js.map" />
+    <Content Include="Scripts\esm\popper.js.map" />
+    <Content Include="Scripts\esm\popper-utils.min.js.map" />
+    <Content Include="Scripts\esm\popper-utils.js.map" />
+    <EntityDeploy Include="Models\db_Co2HomeSavers.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>db_Co2HomeSavers.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\db_Co2HomeSavers.edmx.diagram">
+      <DependentUpon>db_Co2HomeSavers.edmx</DependentUpon>
+    </Content>
+    <None Include="Properties\PublishProfiles\c02home-001-site1 - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\c02home-001-site1 - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\co2home-001-site1 - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\co2home-001-site1 - FTP1.pubxml" />
+    <None Include="Properties\PublishProfiles\co2home-001-site1 - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\co2home-001-site1 - Web Deploy1.pubxml" />
+    <None Include="Properties\PublishProfiles\Co2HomeSavers.pubxml" />
+    <None Include="Properties\PublishProfiles\Co2Homesavers1.pubxml" />
+    <None Include="Properties\PublishProfiles\FTPProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\FTPProfile1.pubxml" />
+    <None Include="Properties\PublishProfiles\FTPProfile2.pubxml" />
+    <None Include="Properties\PublishProfiles\FTPProfile3.pubxml" />
+    <None Include="Scripts\jquery-3.7.0.intellisense.js" />
+    <Content Include="Scripts\jquery-3.7.0.js" />
+    <Content Include="Scripts\jquery-3.7.0.min.js" />
+    <Content Include="Scripts\jquery-3.7.0.slim.js" />
+    <Content Include="Scripts\jquery-3.7.0.slim.min.js" />
+    <Content Include="Scripts\jquery-3.7.0.slim.min.map" />
+    <Content Include="Scripts\jquery-3.7.0.min.map" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\popper-utils.js" />
+    <Content Include="Scripts\popper-utils.min.js" />
+    <Content Include="Scripts\popper.js" />
+    <Content Include="Scripts\popper.min.js" />
+    <Content Include="Scripts\src\index.js" />
+    <Content Include="Scripts\src\methods\defaults.js" />
+    <Content Include="Scripts\src\methods\destroy.js" />
+    <Content Include="Scripts\src\methods\disableEventListeners.js" />
+    <Content Include="Scripts\src\methods\enableEventListeners.js" />
+    <Content Include="Scripts\src\methods\placements.js" />
+    <Content Include="Scripts\src\methods\update.js" />
+    <Content Include="Scripts\src\modifiers\applyStyle.js" />
+    <Content Include="Scripts\src\modifiers\arrow.js" />
+    <Content Include="Scripts\src\modifiers\computeStyle.js" />
+    <Content Include="Scripts\src\modifiers\flip.js" />
+    <Content Include="Scripts\src\modifiers\hide.js" />
+    <Content Include="Scripts\src\modifiers\index.js" />
+    <Content Include="Scripts\src\modifiers\inner.js" />
+    <Content Include="Scripts\src\modifiers\keepTogether.js" />
+    <Content Include="Scripts\src\modifiers\offset.js" />
+    <Content Include="Scripts\src\modifiers\preventOverflow.js" />
+    <Content Include="Scripts\src\modifiers\shift.js" />
+    <Content Include="Scripts\src\utils\clockwise.js" />
+    <Content Include="Scripts\src\utils\computeAutoPlacement.js" />
+    <Content Include="Scripts\src\utils\debounce.js" />
+    <Content Include="Scripts\src\utils\find.js" />
+    <Content Include="Scripts\src\utils\findCommonOffsetParent.js" />
+    <Content Include="Scripts\src\utils\findIndex.js" />
+    <Content Include="Scripts\src\utils\getBordersSize.js" />
+    <Content Include="Scripts\src\utils\getBoundaries.js" />
+    <Content Include="Scripts\src\utils\getBoundingClientRect.js" />
+    <Content Include="Scripts\src\utils\getClientRect.js" />
+    <Content Include="Scripts\src\utils\getFixedPositionOffsetParent.js" />
+    <Content Include="Scripts\src\utils\getOffsetParent.js" />
+    <Content Include="Scripts\src\utils\getOffsetRect.js" />
+    <Content Include="Scripts\src\utils\getOffsetRectRelativeToArbitraryNode.js" />
+    <Content Include="Scripts\src\utils\getOppositePlacement.js" />
+    <Content Include="Scripts\src\utils\getOppositeVariation.js" />
+    <Content Include="Scripts\src\utils\getOuterSizes.js" />
+    <Content Include="Scripts\src\utils\getParentNode.js" />
+    <Content Include="Scripts\src\utils\getPopperOffsets.js" />
+    <Content Include="Scripts\src\utils\getReferenceNode.js" />
+    <Content Include="Scripts\src\utils\getReferenceOffsets.js" />
+    <Content Include="Scripts\src\utils\getRoot.js" />
+    <Content Include="Scripts\src\utils\getRoundedOffsets.js" />
+    <Content Include="Scripts\src\utils\getScroll.js" />
+    <Content Include="Scripts\src\utils\getScrollParent.js" />
+    <Content Include="Scripts\src\utils\getStyleComputedProperty.js" />
+    <Content Include="Scripts\src\utils\getSupportedPropertyName.js" />
+    <Content Include="Scripts\src\utils\getViewportOffsetRectRelativeToArtbitraryNode.js" />
+    <Content Include="Scripts\src\utils\getWindow.js" />
+    <Content Include="Scripts\src\utils\getWindowSizes.js" />
+    <Content Include="Scripts\src\utils\includeScroll.js" />
+    <Content Include="Scripts\src\utils\index.js" />
+    <Content Include="Scripts\src\utils\isBrowser.js" />
+    <Content Include="Scripts\src\utils\isFixed.js" />
+    <Content Include="Scripts\src\utils\isFunction.js" />
+    <Content Include="Scripts\src\utils\isIE.js" />
+    <Content Include="Scripts\src\utils\isModifierEnabled.js" />
+    <Content Include="Scripts\src\utils\isModifierRequired.js" />
+    <Content Include="Scripts\src\utils\isNumeric.js" />
+    <Content Include="Scripts\src\utils\isOffsetContainer.js" />
+    <Content Include="Scripts\src\utils\removeEventListeners.js" />
+    <Content Include="Scripts\src\utils\runModifiers.js" />
+    <Content Include="Scripts\src\utils\setAttributes.js" />
+    <Content Include="Scripts\src\utils\setStyles.js" />
+    <Content Include="Scripts\src\utils\setupEventListeners.js" />
+    <Content Include="Scripts\umd\popper-utils.js" />
+    <Content Include="Scripts\umd\popper-utils.min.js" />
+    <Content Include="Scripts\umd\popper.js" />
+    <Content Include="Scripts\umd\popper.min.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Scripts\umd\popper.min.js.map" />
+    <Content Include="Scripts\umd\popper.js.map" />
+    <Content Include="Scripts\umd\popper.js.flow" />
+    <Content Include="Scripts\umd\popper-utils.min.js.map" />
+    <Content Include="Scripts\umd\popper-utils.js.map" />
+    <Content Include="Scripts\README.md" />
+    <Content Include="Scripts\popper.min.js.map" />
+    <Content Include="Scripts\popper.js.map" />
+    <Content Include="Scripts\popper-utils.min.js.map" />
+    <Content Include="Scripts\popper-utils.js.map" />
+    <Content Include="Views\Category\SelectCategory.cshtml" />
+    <Content Include="Views\Refrigerator\Index.cshtml" />
+    <Content Include="Views\Refrigerator\Tips.cshtml" />
+    <Content Include="Views\Refrigerator\Question3.cshtml" />
+    <Content Include="Views\Refrigerator\Question4.cshtml" />
+    <Content Include="Views\Freezer\Index.cshtml" />
+    <Content Include="Views\Freezer\Question2.cshtml" />
+    <Content Include="Views\Freezer\Question3.cshtml" />
+    <Content Include="Views\Freezer\Question4.cshtml" />
+    <Content Include="Views\Freezer\Tips.cshtml" />
+    <Content Include="Views\Microwave\Index.cshtml" />
+    <Content Include="Views\Microwave\Question2.cshtml" />
+    <Content Include="Views\Microwave\Question3.cshtml" />
+    <Content Include="Views\Microwave\Question4.cshtml" />
+    <Content Include="Views\Microwave\Tips.cshtml" />
+    <Content Include="Views\Computer\Index.cshtml" />
+    <Content Include="Views\Computer\Question2.cshtml" />
+    <Content Include="Views\Computer\Question3.cshtml" />
+    <Content Include="Views\Computer\Question4.cshtml" />
+    <Content Include="Views\Computer\Tips.cshtml" />
+    <Content Include="Views\Oven\Index.cshtml" />
+    <Content Include="Views\Oven\Question2.cshtml" />
+    <Content Include="Views\Oven\Question3.cshtml" />
+    <Content Include="Views\Oven\Question4.cshtml" />
+    <Content Include="Views\Oven\Tips.cshtml" />
+    <Content Include="Views\Stoveorcooktop\Index.cshtml" />
+    <Content Include="Views\Stoveorcooktop\Question2.cshtml" />
+    <Content Include="Views\Stoveorcooktop\Question3.cshtml" />
+    <Content Include="Views\Stoveorcooktop\Question4.cshtml" />
+    <Content Include="Views\Stoveorcooktop\Tips.cshtml" />
+    <Content Include="Views\Dishwasher\Index.cshtml" />
+    <Content Include="Views\Dishwasher\Question2.cshtml" />
+    <Content Include="Views\Dishwasher\Question3.cshtml" />
+    <Content Include="Views\Dishwasher\Question4.cshtml" />
+    <Content Include="Views\Dishwasher\Tips.cshtml" />
+    <Content Include="Views\Washingmachine\Question2.cshtml" />
+    <Content Include="Views\Washingmachine\Question3.cshtml" />
+    <Content Include="Views\Washingmachine\Question4.cshtml" />
+    <Content Include="Views\Washingmachine\Tips.cshtml" />
+    <Content Include="Views\Dryer\Question2.cshtml" />
+    <Content Include="Views\Dryer\Question3.cshtml" />
+    <Content Include="Views\Dryer\Question4.cshtml" />
+    <Content Include="Views\Dryer\Tips.cshtml" />
+    <Content Include="Views\Dryer\Index.cshtml" />
+    <Content Include="Views\Washingmachine\Index.cshtml" />
+    <Content Include="Views\Television\Index.cshtml" />
+    <Content Include="Views\Television\Question2.cshtml" />
+    <Content Include="Views\Television\Question3.cshtml" />
+    <Content Include="Views\Television\Question4.cshtml" />
+    <Content Include="Views\Television\Tips.cshtml" />
+    <Content Include="Views\Laptop\Index.cshtml" />
+    <Content Include="Views\Laptop\Question2.cshtml" />
+    <Content Include="Views\Laptop\Question3.cshtml" />
+    <Content Include="Views\Laptop\Question4.cshtml" />
+    <Content Include="Views\Laptop\Tips.cshtml" />
+    <Content Include="Views\Tablet\Index.cshtml" />
+    <Content Include="Views\Tablet\Question2.cshtml" />
+    <Content Include="Views\Tablet\Question3.cshtml" />
+    <Content Include="Views\Tablet\Question4.cshtml" />
+    <Content Include="Views\Tablet\Tips.cshtml" />
+    <Content Include="Views\Faucet\Index.cshtml" />
+    <Content Include="Views\Faucet\Question2.cshtml" />
+    <Content Include="Views\Faucet\Question3.cshtml" />
+    <Content Include="Views\Faucet\Question4.cshtml" />
+    <Content Include="Views\Faucet\Tips.cshtml" />
+    <Content Include="Views\AC\Index.cshtml" />
+    <Content Include="Views\AC\Question2.cshtml" />
+    <Content Include="Views\AC\Question3.cshtml" />
+    <Content Include="Views\AC\Question4.cshtml" />
+    <Content Include="Views\AC\Tips.cshtml" />
+    <Content Include="Views\Heater\Index.cshtml" />
+    <Content Include="Views\Heater\Question2.cshtml" />
+    <Content Include="Views\Heater\Question3.cshtml" />
+    <Content Include="Views\Heater\Question4.cshtml" />
+    <Content Include="Views\Heater\Tips.cshtml" />
+    <Content Include="Views\Shower\Index.cshtml" />
+    <Content Include="Views\Shower\Question2.cshtml" />
+    <Content Include="Views\Shower\Question3.cshtml" />
+    <Content Include="Views\Shower\Question4.cshtml" />
+    <Content Include="Views\Shower\Tips.cshtml" />
+    <Content Include="Views\Bathtub\Index.cshtml" />
+    <Content Include="Views\Bathtub\Question2.cshtml" />
+    <Content Include="Views\Bathtub\Question3.cshtml" />
+    <Content Include="Views\Bathtub\Question4.cshtml" />
+    <Content Include="Views\Bathtub\Tips.cshtml" />
+    <Content Include="Views\Sink\Index.cshtml" />
+    <Content Include="Views\Sink\Question2.cshtml" />
+    <Content Include="Views\Sink\Question3.cshtml" />
+    <Content Include="Views\Sink\Question4.cshtml" />
+    <Content Include="Views\Sink\Tips.cshtml" />
+    <Content Include="Views\Toilet\Index.cshtml" />
+    <Content Include="Views\Toilet\Question2.cshtml" />
+    <Content Include="Views\Toilet\Question3.cshtml" />
+    <Content Include="Views\Toilet\Question4.cshtml" />
+    <Content Include="Views\Toilet\Tips.cshtml" />
+    <Content Include="Views\WaterHeater\Question2.cshtml" />
+    <Content Include="Views\WaterHeater\Index.cshtml" />
+    <Content Include="Views\WaterDishwasher\Index.cshtml" />
+    <Content Include="Views\WaterDishwasher\Question2.cshtml" />
+    <Content Include="Views\WaterDishwasher\Question3.cshtml" />
+    <Content Include="Views\WaterDishwasher\Question4.cshtml" />
+    <Content Include="Views\WaterDishwasher\Tips.cshtml" />
+    <Content Include="Views\WaterHeater\Question3.cshtml" />
+    <Content Include="Views\WaterHeater\Question4.cshtml" />
+    <Content Include="Views\WaterHeater\Tips.cshtml" />
+    <Content Include="Views\icemaker\Index.cshtml" />
+    <Content Include="Views\icemaker\Question2.cshtml" />
+    <Content Include="Views\icemaker\Question3.cshtml" />
+    <Content Include="Views\icemaker\Question4.cshtml" />
+    <Content Include="Views\icemaker\Tips.cshtml" />
+    <Content Include="Views\Waterdispenser\Index.cshtml" />
+    <Content Include="Views\Waterdispenser\Question2.cshtml" />
+    <Content Include="Views\Waterdispenser\Question3.cshtml" />
+    <Content Include="Views\Waterdispenser\Question4.cshtml" />
+    <Content Include="Views\Waterdispenser\Tips.cshtml" />
+    <Content Include="Views\Humidifier\Index.cshtml" />
+    <Content Include="Views\Humidifier\Question2.cshtml" />
+    <Content Include="Views\Humidifier\Question3.cshtml" />
+    <Content Include="Views\Humidifier\Question4.cshtml" />
+    <Content Include="Views\Humidifier\Tips.cshtml" />
+    <Content Include="Views\WaterAC\Index.cshtml" />
+    <Content Include="Views\WaterAC\Question2.cshtml" />
+    <Content Include="Views\WaterAC\Question3.cshtml" />
+    <Content Include="Views\WaterAC\Question4.cshtml" />
+    <Content Include="Views\WaterAC\Tips.cshtml" />
+    <Content Include="Views\Gardenhosespigot\Index.cshtml" />
+    <Content Include="Views\Gardenhosespigot\Question2.cshtml" />
+    <Content Include="Views\Gardenhosespigot\Question3.cshtml" />
+    <Content Include="Views\Gardenhosespigot\Question4.cshtml" />
+    <Content Include="Views\Gardenhosespigot\Tips.cshtml" />
+    <Content Include="Views\Outdoorsprinklersystem\Index.cshtml" />
+    <Content Include="Views\Outdoorsprinklersystem\Question2.cshtml" />
+    <Content Include="Views\Outdoorsprinklersystem\Question3.cshtml" />
+    <Content Include="Views\Outdoorsprinklersystem\Question4.cshtml" />
+    <Content Include="Views\Outdoorsprinklersystem\Tips.cshtml" />
+    <Content Include="Views\Pool\Index.cshtml" />
+    <Content Include="Views\Pool\Question2.cshtml" />
+    <Content Include="Views\Pool\Question3.cshtml" />
+    <Content Include="Views\Pool\Question4.cshtml" />
+    <Content Include="Views\Pool\Tips.cshtml" />
+    <Content Include="Views\Jacuzzi\Index.cshtml" />
+    <Content Include="Views\Jacuzzi\Question2.cshtml" />
+    <Content Include="Views\Jacuzzi\Question3.cshtml" />
+    <Content Include="Views\Jacuzzi\Question4.cshtml" />
+    <Content Include="Views\Jacuzzi\Tips.cshtml" />
+    <Content Include="Views\Bidet\Index.cshtml" />
+    <Content Include="Views\Bidet\Question2.cshtml" />
+    <Content Include="Views\Bidet\Question3.cshtml" />
+    <Content Include="Views\Bidet\Question4.cshtml" />
+    <Content Include="Views\Bidet\Tips.cshtml" />
+    <Content Include="Views\Result\Index.cshtml" />
+    <Content Include="Views\Smartphone\Index.cshtml" />
+    <Content Include="Views\Smartphone\Question2.cshtml" />
+    <Content Include="Views\Smartphone\Question3.cshtml" />
+    <Content Include="Views\Smartphone\Question4.cshtml" />
+    <Content Include="Views\Smartphone\Tips.cshtml" />
+    <Content Include="Views\SmartSpeaker\Index.cshtml" />
+    <Content Include="Views\SmartSpeaker\Question2.cshtml" />
+    <Content Include="Views\SmartSpeaker\Question3.cshtml" />
+    <Content Include="Views\SmartSpeaker\Question4.cshtml" />
+    <Content Include="Views\SmartSpeaker\Tips.cshtml" />
+    <Content Include="Views\GamingConsole\Index.cshtml" />
+    <Content Include="Views\GamingConsole\Question2.cshtml" />
+    <Content Include="Views\GamingConsole\Question3.cshtml" />
+    <Content Include="Views\GamingConsole\Question4.cshtml" />
+    <Content Include="Views\GamingConsole\Tips.cshtml" />
+    <Content Include="Views\Cooktop\Index.cshtml" />
+    <Content Include="Views\Cooktop\Question2.cshtml" />
+    <Content Include="Views\Cooktop\Question3.cshtml" />
+    <Content Include="Views\Cooktop\Question4.cshtml" />
+    <Content Include="Views\Cooktop\Tips.cshtml" />
+    <Content Include="Views\Furnance\Index.cshtml" />
+    <Content Include="Views\Furnance\Question2.cshtml" />
+    <Content Include="Views\Furnance\Question3.cshtml" />
+    <Content Include="Views\Furnance\Question4.cshtml" />
+    <Content Include="Views\Furnance\Tips.cshtml" />
+    <Content Include="Views\Barbecue\Index.cshtml" />
+    <Content Include="Views\Fireplace\Index.cshtml" />
+    <Content Include="Views\Fireplace\Question2.cshtml" />
+    <Content Include="Views\Fireplace\Question3.cshtml" />
+    <Content Include="Views\Fireplace\Question4.cshtml" />
+    <Content Include="Views\Fireplace\Tips.cshtml" />
+    <Content Include="Views\Barbecue\Question2.cshtml" />
+    <Content Include="Views\Barbecue\Question3.cshtml" />
+    <Content Include="Views\Barbecue\Question4.cshtml" />
+    <Content Include="Views\Barbecue\Tips.cshtml" />
+    <Content Include="Views\Generator\Index.cshtml" />
+    <Content Include="Views\Generator\Question2.cshtml" />
+    <Content Include="Views\Generator\Question3.cshtml" />
+    <Content Include="Views\Generator\Question4.cshtml" />
+    <Content Include="Views\Generator\Tips.cshtml" />
+    <Content Include="Views\SolarWaterHeater\Index.cshtml" />
+    <Content Include="Views\SolarWaterHeater\Question2.cshtml" />
+    <Content Include="Views\SolarWaterHeater\Question3.cshtml" />
+    <Content Include="Views\SolarWaterHeater\Question4.cshtml" />
+    <Content Include="Views\SolarWaterHeater\Tips.cshtml" />
+    <Content Include="Views\WindTurbine\Index.cshtml" />
+    <Content Include="Views\WindTurbine\Question2.cshtml" />
+    <Content Include="Views\WindTurbine\Question3.cshtml" />
+    <Content Include="Views\WindTurbine\Question4.cshtml" />
+    <Content Include="Views\WindTurbine\Tips.cshtml" />
+    <Content Include="Views\PhotovoltaicSolarPanels\Index.cshtml" />
+    <Content Include="Views\PhotovoltaicSolarPanels\Question2.cshtml" />
+    <Content Include="Views\PhotovoltaicSolarPanels\Question3.cshtml" />
+    <Content Include="Views\PhotovoltaicSolarPanels\Question4.cshtml" />
+    <Content Include="Views\PhotovoltaicSolarPanels\Tips.cshtml" />
+    <Content Include="Views\GeothermalHeatPump\Index.cshtml" />
+    <Content Include="Views\GeothermalHeatPump\Question2.cshtml" />
+    <Content Include="Views\GeothermalHeatPump\Question3.cshtml" />
+    <Content Include="Views\GeothermalHeatPump\Question4.cshtml" />
+    <Content Include="Views\GeothermalHeatPump\Tips.cshtml" />
+    <Content Include="Views\HFreezer\Index.cshtml" />
+    <Content Include="Views\HFreezer\Question2.cshtml" />
+    <Content Include="Views\HFreezer\Question3.cshtml" />
+    <Content Include="Views\HFreezer\Question4.cshtml" />
+    <Content Include="Views\HFreezer\Tips.cshtml" />
+    <Content Include="Views\HRefrigilator\Index.cshtml" />
+    <Content Include="Views\HRefrigilator\Question2.cshtml" />
+    <Content Include="Views\HRefrigilator\Question3.cshtml" />
+    <Content Include="Views\HRefrigilator\Question4.cshtml" />
+    <Content Include="Views\HRefrigilator\Tips.cshtml" />
+    <Content Include="Views\WDishwasher\Index.cshtml" />
+    <Content Include="Views\WDishwasher\Question2.cshtml" />
+    <Content Include="Views\WDishwasher\Question3.cshtml" />
+    <Content Include="Views\WDishwasher\Question4.cshtml" />
+    <Content Include="Views\WDishwasher\Tips.cshtml" />
+    <Content Include="Views\Hheater\Index.cshtml" />
+    <Content Include="Views\Hheater\Question2.cshtml" />
+    <Content Include="Views\Hheater\Question3.cshtml" />
+    <Content Include="Views\Hheater\Question4.cshtml" />
+    <Content Include="Views\Hheater\Tips.cshtml" />
+    <Content Include="Views\Router\Index.cshtml" />
+    <Content Include="Views\Router\Question2.cshtml" />
+    <Content Include="Views\Router\Question3.cshtml" />
+    <Content Include="Views\Router\Question4.cshtml" />
+    <Content Include="Views\Router\Tips.cshtml" />
+    <Content Include="Views\Modem\Index.cshtml" />
+    <Content Include="Views\Modem\Question2.cshtml" />
+    <Content Include="Views\Modem\Question3.cshtml" />
+    <Content Include="Views\Modem\Question4.cshtml" />
+    <Content Include="Views\Modem\Tips.cshtml" />
+    <Content Include="Views\Showerhead\Question2.cshtml" />
+    <Content Include="Views\Showerhead\Index.cshtml" />
+    <Content Include="Views\Showerhead\Question3.cshtml" />
+    <Content Include="Views\Showerhead\Question4.cshtml" />
+    <Content Include="Views\Showerhead\Tips.cshtml" />
+    <Content Include="Views\Lawnsprinklersystem\Index.cshtml" />
+    <Content Include="Views\Lawnsprinklersystem\Question2.cshtml" />
+    <Content Include="Views\Lawnsprinklersystem\Question3.cshtml" />
+    <Content Include="Views\Lawnsprinklersystem\Question4.cshtml" />
+    <Content Include="Views\Lawnsprinklersystem\Tips.cshtml" />
+    <Content Include="Views\GasDryer\Index.cshtml" />
+    <Content Include="Views\GasDryer\Question2.cshtml" />
+    <Content Include="Views\GasDryer\Question3.cshtml" />
+    <Content Include="Views\GasDryer\Question4.cshtml" />
+    <Content Include="Views\GasDryer\Tips.cshtml" />
+    <Content Include="Views\GasOven\Index.cshtml" />
+    <Content Include="Views\GasOven\Question2.cshtml" />
+    <Content Include="Views\GasOven\Question3.cshtml" />
+    <Content Include="Views\GasOven\Question4.cshtml" />
+    <Content Include="Views\GasOven\Tips.cshtml" />
+    <Content Include="Views\healthiestlightbulbs\Index.cshtml" />
+    <Content Include="Views\healthiestlightbulbs\Question2.cshtml" />
+    <Content Include="Views\healthiestlightbulbs\Question3.cshtml" />
+    <Content Include="Views\healthiestlightbulbs\Question4.cshtml" />
+    <Content Include="Views\healthiestlightbulbs\Tips.cshtml" />
+    <Content Include="Views\Refrigerator\Question2.cshtml" />
+    <Content Include="Views\Make\Index.cshtml" />
+    <Content Include="Views\MakeTips\Index.cshtml" />
+    <Content Include="Views\MakeQ4Extra\Index.cshtml" />
+    <Content Include="Views\wallts\Index.cshtml" />
+    <Content Include="Views\TpsExtra\Index.cshtml" />
+    <Content Include="Views\MakeTips\R_Index.cshtml" />
+    <Content Include="Views\KitchenResult\Index.cshtml" />
+    <Content Include="Views\HeatingAndCoolingResult\Index.cshtml" />
+    <Content Include="Views\HomeEntertainmentResult\Index.cshtml" />
+    <Content Include="Views\WaterApplianceResult\Index.cshtml" />
+    <Content Include="Views\GasAppliances\Index.cshtml" />
+    <Content Include="Views\AlternateElectricityResult\Index.cshtml" />
+    <Content Include="Views\makemedelete\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="Scripts\index.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>56171</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:56171/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

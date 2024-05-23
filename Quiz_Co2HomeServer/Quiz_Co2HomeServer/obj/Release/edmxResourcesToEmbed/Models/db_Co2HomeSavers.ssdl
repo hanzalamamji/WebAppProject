@@ -1,0 +1,2231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="db_Co2HomeSaversModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="tbl_AffilaiteLink">
+    <Key>
+      <PropertyRef Name="AfflilateLinkID" />
+    </Key>
+    <Property Name="AfflilateLinkID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Appliance" Type="nvarchar" MaxLength="150" />
+    <Property Name="Link" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="tbl_Barbecue">
+    <Key>
+      <PropertyRef Name="BarbecueID" />
+    </Key>
+    <Property Name="BarbecueID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryID" Type="int" />
+    <Property Name="Usernme" Type="nvarchar" MaxLength="150" />
+    <Property Name="NoOfBarbecues" Type="int" />
+    <Property Name="Appliance" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt3" Type="nvarchar" MaxLength="150" />
+    <Property Name="TotalWatts" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="nvarchar" MaxLength="150" />
+    <Property Name="Image" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="tbl_Bathtubr">
+    <Key>
+      <PropertyRef Name="BathtubID" />
+    </Key>
+    <Property Name="BathtubID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryID" Type="int" />
+    <Property Name="Usernme" Type="nvarchar" MaxLength="150" />
+    <Property Name="NoOfBathtubs" Type="int" />
+    <Property Name="Appliance" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt3" Type="nvarchar" MaxLength="150" />
+    <Property Name="TotalWatts" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="nvarchar" MaxLength="150" />
+    <Property Name="Image" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="tbl_Bidet">
+    <Key>
+      <PropertyRef Name="BidetID" />
+    </Key>
+    <Property Name="BidetID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryID" Type="int" />
+    <Property Name="Usernme" Type="nvarchar" MaxLength="150" />
+    <Property Name="NoOfBidets" Type="int" />
+    <Property Name="Appliance" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt3" Type="nvarchar" MaxLength="150" />
+    <Property Name="TotalWatts" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="nvarchar" MaxLength="150" />
+    <Property Name="Image" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="tbl_Category">
+    <Key>
+      <PropertyRef Name="CategoryID" />
+    </Key>
+    <Property Name="CategoryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Category" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="tbl_Computer">
+    <Key>
+      <PropertyRef Name="ComputerID" />
+    </Key>
+    <Property Name="ComputerID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryID" Type="int" />
+    <Property Name="Usernme" Type="nvarchar" MaxLength="150" />
+    <Property Name="NoOfComputers" Type="int" />
+    <Property Name="Appliance" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt3" Type="nvarchar" MaxLength="150" />
+    <Property Name="TotalWatts" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="nvarchar" MaxLength="150" />
+    <Property Name="Image" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="tbl_Cooktop">
+    <Key>
+      <PropertyRef Name="CooktopID" />
+    </Key>
+    <Property Name="CooktopID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryID" Type="int" />
+    <Property Name="Usernme" Type="nvarchar" MaxLength="150" />
+    <Property Name="NoOfCooktops" Type="int" />
+    <Property Name="Appliance" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt3" Type="nvarchar" MaxLength="150" />
+    <Property Name="TotalWatts" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="nvarchar" MaxLength="150" />
+    <Property Name="Image" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="tbl_Dishwashere">
+    <Key>
+      <PropertyRef Name="DishwasherID" />
+    </Key>
+    <Property Name="DishwasherID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryID" Type="int" />
+    <Property Name="Usernme" Type="nvarchar" MaxLength="150" />
+    <Property Name="NoOfDishwasher" Type="int" />
+    <Property Name="Appliance" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt3" Type="nvarchar" MaxLength="150" />
+    <Property Name="TotalWatts" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="nvarchar" MaxLength="150" />
+    <Property Name="Image" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="tbl_Dryer">
+    <Key>
+      <PropertyRef Name="DryerID" />
+    </Key>
+    <Property Name="DryerID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryID" Type="int" />
+    <Property Name="Usernme" Type="nvarchar" MaxLength="150" />
+    <Property Name="NoOfDryer" Type="int" />
+    <Property Name="Appliance" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt3" Type="nvarchar" MaxLength="150" />
+    <Property Name="TotalWatts" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="nvarchar" MaxLength="150" />
+    <Property Name="Image" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="tbl_Electriccarcharger">
+    <Key>
+      <PropertyRef Name="ElectriccarchargerID" />
+    </Key>
+    <Property Name="ElectriccarchargerID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryID" Type="int" />
+    <Property Name="Usernme" Type="nvarchar" MaxLength="150" />
+    <Property Name="NoOfElectriccarchargers" Type="int" />
+    <Property Name="Appliance" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt3" Type="nvarchar" MaxLength="150" />
+    <Property Name="TotalWatts" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="nvarchar" MaxLength="150" />
+    <Property Name="Image" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="tbl_Faucet">
+    <Key>
+      <PropertyRef Name="FaucetID" />
+    </Key>
+    <Property Name="FaucetID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryID" Type="int" />
+    <Property Name="Usernme" Type="nvarchar" MaxLength="150" />
+    <Property Name="NoOfFaucets" Type="int" />
+    <Property Name="Appliance" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt3" Type="nvarchar" MaxLength="150" />
+    <Property Name="TotalWatts" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="nvarchar" MaxLength="150" />
+    <Property Name="Image" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="tbl_Fireplace">
+    <Key>
+      <PropertyRef Name="FireplaceID" />
+    </Key>
+    <Property Name="FireplaceID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryID" Type="int" />
+    <Property Name="Usernme" Type="nvarchar" MaxLength="150" />
+    <Property Name="NoOfFireplace" Type="int" />
+    <Property Name="Appliance" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt3" Type="nvarchar" MaxLength="150" />
+    <Property Name="TotalWatts" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="nvarchar" MaxLength="150" />
+    <Property Name="Image" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="tbl_Freezer">
+    <Key>
+      <PropertyRef Name="FreezerID" />
+    </Key>
+    <Property Name="FreezerID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryID" Type="int" />
+    <Property Name="Usernme" Type="nvarchar" MaxLength="150" />
+    <Property Name="NoOfFreezers" Type="int" />
+    <Property Name="Appliance" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt3" Type="nvarchar" MaxLength="150" />
+    <Property Name="TotalWatts" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="nvarchar" MaxLength="150" />
+    <Property Name="Image" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="tbl_Furnance">
+    <Key>
+      <PropertyRef Name="FurnanceID" />
+    </Key>
+    <Property Name="FurnanceID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryID" Type="int" />
+    <Property Name="Usernme" Type="nvarchar" MaxLength="150" />
+    <Property Name="NoOfFurnance" Type="int" />
+    <Property Name="Appliance" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt3" Type="nvarchar" MaxLength="150" />
+    <Property Name="TotalWatts" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="nvarchar" MaxLength="150" />
+    <Property Name="Image" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="tbl_GamingConsole">
+    <Key>
+      <PropertyRef Name="GamingConsoleID" />
+    </Key>
+    <Property Name="GamingConsoleID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryID" Type="int" />
+    <Property Name="Usernme" Type="nvarchar" MaxLength="150" />
+    <Property Name="NoOfGamingConsoles" Type="int" />
+    <Property Name="Appliance" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt3" Type="nvarchar" MaxLength="150" />
+    <Property Name="TotalWatts" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="nvarchar" MaxLength="150" />
+    <Property Name="Image" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="tbl_GasDryer">
+    <Key>
+      <PropertyRef Name="GasDryerID" />
+    </Key>
+    <Property Name="GasDryerID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryID" Type="int" />
+    <Property Name="Usernme" Type="nvarchar" MaxLength="150" />
+    <Property Name="NoOfGasDryers" Type="int" />
+    <Property Name="Appliance" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt3" Type="nvarchar" MaxLength="150" />
+    <Property Name="TotalWatts" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="nvarchar" MaxLength="150" />
+    <Property Name="Image" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="tbl_GasOven">
+    <Key>
+      <PropertyRef Name="GasOvenID" />
+    </Key>
+    <Property Name="GasOvenID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryID" Type="int" />
+    <Property Name="Usernme" Type="nvarchar" MaxLength="150" />
+    <Property Name="NoOfGasOvens" Type="int" />
+    <Property Name="Appliance" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt3" Type="nvarchar" MaxLength="150" />
+    <Property Name="TotalWatts" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="nvarchar" MaxLength="150" />
+    <Property Name="Image" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="tbl_Generator">
+    <Key>
+      <PropertyRef Name="GeneratorID" />
+    </Key>
+    <Property Name="GeneratorID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryID" Type="int" />
+    <Property Name="Usernme" Type="nvarchar" MaxLength="150" />
+    <Property Name="NoOfGenerators" Type="int" />
+    <Property Name="Appliance" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt3" Type="nvarchar" MaxLength="150" />
+    <Property Name="TotalWatts" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="nvarchar" MaxLength="150" />
+    <Property Name="Image" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="tbl_healthiestlightbulbs">
+    <Key>
+      <PropertyRef Name="ElectriccarchargerID" />
+    </Key>
+    <Property Name="ElectriccarchargerID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryID" Type="int" />
+    <Property Name="Usernme" Type="nvarchar" MaxLength="150" />
+    <Property Name="NoOfhealthiestlightbulbs" Type="int" />
+    <Property Name="Appliance" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt3" Type="nvarchar" MaxLength="150" />
+    <Property Name="TotalWatts" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="nvarchar" MaxLength="150" />
+    <Property Name="Image" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="tbl_Humidifier">
+    <Key>
+      <PropertyRef Name="HumidifierID" />
+    </Key>
+    <Property Name="HumidifierID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryID" Type="int" />
+    <Property Name="Usernme" Type="nvarchar" MaxLength="150" />
+    <Property Name="NoOfHumidifiers" Type="int" />
+    <Property Name="Appliance" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt3" Type="nvarchar" MaxLength="150" />
+    <Property Name="TotalWatts" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="nvarchar" MaxLength="150" />
+    <Property Name="Image" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="tbl_Jacuzzi">
+    <Key>
+      <PropertyRef Name="JacuzziID" />
+    </Key>
+    <Property Name="JacuzziID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryID" Type="int" />
+    <Property Name="Usernme" Type="nvarchar" MaxLength="150" />
+    <Property Name="NoOfJacuzzis" Type="int" />
+    <Property Name="Appliance" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt3" Type="nvarchar" MaxLength="150" />
+    <Property Name="TotalWatts" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="nvarchar" MaxLength="150" />
+    <Property Name="Image" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="tbl_Laptop">
+    <Key>
+      <PropertyRef Name="LaptopID" />
+    </Key>
+    <Property Name="LaptopID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryID" Type="int" />
+    <Property Name="Usernme" Type="nvarchar" MaxLength="150" />
+    <Property Name="NoOfLaptops" Type="int" />
+    <Property Name="Appliance" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt3" Type="nvarchar" MaxLength="150" />
+    <Property Name="TotalWatts" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="nvarchar" MaxLength="150" />
+    <Property Name="Image" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="tbl_Lawnsprinklersystem">
+    <Key>
+      <PropertyRef Name="LawnsprinklersystemID" />
+    </Key>
+    <Property Name="LawnsprinklersystemID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryID" Type="int" />
+    <Property Name="Usernme" Type="nvarchar" MaxLength="150" />
+    <Property Name="NoOfLawnsprinklersystems" Type="int" />
+    <Property Name="Appliance" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt3" Type="nvarchar" MaxLength="150" />
+    <Property Name="TotalWatts" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="nvarchar" MaxLength="150" />
+    <Property Name="Image" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="tbl_Microwave">
+    <Key>
+      <PropertyRef Name="MicrowaveID" />
+    </Key>
+    <Property Name="MicrowaveID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryID" Type="int" />
+    <Property Name="Usernme" Type="nvarchar" MaxLength="150" />
+    <Property Name="NoOfMicrowaves" Type="int" />
+    <Property Name="Appliance" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt3" Type="nvarchar" MaxLength="150" />
+    <Property Name="TotalWatts" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="nvarchar" MaxLength="150" />
+    <Property Name="Image" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="tbl_Modem">
+    <Key>
+      <PropertyRef Name="ModemID" />
+    </Key>
+    <Property Name="ModemID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryID" Type="int" />
+    <Property Name="Usernme" Type="nvarchar" MaxLength="150" />
+    <Property Name="NoOfModems" Type="int" />
+    <Property Name="Appliance" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt3" Type="nvarchar" MaxLength="150" />
+    <Property Name="TotalWatts" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="nvarchar" MaxLength="150" />
+    <Property Name="Image" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="tbl_Outdoorsprinklersystem">
+    <Key>
+      <PropertyRef Name="OutdoorsprinklersystemID" />
+    </Key>
+    <Property Name="OutdoorsprinklersystemID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryID" Type="int" />
+    <Property Name="Usernme" Type="nvarchar" MaxLength="150" />
+    <Property Name="NoOfOutdoorsprinklersystems" Type="int" />
+    <Property Name="Appliance" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt3" Type="nvarchar" MaxLength="150" />
+    <Property Name="TotalWatts" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="nvarchar" MaxLength="150" />
+    <Property Name="Image" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="tbl_Oven">
+    <Key>
+      <PropertyRef Name="OvenID" />
+    </Key>
+    <Property Name="OvenID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryID" Type="int" />
+    <Property Name="Usernme" Type="nvarchar" MaxLength="150" />
+    <Property Name="NoOfOvens" Type="int" />
+    <Property Name="Appliance" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt3" Type="nvarchar" MaxLength="150" />
+    <Property Name="TotalWatts" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="nvarchar" MaxLength="150" />
+    <Property Name="Image" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="tbl_Pool">
+    <Key>
+      <PropertyRef Name="PoolID" />
+    </Key>
+    <Property Name="PoolID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryID" Type="int" />
+    <Property Name="Usernme" Type="nvarchar" MaxLength="150" />
+    <Property Name="NoOfPools" Type="int" />
+    <Property Name="Appliance" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt3" Type="nvarchar" MaxLength="150" />
+    <Property Name="TotalWatts" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="nvarchar" MaxLength="150" />
+    <Property Name="Image" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="tbl_Programmablethermostat">
+    <Key>
+      <PropertyRef Name="ProgrammablethermostatID" />
+    </Key>
+    <Property Name="ProgrammablethermostatID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryID" Type="int" />
+    <Property Name="Usernme" Type="nvarchar" MaxLength="150" />
+    <Property Name="NoOfProgrammablethermostats" Type="int" />
+    <Property Name="Appliance" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt3" Type="nvarchar" MaxLength="150" />
+    <Property Name="TotalWatts" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="nvarchar" MaxLength="150" />
+    <Property Name="Image" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="tbl_Refrigilator">
+    <Key>
+      <PropertyRef Name="RefrigilatorID" />
+    </Key>
+    <Property Name="RefrigilatorID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryID" Type="int" />
+    <Property Name="Usernme" Type="nvarchar" MaxLength="150" />
+    <Property Name="NoOfRefrigilators" Type="int" />
+    <Property Name="Appliance" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt3" Type="nvarchar" MaxLength="150" />
+    <Property Name="TotalWatts" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="nvarchar" MaxLength="150" />
+    <Property Name="Image" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="tbl_ResutImages">
+    <Key>
+      <PropertyRef Name="ResutImagesID" />
+    </Key>
+    <Property Name="ResutImagesID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Appliance" Type="nvarchar" MaxLength="150" />
+    <Property Name="ImageAddress" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="tbl_Router">
+    <Key>
+      <PropertyRef Name="RouterID" />
+    </Key>
+    <Property Name="RouterID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryID" Type="int" />
+    <Property Name="Usernme" Type="nvarchar" MaxLength="150" />
+    <Property Name="NoOfRouters" Type="int" />
+    <Property Name="Appliance" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt3" Type="nvarchar" MaxLength="150" />
+    <Property Name="TotalWatts" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="nvarchar" MaxLength="150" />
+    <Property Name="Image" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="tbl_Shower">
+    <Key>
+      <PropertyRef Name="ShowerID" />
+    </Key>
+    <Property Name="ShowerID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryID" Type="int" />
+    <Property Name="Usernme" Type="nvarchar" MaxLength="150" />
+    <Property Name="NoOfShowers" Type="int" />
+    <Property Name="Appliance" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt3" Type="nvarchar" MaxLength="150" />
+    <Property Name="TotalWatts" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="nvarchar" MaxLength="150" />
+    <Property Name="Image" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="tbl_Showerhead">
+    <Key>
+      <PropertyRef Name="ShowerheadID" />
+    </Key>
+    <Property Name="ShowerheadID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryID" Type="int" />
+    <Property Name="Usernme" Type="nvarchar" MaxLength="150" />
+    <Property Name="NoOfShowerheads" Type="int" />
+    <Property Name="Appliance" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt3" Type="nvarchar" MaxLength="150" />
+    <Property Name="TotalWatts" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="nvarchar" MaxLength="150" />
+    <Property Name="Image" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="tbl_Sink">
+    <Key>
+      <PropertyRef Name="SinkID" />
+    </Key>
+    <Property Name="SinkID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryID" Type="int" />
+    <Property Name="Usernme" Type="nvarchar" MaxLength="150" />
+    <Property Name="NoOfSinks" Type="int" />
+    <Property Name="Appliance" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt3" Type="nvarchar" MaxLength="150" />
+    <Property Name="TotalWatts" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="nvarchar" MaxLength="150" />
+    <Property Name="Image" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="tbl_Smartphone">
+    <Key>
+      <PropertyRef Name="SmartphoneID" />
+    </Key>
+    <Property Name="SmartphoneID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryID" Type="int" />
+    <Property Name="Usernme" Type="nvarchar" MaxLength="150" />
+    <Property Name="NoOfSmartphones" Type="int" />
+    <Property Name="Appliance" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt3" Type="nvarchar" MaxLength="150" />
+    <Property Name="TotalWatts" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="nvarchar" MaxLength="150" />
+    <Property Name="Image" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="tbl_Smartpowerstrip">
+    <Key>
+      <PropertyRef Name="SmartpowerstripID" />
+    </Key>
+    <Property Name="SmartpowerstripID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryID" Type="int" />
+    <Property Name="Usernme" Type="nvarchar" MaxLength="150" />
+    <Property Name="NoOfSmartpowerstrips" Type="int" />
+    <Property Name="Appliance" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt3" Type="nvarchar" MaxLength="150" />
+    <Property Name="TotalWatts" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="nvarchar" MaxLength="150" />
+    <Property Name="Image" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="tbl_SmartSpeaker">
+    <Key>
+      <PropertyRef Name="SmartSpeakerID" />
+    </Key>
+    <Property Name="SmartSpeakerID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryID" Type="int" />
+    <Property Name="Usernme" Type="nvarchar" MaxLength="150" />
+    <Property Name="NoOfSmartSpeakers" Type="int" />
+    <Property Name="Appliance" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt3" Type="nvarchar" MaxLength="150" />
+    <Property Name="TotalWatts" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="nvarchar" MaxLength="150" />
+    <Property Name="Image" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="tbl_Solarpanels">
+    <Key>
+      <PropertyRef Name="SolarpanelstID" />
+    </Key>
+    <Property Name="SolarpanelstID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryID" Type="int" />
+    <Property Name="Usernme" Type="nvarchar" MaxLength="150" />
+    <Property Name="NoOfSolarpanels" Type="int" />
+    <Property Name="Appliance" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt3" Type="nvarchar" MaxLength="150" />
+    <Property Name="TotalWatts" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="nvarchar" MaxLength="150" />
+    <Property Name="Image" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="tbl_Stove">
+    <Key>
+      <PropertyRef Name="StoveID" />
+    </Key>
+    <Property Name="StoveID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryID" Type="int" />
+    <Property Name="Usernme" Type="nvarchar" MaxLength="150" />
+    <Property Name="NoOfStoves" Type="int" />
+    <Property Name="Appliance" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt3" Type="nvarchar" MaxLength="150" />
+    <Property Name="TotalWatts" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="nvarchar" MaxLength="150" />
+    <Property Name="Image" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="tbl_Television">
+    <Key>
+      <PropertyRef Name="TelevisionID" />
+    </Key>
+    <Property Name="TelevisionID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryID" Type="int" />
+    <Property Name="Usernme" Type="nvarchar" MaxLength="150" />
+    <Property Name="NoOfTelevisions" Type="int" />
+    <Property Name="Appliance" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt3" Type="nvarchar" MaxLength="150" />
+    <Property Name="TotalWatts" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="nvarchar" MaxLength="150" />
+    <Property Name="Image" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="tbl_Toilet">
+    <Key>
+      <PropertyRef Name="ToiletID" />
+    </Key>
+    <Property Name="ToiletID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryID" Type="int" />
+    <Property Name="Usernme" Type="nvarchar" MaxLength="150" />
+    <Property Name="NoOfToilets" Type="int" />
+    <Property Name="Appliance" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt3" Type="nvarchar" MaxLength="150" />
+    <Property Name="TotalWatts" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="nvarchar" MaxLength="150" />
+    <Property Name="Image" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="tbl_User">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Username" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="tbl_WashingMachine">
+    <Key>
+      <PropertyRef Name="WashingMachineID" />
+    </Key>
+    <Property Name="WashingMachineID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryID" Type="int" />
+    <Property Name="Usernme" Type="nvarchar" MaxLength="150" />
+    <Property Name="NoOfWashingMachine" Type="int" />
+    <Property Name="Appliance" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt3" Type="nvarchar" MaxLength="150" />
+    <Property Name="TotalWatts" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="nvarchar" MaxLength="150" />
+    <Property Name="Image" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="tbl_WaterAC">
+    <Key>
+      <PropertyRef Name="WaterACID" />
+    </Key>
+    <Property Name="WaterACID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryID" Type="int" />
+    <Property Name="Usernme" Type="nvarchar" MaxLength="150" />
+    <Property Name="NoOfWaterACs" Type="int" />
+    <Property Name="Appliance" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt3" Type="nvarchar" MaxLength="150" />
+    <Property Name="TotalWatts" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="nvarchar" MaxLength="150" />
+    <Property Name="Image" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="tbl_Waterdispenser">
+    <Key>
+      <PropertyRef Name="WaterdispenserID" />
+    </Key>
+    <Property Name="WaterdispenserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryID" Type="int" />
+    <Property Name="Usernme" Type="nvarchar" MaxLength="150" />
+    <Property Name="NoOfWaterdispensers" Type="int" />
+    <Property Name="Appliance" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt3" Type="nvarchar" MaxLength="150" />
+    <Property Name="TotalWatts" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="nvarchar" MaxLength="150" />
+    <Property Name="Image" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="tbl_WaterHeater">
+    <Key>
+      <PropertyRef Name="RefrigilatorID" />
+    </Key>
+    <Property Name="RefrigilatorID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryID" Type="int" />
+    <Property Name="Usernme" Type="nvarchar" MaxLength="150" />
+    <Property Name="NoOfWaterHeaters" Type="int" />
+    <Property Name="Appliance" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt3" Type="nvarchar" MaxLength="150" />
+    <Property Name="TotalWatts" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="nvarchar" MaxLength="150" />
+    <Property Name="Image" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="tbl_WRefrigilator">
+    <Key>
+      <PropertyRef Name="WRefrigilatorID" />
+    </Key>
+    <Property Name="WRefrigilatorID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryID" Type="int" />
+    <Property Name="Usernme" Type="nvarchar" MaxLength="150" />
+    <Property Name="NoOfWRefrigilators" Type="int" />
+    <Property Name="Appliance" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Make3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Model3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tip3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Wallt3" Type="nvarchar" MaxLength="150" />
+    <Property Name="TotalWatts" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="nvarchar" MaxLength="150" />
+    <Property Name="Image" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <Association Name="FK__tbl_Barbe__Categ__038683F8">
+    <End Role="tbl_Category" Type="Self.tbl_Category" Multiplicity="0..1" />
+    <End Role="tbl_Barbecue" Type="Self.tbl_Barbecue" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_Barbecue">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbl_Batht__Categ__3B0BC30C">
+    <End Role="tbl_Category" Type="Self.tbl_Category" Multiplicity="0..1" />
+    <End Role="tbl_Bathtubr" Type="Self.tbl_Bathtubr" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_Bathtubr">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbl_Bidet__Categ__61316BF4">
+    <End Role="tbl_Category" Type="Self.tbl_Category" Multiplicity="0..1" />
+    <End Role="tbl_Bidet" Type="Self.tbl_Bidet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_Bidet">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbl_Compu__Categ__14E61A24">
+    <End Role="tbl_Category" Type="Self.tbl_Category" Multiplicity="0..1" />
+    <End Role="tbl_Computer" Type="Self.tbl_Computer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_Computer">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbl_Cookt__Categ__79FD19BE">
+    <End Role="tbl_Category" Type="Self.tbl_Category" Multiplicity="0..1" />
+    <End Role="tbl_Cooktop" Type="Self.tbl_Cooktop" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_Cooktop">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbl_Dishw__Categ__671F4F74">
+    <End Role="tbl_Category" Type="Self.tbl_Category" Multiplicity="0..1" />
+    <End Role="tbl_Dishwashere" Type="Self.tbl_Dishwashere" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_Dishwashere">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbl_Dryer__Categ__4F47C5E3">
+    <End Role="tbl_Category" Type="Self.tbl_Category" Multiplicity="0..1" />
+    <End Role="tbl_Dryer" Type="Self.tbl_Dryer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_Dryer">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbl_Elect__Categ__2022C2A6">
+    <End Role="tbl_Category" Type="Self.tbl_Category" Multiplicity="0..1" />
+    <End Role="tbl_Electriccarcharger" Type="Self.tbl_Electriccarcharger" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_Electriccarcharger">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbl_Fauce__Categ__6ABAD62E">
+    <End Role="tbl_Category" Type="Self.tbl_Category" Multiplicity="0..1" />
+    <End Role="tbl_Faucet" Type="Self.tbl_Faucet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_Faucet">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbl_Firep__Categ__370627FE">
+    <End Role="tbl_Category" Type="Self.tbl_Category" Multiplicity="0..1" />
+    <End Role="tbl_Fireplace" Type="Self.tbl_Fireplace" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_Fireplace">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbl_Freez__Categ__4A8310C6">
+    <End Role="tbl_Category" Type="Self.tbl_Category" Multiplicity="0..1" />
+    <End Role="tbl_Freezer" Type="Self.tbl_Freezer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_Freezer">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbl_Furna__Categ__324172E1">
+    <End Role="tbl_Category" Type="Self.tbl_Category" Multiplicity="0..1" />
+    <End Role="tbl_Furnance" Type="Self.tbl_Furnance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_Furnance">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbl_Gamin__Categ__27F8EE98">
+    <End Role="tbl_Category" Type="Self.tbl_Category" Multiplicity="0..1" />
+    <End Role="tbl_GamingConsole" Type="Self.tbl_GamingConsole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_GamingConsole">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbl_GasDr__Categ__7EC1CEDB">
+    <End Role="tbl_Category" Type="Self.tbl_Category" Multiplicity="0..1" />
+    <End Role="tbl_GasDryer" Type="Self.tbl_GasDryer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_GasDryer">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbl_GasOv__Categ__0D0FEE32">
+    <End Role="tbl_Category" Type="Self.tbl_Category" Multiplicity="0..1" />
+    <End Role="tbl_GasOven" Type="Self.tbl_GasOven" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_GasOven">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbl_Gener__Categ__084B3915">
+    <End Role="tbl_Category" Type="Self.tbl_Category" Multiplicity="0..1" />
+    <End Role="tbl_Generator" Type="Self.tbl_Generator" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_Generator">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbl_healt__Categ__28B808A7">
+    <End Role="tbl_Category" Type="Self.tbl_Category" Multiplicity="0..1" />
+    <End Role="tbl_healthiestlightbulbs" Type="Self.tbl_healthiestlightbulbs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_healthiestlightbulbs">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbl_Humid__Categ__4E1E9780">
+    <End Role="tbl_Category" Type="Self.tbl_Category" Multiplicity="0..1" />
+    <End Role="tbl_Humidifier" Type="Self.tbl_Humidifier" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_Humidifier">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbl_Jacuz__Categ__5C6CB6D7">
+    <End Role="tbl_Category" Type="Self.tbl_Category" Multiplicity="0..1" />
+    <End Role="tbl_Jacuzzi" Type="Self.tbl_Jacuzzi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_Jacuzzi">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbl_Lapto__Categ__19AACF41">
+    <End Role="tbl_Category" Type="Self.tbl_Category" Multiplicity="0..1" />
+    <End Role="tbl_Laptop" Type="Self.tbl_Laptop" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_Laptop">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbl_Lawns__Categ__7073AF84">
+    <End Role="tbl_Category" Type="Self.tbl_Category" Multiplicity="0..1" />
+    <End Role="tbl_Lawnsprinklersystem" Type="Self.tbl_Lawnsprinklersystem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_Lawnsprinklersystem">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbl_Micro__Categ__540C7B00">
+    <End Role="tbl_Category" Type="Self.tbl_Category" Multiplicity="0..1" />
+    <End Role="tbl_Microwave" Type="Self.tbl_Microwave" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_Microwave">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbl_Modem__Categ__318258D2">
+    <End Role="tbl_Category" Type="Self.tbl_Category" Multiplicity="0..1" />
+    <End Role="tbl_Modem" Type="Self.tbl_Modem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_Modem">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbl_Outdo__Categ__52E34C9D">
+    <End Role="tbl_Category" Type="Self.tbl_Category" Multiplicity="0..1" />
+    <End Role="tbl_Outdoorsprinklersystem" Type="Self.tbl_Outdoorsprinklersystem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_Outdoorsprinklersystem">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbl_Oven__Catego__58D1301D">
+    <End Role="tbl_Category" Type="Self.tbl_Category" Multiplicity="0..1" />
+    <End Role="tbl_Oven" Type="Self.tbl_Oven" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_Oven">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbl_Pool__Catego__57A801BA">
+    <End Role="tbl_Category" Type="Self.tbl_Category" Multiplicity="0..1" />
+    <End Role="tbl_Pool" Type="Self.tbl_Pool" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_Pool">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbl_Progr__Categ__11D4A34F">
+    <End Role="tbl_Category" Type="Self.tbl_Category" Multiplicity="0..1" />
+    <End Role="tbl_Programmablethermostat" Type="Self.tbl_Programmablethermostat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_Programmablethermostat">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbl_Refri__Categ__02FC7413">
+    <End Role="tbl_Category" Type="Self.tbl_Category" Multiplicity="0..1" />
+    <End Role="tbl_Refrigilator" Type="Self.tbl_Refrigilator" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_Refrigilator">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbl_Route__Categ__2CBDA3B5">
+    <End Role="tbl_Category" Type="Self.tbl_Category" Multiplicity="0..1" />
+    <End Role="tbl_Router" Type="Self.tbl_Router" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_Router">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbl_Showe__Categ__36470DEF">
+    <End Role="tbl_Category" Type="Self.tbl_Category" Multiplicity="0..1" />
+    <End Role="tbl_Shower" Type="Self.tbl_Shower" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_Shower">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbl_Showe__Categ__65F62111">
+    <End Role="tbl_Category" Type="Self.tbl_Category" Multiplicity="0..1" />
+    <End Role="tbl_Showerhead" Type="Self.tbl_Showerhead" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_Showerhead">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbl_Sink__Catego__3FD07829">
+    <End Role="tbl_Category" Type="Self.tbl_Category" Multiplicity="0..1" />
+    <End Role="tbl_Sink" Type="Self.tbl_Sink" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_Sink">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbl_Smart__Categ__1B5E0D89">
+    <End Role="tbl_Category" Type="Self.tbl_Category" Multiplicity="0..1" />
+    <End Role="tbl_Smartpowerstrip" Type="Self.tbl_Smartpowerstrip" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_Smartpowerstrip">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbl_Smart__Categ__1E6F845E">
+    <End Role="tbl_Category" Type="Self.tbl_Category" Multiplicity="0..1" />
+    <End Role="tbl_Smartphone" Type="Self.tbl_Smartphone" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_Smartphone">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbl_Smart__Categ__2334397B">
+    <End Role="tbl_Category" Type="Self.tbl_Category" Multiplicity="0..1" />
+    <End Role="tbl_SmartSpeaker" Type="Self.tbl_SmartSpeaker" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_SmartSpeaker">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbl_Solar__Categ__1699586C">
+    <End Role="tbl_Category" Type="Self.tbl_Category" Multiplicity="0..1" />
+    <End Role="tbl_Solarpanels" Type="Self.tbl_Solarpanels" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_Solarpanels">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbl_Stove__Categ__5D95E53A">
+    <End Role="tbl_Category" Type="Self.tbl_Category" Multiplicity="0..1" />
+    <End Role="tbl_Stove" Type="Self.tbl_Stove" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_Stove">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbl_Telev__Categ__10216507">
+    <End Role="tbl_Category" Type="Self.tbl_Category" Multiplicity="0..1" />
+    <End Role="tbl_Television" Type="Self.tbl_Television" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_Television">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbl_Toile__Categ__44952D46">
+    <End Role="tbl_Category" Type="Self.tbl_Category" Multiplicity="0..1" />
+    <End Role="tbl_Toilet" Type="Self.tbl_Toilet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_Toilet">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbl_Washi__Categ__625A9A57">
+    <End Role="tbl_Category" Type="Self.tbl_Category" Multiplicity="0..1" />
+    <End Role="tbl_WashingMachine" Type="Self.tbl_WashingMachine" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_WashingMachine">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbl_Water__Categ__0B5CAFEA">
+    <End Role="tbl_Category" Type="Self.tbl_Category" Multiplicity="0..1" />
+    <End Role="tbl_WaterHeater" Type="Self.tbl_WaterHeater" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_WaterHeater">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbl_Water__Categ__2D7CBDC4">
+    <End Role="tbl_Category" Type="Self.tbl_Category" Multiplicity="0..1" />
+    <End Role="tbl_WaterAC" Type="Self.tbl_WaterAC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_WaterAC">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbl_Water__Categ__4959E263">
+    <End Role="tbl_Category" Type="Self.tbl_Category" Multiplicity="0..1" />
+    <End Role="tbl_Waterdispenser" Type="Self.tbl_Waterdispenser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_Waterdispenser">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbl_WRefr__Categ__753864A1">
+    <End Role="tbl_Category" Type="Self.tbl_Category" Multiplicity="0..1" />
+    <End Role="tbl_WRefrigilator" Type="Self.tbl_WRefrigilator" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_WRefrigilator">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+  <Function Name="GetLowestTotalWattsRecords" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="GetSecondLowestTotalWattsRecords" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="GetThirdHighestTotalWattsRecords" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="GetWattsRecordsForAlternateElectricityAppliancePage" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="GetWattsRecordsForAlternateElectricityAppliancePages" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="GetWattsRecordsForGasAppliance" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="GetWattsRecordsForHeatingAndCoolingAppliancesPage" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="GetWattsRecordsForHomeEntertainmentAppliance" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="GetWattsRecordsForKitchenResults" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="GetWattsRecordsForWaterAppliance" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="InsertRefrigilator" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+    <Parameter Name="NoOfRefrigilators" Type="int" Mode="In" />
+  </Function>
+  <Function Name="InsertUsernameAndReturn" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SelectBarbecueByUsernme" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SelectBathtubByUsernme" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SelectBidetByUsernme" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SelectComputerByUsernme" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SelectCooktopByUsernme" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SelectDishwasherByUsernme" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SelectDryerByUsernme" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SelectElectriccarchargerByUsernme" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SelectFaucetByUsernme" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SelectFireplaceByUsernme" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SelectFreezersByUsernme" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SelectFurnanceByUsernme" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SelectGamingConsoleByUsernme" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SelectGasDryerByUsernme" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SelectGasOvenByUsernme" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SelectGeneratorByUsernme" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SelecthealthiestlightbulbsByUsernme" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SelectHumidifierByUsernme" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SelectJacuzziByUsernme" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SelectLaptopByUsernme" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SelectLawnsprinklersystemByUsernme" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SelectMicrowavesByUsernme" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SelectModemByUsernme" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SelectOutdoorsprinklersystemByUsernme" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SelectOvensByUsernme" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SelectPoolByUsernme" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SelectProgrammablethermostatByUsernme" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SelectRefrigilatorsByUsernme" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SelectRouterByUsernme" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SelectShowerByUsernme" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SelectShowerheadByUsernme" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SelectSinkByUsernme" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SelectSmartphoneByUsernme" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SelectSmartpowerstripByUsernme" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SelectSmartSpeakerByUsernme" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SelectSolarpanelsByUsernme" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SelectStovesByUsernme" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SelectTelevisionByUsernme" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SelectToiletByUsernme" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SelectWashingMachineByUsernme" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SelectWaterACByUsernme" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SelectWaterdispenserByUsernme" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SelectWaterHeaterByUsernme" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SelectWRefrigilatorByUsernme" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="UpdateRefrigilatorTips" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+    <Parameter Name="NewTip1" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="NewTip2" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="NewTip3" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="UpdateTotalWattsForBarbecue" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="UpdateTotalWattsForBathtub" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="UpdateTotalWattsForBidet" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="UpdateTotalWattsForComputer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="UpdateTotalWattsForCooktop" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="UpdateTotalWattsForElectriccarcharger" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="UpdateTotalWattsForFaucet" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="UpdateTotalWattsForFireplace" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="UpdateTotalWattsForFurnance" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="UpdateTotalWattsForGamingConsole" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="UpdateTotalWattsForGasDryer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="UpdateTotalWattsForGasOven" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="UpdateTotalWattsForGenerator" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="UpdateTotalWattsForHumidifier" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="UpdateTotalWattsForJacuzzi" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="UpdateTotalWattsForLaptop" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="UpdateTotalWattsForLawnsprinklersystem" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="UpdateTotalWattsForModem" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="UpdateTotalWattsForOutdoorsprinklersystem" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="UpdateTotalWattsForPool" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="UpdateTotalWattsForProgrammablethermostat" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="UpdateTotalWattsForRouter" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="UpdateTotalWattsForShower" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="UpdateTotalWattsForShowerhead" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="UpdateTotalWattsForSink" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="UpdateTotalWattsForSmartphone" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="UpdateTotalWattsForSmartpowerstrip" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="UpdateTotalWattsForSmartSpeaker" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="UpdateTotalWattsForSolarpanels" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="UpdateTotalWattsForToilet" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="UpdateTotalWattsForTV" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="UpdateTotalWattsForUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="UpdateTotalWattsForUser2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="UpdateTotalWattsForUser3" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="UpdateTotalWattsForUser4" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="UpdateTotalWattsForUser5" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="UpdateTotalWattsForUser6" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="UpdateTotalWattsForUser7" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="UpdateTotalWattsForUser8" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="UpdateTotalWattsForUser9" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="UpdateTotalWattsForWaterAC" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="UpdateTotalWattsForWaterdispenser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="UpdateTotalWattsForWRefrigilator" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="db_Co2HomeSaversModelStoreContainer">
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_AffilaiteLink" EntityType="Self.tbl_AffilaiteLink" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Barbecue" EntityType="Self.tbl_Barbecue" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Bathtubr" EntityType="Self.tbl_Bathtubr" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Bidet" EntityType="Self.tbl_Bidet" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Category" EntityType="Self.tbl_Category" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Computer" EntityType="Self.tbl_Computer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Cooktop" EntityType="Self.tbl_Cooktop" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Dishwashere" EntityType="Self.tbl_Dishwashere" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Dryer" EntityType="Self.tbl_Dryer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Electriccarcharger" EntityType="Self.tbl_Electriccarcharger" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Faucet" EntityType="Self.tbl_Faucet" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Fireplace" EntityType="Self.tbl_Fireplace" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Freezer" EntityType="Self.tbl_Freezer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Furnance" EntityType="Self.tbl_Furnance" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_GamingConsole" EntityType="Self.tbl_GamingConsole" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_GasDryer" EntityType="Self.tbl_GasDryer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_GasOven" EntityType="Self.tbl_GasOven" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Generator" EntityType="Self.tbl_Generator" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_healthiestlightbulbs" EntityType="Self.tbl_healthiestlightbulbs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Humidifier" EntityType="Self.tbl_Humidifier" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Jacuzzi" EntityType="Self.tbl_Jacuzzi" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Laptop" EntityType="Self.tbl_Laptop" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Lawnsprinklersystem" EntityType="Self.tbl_Lawnsprinklersystem" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Microwave" EntityType="Self.tbl_Microwave" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Modem" EntityType="Self.tbl_Modem" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Outdoorsprinklersystem" EntityType="Self.tbl_Outdoorsprinklersystem" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Oven" EntityType="Self.tbl_Oven" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Pool" EntityType="Self.tbl_Pool" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Programmablethermostat" EntityType="Self.tbl_Programmablethermostat" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Refrigilator" EntityType="Self.tbl_Refrigilator" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_ResutImages" EntityType="Self.tbl_ResutImages" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Router" EntityType="Self.tbl_Router" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Shower" EntityType="Self.tbl_Shower" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Showerhead" EntityType="Self.tbl_Showerhead" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Sink" EntityType="Self.tbl_Sink" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Smartphone" EntityType="Self.tbl_Smartphone" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Smartpowerstrip" EntityType="Self.tbl_Smartpowerstrip" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_SmartSpeaker" EntityType="Self.tbl_SmartSpeaker" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Solarpanels" EntityType="Self.tbl_Solarpanels" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Stove" EntityType="Self.tbl_Stove" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Television" EntityType="Self.tbl_Television" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Toilet" EntityType="Self.tbl_Toilet" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_User" EntityType="Self.tbl_User" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_WashingMachine" EntityType="Self.tbl_WashingMachine" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_WaterAC" EntityType="Self.tbl_WaterAC" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Waterdispenser" EntityType="Self.tbl_Waterdispenser" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_WaterHeater" EntityType="Self.tbl_WaterHeater" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_WRefrigilator" EntityType="Self.tbl_WRefrigilator" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__tbl_Barbe__Categ__038683F8" Association="Self.FK__tbl_Barbe__Categ__038683F8">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_Barbecue" EntitySet="tbl_Barbecue" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbl_Batht__Categ__3B0BC30C" Association="Self.FK__tbl_Batht__Categ__3B0BC30C">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_Bathtubr" EntitySet="tbl_Bathtubr" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbl_Bidet__Categ__61316BF4" Association="Self.FK__tbl_Bidet__Categ__61316BF4">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_Bidet" EntitySet="tbl_Bidet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbl_Compu__Categ__14E61A24" Association="Self.FK__tbl_Compu__Categ__14E61A24">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_Computer" EntitySet="tbl_Computer" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbl_Cookt__Categ__79FD19BE" Association="Self.FK__tbl_Cookt__Categ__79FD19BE">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_Cooktop" EntitySet="tbl_Cooktop" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbl_Dishw__Categ__671F4F74" Association="Self.FK__tbl_Dishw__Categ__671F4F74">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_Dishwashere" EntitySet="tbl_Dishwashere" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbl_Dryer__Categ__4F47C5E3" Association="Self.FK__tbl_Dryer__Categ__4F47C5E3">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_Dryer" EntitySet="tbl_Dryer" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbl_Elect__Categ__2022C2A6" Association="Self.FK__tbl_Elect__Categ__2022C2A6">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_Electriccarcharger" EntitySet="tbl_Electriccarcharger" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbl_Fauce__Categ__6ABAD62E" Association="Self.FK__tbl_Fauce__Categ__6ABAD62E">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_Faucet" EntitySet="tbl_Faucet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbl_Firep__Categ__370627FE" Association="Self.FK__tbl_Firep__Categ__370627FE">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_Fireplace" EntitySet="tbl_Fireplace" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbl_Freez__Categ__4A8310C6" Association="Self.FK__tbl_Freez__Categ__4A8310C6">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_Freezer" EntitySet="tbl_Freezer" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbl_Furna__Categ__324172E1" Association="Self.FK__tbl_Furna__Categ__324172E1">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_Furnance" EntitySet="tbl_Furnance" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbl_Gamin__Categ__27F8EE98" Association="Self.FK__tbl_Gamin__Categ__27F8EE98">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_GamingConsole" EntitySet="tbl_GamingConsole" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbl_GasDr__Categ__7EC1CEDB" Association="Self.FK__tbl_GasDr__Categ__7EC1CEDB">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_GasDryer" EntitySet="tbl_GasDryer" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbl_GasOv__Categ__0D0FEE32" Association="Self.FK__tbl_GasOv__Categ__0D0FEE32">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_GasOven" EntitySet="tbl_GasOven" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbl_Gener__Categ__084B3915" Association="Self.FK__tbl_Gener__Categ__084B3915">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_Generator" EntitySet="tbl_Generator" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbl_healt__Categ__28B808A7" Association="Self.FK__tbl_healt__Categ__28B808A7">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_healthiestlightbulbs" EntitySet="tbl_healthiestlightbulbs" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbl_Humid__Categ__4E1E9780" Association="Self.FK__tbl_Humid__Categ__4E1E9780">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_Humidifier" EntitySet="tbl_Humidifier" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbl_Jacuz__Categ__5C6CB6D7" Association="Self.FK__tbl_Jacuz__Categ__5C6CB6D7">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_Jacuzzi" EntitySet="tbl_Jacuzzi" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbl_Lapto__Categ__19AACF41" Association="Self.FK__tbl_Lapto__Categ__19AACF41">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_Laptop" EntitySet="tbl_Laptop" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbl_Lawns__Categ__7073AF84" Association="Self.FK__tbl_Lawns__Categ__7073AF84">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_Lawnsprinklersystem" EntitySet="tbl_Lawnsprinklersystem" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbl_Micro__Categ__540C7B00" Association="Self.FK__tbl_Micro__Categ__540C7B00">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_Microwave" EntitySet="tbl_Microwave" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbl_Modem__Categ__318258D2" Association="Self.FK__tbl_Modem__Categ__318258D2">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_Modem" EntitySet="tbl_Modem" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbl_Outdo__Categ__52E34C9D" Association="Self.FK__tbl_Outdo__Categ__52E34C9D">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_Outdoorsprinklersystem" EntitySet="tbl_Outdoorsprinklersystem" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbl_Oven__Catego__58D1301D" Association="Self.FK__tbl_Oven__Catego__58D1301D">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_Oven" EntitySet="tbl_Oven" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbl_Pool__Catego__57A801BA" Association="Self.FK__tbl_Pool__Catego__57A801BA">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_Pool" EntitySet="tbl_Pool" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbl_Progr__Categ__11D4A34F" Association="Self.FK__tbl_Progr__Categ__11D4A34F">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_Programmablethermostat" EntitySet="tbl_Programmablethermostat" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbl_Refri__Categ__02FC7413" Association="Self.FK__tbl_Refri__Categ__02FC7413">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_Refrigilator" EntitySet="tbl_Refrigilator" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbl_Route__Categ__2CBDA3B5" Association="Self.FK__tbl_Route__Categ__2CBDA3B5">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_Router" EntitySet="tbl_Router" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbl_Showe__Categ__36470DEF" Association="Self.FK__tbl_Showe__Categ__36470DEF">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_Shower" EntitySet="tbl_Shower" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbl_Showe__Categ__65F62111" Association="Self.FK__tbl_Showe__Categ__65F62111">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_Showerhead" EntitySet="tbl_Showerhead" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbl_Sink__Catego__3FD07829" Association="Self.FK__tbl_Sink__Catego__3FD07829">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_Sink" EntitySet="tbl_Sink" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbl_Smart__Categ__1B5E0D89" Association="Self.FK__tbl_Smart__Categ__1B5E0D89">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_Smartpowerstrip" EntitySet="tbl_Smartpowerstrip" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbl_Smart__Categ__1E6F845E" Association="Self.FK__tbl_Smart__Categ__1E6F845E">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_Smartphone" EntitySet="tbl_Smartphone" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbl_Smart__Categ__2334397B" Association="Self.FK__tbl_Smart__Categ__2334397B">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_SmartSpeaker" EntitySet="tbl_SmartSpeaker" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbl_Solar__Categ__1699586C" Association="Self.FK__tbl_Solar__Categ__1699586C">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_Solarpanels" EntitySet="tbl_Solarpanels" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbl_Stove__Categ__5D95E53A" Association="Self.FK__tbl_Stove__Categ__5D95E53A">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_Stove" EntitySet="tbl_Stove" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbl_Telev__Categ__10216507" Association="Self.FK__tbl_Telev__Categ__10216507">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_Television" EntitySet="tbl_Television" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbl_Toile__Categ__44952D46" Association="Self.FK__tbl_Toile__Categ__44952D46">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_Toilet" EntitySet="tbl_Toilet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbl_Washi__Categ__625A9A57" Association="Self.FK__tbl_Washi__Categ__625A9A57">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_WashingMachine" EntitySet="tbl_WashingMachine" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbl_Water__Categ__0B5CAFEA" Association="Self.FK__tbl_Water__Categ__0B5CAFEA">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_WaterHeater" EntitySet="tbl_WaterHeater" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbl_Water__Categ__2D7CBDC4" Association="Self.FK__tbl_Water__Categ__2D7CBDC4">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_WaterAC" EntitySet="tbl_WaterAC" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbl_Water__Categ__4959E263" Association="Self.FK__tbl_Water__Categ__4959E263">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_Waterdispenser" EntitySet="tbl_Waterdispenser" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbl_WRefr__Categ__753864A1" Association="Self.FK__tbl_WRefr__Categ__753864A1">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_WRefrigilator" EntitySet="tbl_WRefrigilator" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

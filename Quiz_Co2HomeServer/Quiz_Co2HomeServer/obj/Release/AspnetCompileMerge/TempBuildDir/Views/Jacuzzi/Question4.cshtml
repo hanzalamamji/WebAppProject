@@ -1,0 +1,296 @@
+﻿
+@{
+    ViewBag.Title = "Question4";
+}
+
+<link href="~/Content/css/Style.css" rel="stylesheet" />
+<style>
+    .dropdown_menu {
+        font-size: 16px; /* Adjust the font size as needed */
+        padding-right: 15px; /* Add some right padding to create space for the larger icon */
+        background-image: url('../../Content/Images/Categories/chevron-down.png'); /* Replace with the path to your icon image */
+        background-size: 20px; /* Adjust the size of the icon */
+        background-position: calc(100% - 25px) center; /* Position the icon slightly left of the right edge and center vertically */
+        background-repeat: no-repeat; /* Prevent the icon from repeating */
+        appearance: none; /* Remove default appearance styles */
+        -webkit-appearance: none; /* Remove default appearance styles for Safari */
+    }
+
+    .Custom_List {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1px;
+    }
+
+        .Custom_List li {
+            background: rgba(86, 167, 222, 0.20);
+            padding: 10px;
+            border-radius: 20px;
+            opacity: 0.8;
+            width: fit-content;
+            margin: 5px;
+            display: flex;
+            align-items: center;
+        }
+
+    .icon-container_f {
+        margin-left: auto;
+    }
+
+    .true-icon {
+        font-size: 16px;
+        color: #01853D;
+    }
+</style>
+@*Banner Start*@
+<div class="Category_image-container">
+    <div class="Category_image-overlay">
+        <div class="Banner-content">
+            <h2 class="Category_banner-title ">Enhance Your Energy</h2>
+            <h2 class="Category_banner-title ">Efficiency !</h2>
+            <div class="Category_banner_about_div">
+                <p class="Category_banner_about">Take the quiz and get valuable energy saving tips based on your result</p>
+            </div>
+
+        </div>
+    </div>
+</div>
+@*Banner End*@
+<div class="Bar_main_div2 container-fluid mt-5" style="color: black; display: flex; align-items: center;">
+    <p style="margin: 15px 0 15px 15px;">
+        Question 4 of 4:
+    </p>
+    <div class="progress_bar_container" style="background: #E3E8EC;">
+        <div class="progress-bar bg-success" style="width:100%">
+        </div>
+    </div>
+</div>
+<script>
+    // Check the screen width when the page loads and when it resizes
+    function checkScreenSize() {
+        var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+        // Define the breakpoint for mobile screens (e.g., width <= 768 pixels)
+        var mobileBreakpoint = 768;
+
+        // Get the Bar_main_div2 element
+        var barMainDiv2 = document.querySelector('.Bar_main_div2');
+
+        // Hide or show the element based on screen width
+        if (screenWidth <= mobileBreakpoint) {
+            // Hide the element on mobile screens
+            barMainDiv2.style.display = 'none';
+        } else {
+            // Show the element on larger screens
+            barMainDiv2.style.display = 'flex';
+        }
+    }
+
+    // Call the function when the page loads
+    window.onload = checkScreenSize;
+
+    // Call the function when the window resizes
+    window.addEventListener('resize', checkScreenSize);
+</script>
+@*Question No.4 Div Start*@
+<div id="Fourth_Question_Div">
+
+    <div class="container-fluid">
+        <h1 class="Heading_Kitchen_Applaince">
+            Water Appliances
+        </h1>
+
+        <div class="Selected_List">
+            <ul class="Custom_List">
+                <li style="  background: #E1FBED; color: #01853D; ">
+                    <span class="item-name">Shower</span>
+                    <div class="icon-container_f">
+                        <span class="true-icon"><i class="fas fa-check" style="font-size:16px;"></i></span>
+                    </div>
+                </li>
+                <li style="  background: #E1FBED; color: #01853D; ">
+                    <span class="item-name">Bathtub</span>
+                    <div class="icon-container_f">
+                        <span class="true-icon"><i class="fas fa-check" style="font-size:16px;"></i></span>
+                    </div>
+                </li>
+                <li style="  background: #E1FBED; color: #01853D; ">
+                    <span class="item-name">Sink</span>
+                    <div class="icon-container_f">
+                        <span class="true-icon"><i class="fas fa-check" style="font-size:16px;"></i></span>
+                    </div>
+                </li>
+                <li style="  background: #E1FBED; color: #01853D; ">
+                    <span class="item-name">Toilet</span>
+                    <div class="icon-container_f">
+                        <span class="true-icon"><i class="fas fa-check" style="font-size:16px;"></i></span>
+                    </div>
+                </li>
+                <li style="  background: #E1FBED; color: #01853D; ">
+                    <span class="item-name">Humidifier</span>
+                    <div class="icon-container_f">
+                        <span class="true-icon"><i class="fas fa-check" style="font-size:16px;"></i></span>
+                    </div>
+                </li>
+                <li style="  background: #E1FBED; color: #01853D; ">
+                    <span class="item-name">Outdoor sprinkler system</span>
+                    <div class="icon-container_f">
+                        <span class="true-icon"><i class="fas fa-check" style="font-size:16px;"></i></span>
+                    </div>
+                </li>
+                <li style="  background: #E1FBED; color: #01853D; ">
+                    <span class="item-name">Pool</span>
+                    <div class="icon-container_f">
+                        <span class="true-icon"><i class="fas fa-check" style="font-size:16px;"></i></span>
+                    </div>
+                </li>
+                <li>
+                    <span class="item-name">Jacuzzi</span>
+                    <div class="icon-container">
+
+                    </div>
+                </li>
+                <li style="border-radius: 20px; opacity: 0.4; background: rgba(86, 167, 222, 0.20);">
+                    <span class="item-name">Bidet</span>
+                    <div class="icon-container">
+
+                    </div>
+                </li>
+                <li style="border-radius: 20px; opacity: 0.4; background: rgba(86, 167, 222, 0.20);">
+                    <span class="item-name">Showerhead</span>
+                    <div class="icon-container">
+
+                    </div>
+                </li>
+                <li style="border-radius: 20px; opacity: 0.4; background: rgba(86, 167, 222, 0.20);">
+                    <span class="item-name">Faucet</span>
+                    <div class="icon-container">
+
+                    </div>
+                </li>
+
+                <li style="border-radius: 20px; opacity: 0.4; background: rgba(86, 167, 222, 0.20);">
+                    <span class="item-name">Lawn sprinkler system</span>
+                    <div class="icon-container">
+                    </div>
+                </li>
+                <li style="border-radius: 20px; opacity: 0.4; background: rgba(86, 167, 222, 0.20);">
+                    <span class="item-name" style="display:flex;">Refrigerator</span>
+                    <div class="icon-container">
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    @*Ref Question Start*@
+    @using (Html.BeginForm("q4update", "Jacuzzi", FormMethod.Post))
+    {
+        <div class="container-fluid" style="background: #F2FAFF; padding-bottom:30px; " id="autoscrolltodiv">
+            <div class="refStartDiv">
+                <a href="@Url.Action("Question3", "Jacuzzi")" style="text-decoration:none;color:#444444;"><i class="fas fa-arrow-left"></i></a>
+                <h1>
+                    Jacuzzi
+                </h1>
+                <img src="~/Content/Images/Categories Icons/jacuzzi.png" alt="" class="img-fluid">
+                <p class="Que_Paragraph">
+                    <span class="Que_Span">
+                        Question no 4 :
+                    </span>
+                    Refrigerator watts are?
+                </p>
+
+                @for (int i = 1; i <= ViewBag.NoOfRefrigilators; i++)
+                {
+                    <div class="Que_2_div">
+                        <h6 class="R1_Title">
+                            J @i watts
+                        </h6>
+                        <input type="text" class="input_field" placeholder="492" readonly name="makes">
+                    </div>
+                    <br />
+                }
+
+            </div>
+            <div class="row mt-3">
+                <div class="col-lg-12 col-md-12 col-sm-12 mt-5 text-center-mobile" style="gap:6px;">
+                    <a id="Leave_btn_1" class="btn btn-primary rounded-pill" href="javascript:void(0);" onclick="openModal()">Leave quiz</a>
+
+                    <button type="submit" id="Next_btn_1" href="@Url.Action("Tips", "Jacuzzi")" class="btn btn-secondary rounded-pill">Next</button>
+                </div>
+            </div>
+
+            <script>
+                // Function to generate a random number within a range
+                function getRandomNumber(min, max) {
+                    return Math.floor(Math.random() * (max - min + 1)) + min;
+                }
+
+                // Get all input fields with class "input_field"
+                var inputFields = document.querySelectorAll('.input_field');
+
+                // Loop through each input field and set a random value
+                inputFields.forEach(function (inputField) {
+                    var randomValue = getRandomNumber(1000, 2000);
+                    inputField.value = randomValue;
+                });
+            </script>
+
+        </div>
+    }
+
+
+    @*Microwave Question End*@
+
+    @*Microwave Bar Start*@
+    <div class="Bar_main_div container-fluid mt-5 d-md-none fixed-bottom">
+        <p>
+            Question 4 of 4 :
+        </p>
+        <div class="progress_bar_container">
+            <div class="progress-bar bg-success" style="width:100%">
+
+            </div>
+        </div>
+    </div>
+</div>
+@*Microwave Bar End*@
+
+@*Question No.4 Div End*@
+
+
+<script>
+    function openModal() {
+        $('#staticBackdrop').modal('show');
+    }
+</script>
+
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered blur" role="document">
+        <div class="modal-content">
+            <div class="CloseModalBtn" data-bs-dismiss="modal" aria-label="Close">
+                <button class="d-none" data-bs-dismiss="modal" aria-label="Close"></button>
+                <i class="fa-solid fa-xmark"></i>
+
+            </div>
+
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Leave Quiz Confirmation</h5>
+            </div>
+            <div class="modal-body">
+                <p><b>Are you sure you want to leave the quiz?</b></p>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <a class="btn btn-primary" href="@Url.Action("Index", "WaterApplianceResult")" style="background: #337eb2; border: none; ">Leave Quiz</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+

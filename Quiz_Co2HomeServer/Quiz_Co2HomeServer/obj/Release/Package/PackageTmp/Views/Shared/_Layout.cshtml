@@ -1,0 +1,212 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz_Co2HomeServer</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link href="~/Content/fonts/css/all.css" rel="stylesheet" />
+    <link href="https://fonts.cdnfonts.com/css/open-sans" rel="stylesheet">
+
+    <link href="~/Content/css/Layout_Style.css" rel="stylesheet" />
+    <link href="~/Content/css/Style.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/all.min.css" rel="stylesheet" />
+    @*<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">*@
+    @*<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
+        integrity="sha512-rqQltXRuHxtPWhktpAZxLHUVJ3Eombn3hvk9PHjV/N5DMUYnzKPC1i3ub0mEXgFzsaZNeJcoE0YHq0j/GFsdGg==" crossorigin="anonymous" referrerpolicy="no-referrer" />*@
+
+    <link href="~/Content/css/Style.css" rel="stylesheet" />
+
+    <script>
+        //// Wait for the document to fully load
+        //window.addEventListener("load", function () {
+        //    // Get the element you want to scroll to
+        //    var elementToScrollTo = document.getElementById("about");
+
+        //    // Check if the element exists
+        //    if (elementToScrollTo) {
+        //        // Use the `scrollIntoView` method with smooth scrolling
+        //        elementToScrollTo.scrollIntoView({ behavior: 'smooth' });
+        //    }
+        //});
+
+
+        // Wait for the document to fully load
+        window.addEventListener("load", function () {
+            // Get the element you want to scroll to
+            var elementToScrollTo = document.getElementById("autoscrolltodiv");
+
+            // Check if the element exists
+            if (elementToScrollTo) {
+                // Use the `scrollIntoView` method to scroll to the element
+                elementToScrollTo.scrollIntoView();
+            }
+        });
+    </script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light" style="margin-left: 40px;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="@Url.Action("Index", "Home")" style="margin-right: auto;">
+                <img src="~/Content/Images/logo/Logo.png" alt="Co2 Home Server">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="#navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-right: 65px;">
+                <ul class="navbar-nav ms-4 ms-lg-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link itemtext" href="@Url.Action("Index", "Home")">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link itemtext" href="#about">About us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link itemtext" href="mailto:support@c02homesavers.com?subject=Support" target="_blank">Contact us</a>
+                    </li>
+                    <li class="nav-item" id="quizbtn">
+                        @*<a class="nav-link text-white" href="#">Start Quiz</a>*@
+                        <a id="" class="nav-link text-white" href="@Url.Action("SelectCategory", "Category")">Start Quiz</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    @*<h6 id="ipaddresstag" style="">Display IP Address here</h6>*@
+
+    <script>
+        //// Function to update the IP address in the <h1> element
+        //function updateIpAddress() {
+        //    // Make a GET request to an IP address detection service
+        //    fetch('https://api.ipify.org?format=json')
+        //        .then(response => response.json())
+        //        .then(data => {
+        //            // Extract and display the IP address
+        //            const ipAddress = data.ip;
+        //            const ipAddressElement = document.querySelector('h6');
+        //            ipAddressElement.textContent = `Your IP Address: ${ipAddress}`;
+        //        })
+        //        .catch(error => {
+        //            console.error('Error fetching IP address:', error);
+        //        });
+        //}
+
+        //// Call the updateIpAddress function when the page loads
+        //window.addEventListener('load', updateIpAddress);
+
+
+        var currentValue = 1;
+
+        function updateValueDisplay() {
+            var valueSpan = document.getElementById("valueSpan");
+            valueSpan.innerHTML = currentValue;
+            // Update the hidden input field with the current value
+            document.getElementById("refrigeratorCount").value = currentValue;
+        }
+
+        function incrementValue() {
+            currentValue += 1;
+            updateValueDisplay();
+        }
+
+        function decrementValue() {
+            if (currentValue > 1) {
+                currentValue -= 1;
+                updateValueDisplay();
+            }
+        }
+
+        window.onload = function () {
+            updateValueDisplay();
+        };
+
+    </script>
+    <div class="">
+
+        @RenderBody()
+
+        <footer class="text-center text-white mt-5 pt-5">
+
+            <div class="Social-heading container-fluid ">
+                <img src="~/Content/Images/logo/Logo.png" alt="Co2 Home Server">
+
+            </div>
+            <div class="container-fluid pt-3">
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href="mailto:support@c02homesavers.com?subject=Support" target="_blank" class="liName">Contact Us</a></li>
+                    <li class="list-inline-item"><a href="#" class="liName">Terms & Condition</a></li>
+                    <li class="list-inline-item"><a href="#" class="liName">Privacy policy</a></li>
+                    <li class="list-inline-item"><a href="#" class="liName">Join us</a></li>
+                </ul>
+            </div>
+
+            <div class="Social-heading container-fluid">
+                <h2>Social</h2>
+            </div>
+            <div class="container">
+
+                <section class="social-links mb-4">
+
+                    <a class="btn btn-link btn-floating btn-lg text-dark m-1"
+                       href="#!"
+                       role="button"
+                       data-mdb-ripple-color="dark"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-link btn-floating btn-lg text-dark m-1"
+                       href="#!"
+                       role="button"
+                       data-mdb-ripple-color="dark"><i class="fab fa-instagram"></i></a>
+
+                    <a class="btn btn-link btn-floating btn-lg text-dark m-1"
+                       href="#!"
+                       role="button"
+                       data-mdb-ripple-color="dark"><i class="fab fa-twitter"></i></a>
+
+
+                    <a class="btn btn-link btn-floating btn-lg text-dark m-1"
+                       href="#!"
+                       role="button"
+                       data-mdb-ripple-color="dark"><img src="~/Content/Images/Products/youtube-logo.png"></a>
+
+
+                    <a class="btn btn-link btn-floating btn-lg text-dark m-1"
+                       href="#!"
+                       role="button"
+                       data-mdb-ripple-color="dark"><i class="fab fa-linkedin" style="padding-top: 9px;"></i></a>
+
+
+                </section>
+
+            </div>
+
+            <div class="FooterRights text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                � 2023 Co2 homesaver| All Rights Reserved
+
+            </div>
+
+        </footer>
+    </div>
+    <script src="~/Scripts/jquery-3.7.0.min.js"></script>
+    <script src="~/Scripts/popper.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/bootstrap.bundle.min.js"></script>
+
+
+    @*<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+                integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+                crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+                integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+                crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+            integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+            crossorigin="anonymous"></script>*@
+
+
+</body>
+</html>
+

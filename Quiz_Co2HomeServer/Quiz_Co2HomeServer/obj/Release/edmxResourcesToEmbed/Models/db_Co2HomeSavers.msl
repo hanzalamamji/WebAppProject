@@ -1,0 +1,1432 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="db_Co2HomeSaversModelStoreContainer" CdmEntityContainer="db_Co2HomeSaversEntities1">
+    <FunctionImportMapping FunctionImportName="InsertUsernameAndReturn" FunctionName="db_Co2HomeSaversModel.Store.InsertUsernameAndReturn" />
+    <FunctionImportMapping FunctionImportName="InsertRefrigilator" FunctionName="db_Co2HomeSaversModel.Store.InsertRefrigilator" />
+    <FunctionImportMapping FunctionImportName="SelectRefrigilatorsByUsernme" FunctionName="db_Co2HomeSaversModel.Store.SelectRefrigilatorsByUsernme" />
+    <FunctionImportMapping FunctionImportName="GetLowestTotalWattsRecords" FunctionName="db_Co2HomeSaversModel.Store.GetLowestTotalWattsRecords">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="db_Co2HomeSaversModel.GetLowestTotalWattsRecords_Result">
+          <ScalarProperty Name="Appliance" ColumnName="Appliance" />
+          <ScalarProperty Name="TotalWatts" ColumnName="TotalWatts" />
+          <ScalarProperty Name="Tip1" ColumnName="Tip1" />
+          <ScalarProperty Name="Tip2" ColumnName="Tip2" />
+          <ScalarProperty Name="Tip3" ColumnName="Tip3" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetSecondLowestTotalWattsRecords" FunctionName="db_Co2HomeSaversModel.Store.GetSecondLowestTotalWattsRecords">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="db_Co2HomeSaversModel.GetSecondLowestTotalWattsRecords_Result">
+          <ScalarProperty Name="Appliance" ColumnName="Appliance" />
+          <ScalarProperty Name="TotalWatts" ColumnName="TotalWatts" />
+          <ScalarProperty Name="Tip1" ColumnName="Tip1" />
+          <ScalarProperty Name="Tip2" ColumnName="Tip2" />
+          <ScalarProperty Name="Tip3" ColumnName="Tip3" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetThirdHighestTotalWattsRecords" FunctionName="db_Co2HomeSaversModel.Store.GetThirdHighestTotalWattsRecords">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="db_Co2HomeSaversModel.GetThirdHighestTotalWattsRecords_Result">
+          <ScalarProperty Name="Appliance" ColumnName="Appliance" />
+          <ScalarProperty Name="TotalWatts" ColumnName="TotalWatts" />
+          <ScalarProperty Name="Tip1" ColumnName="Tip1" />
+          <ScalarProperty Name="Tip2" ColumnName="Tip2" />
+          <ScalarProperty Name="Tip3" ColumnName="Tip3" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="UpdateRefrigilatorTips" FunctionName="db_Co2HomeSaversModel.Store.UpdateRefrigilatorTips" />
+    <FunctionImportMapping FunctionImportName="UpdateTotalWattsForUser" FunctionName="db_Co2HomeSaversModel.Store.UpdateTotalWattsForUser" />
+    <FunctionImportMapping FunctionImportName="SelectFreezersByUsernme" FunctionName="db_Co2HomeSaversModel.Store.SelectFreezersByUsernme" />
+    <FunctionImportMapping FunctionImportName="SelectDryerByUsernme" FunctionName="db_Co2HomeSaversModel.Store.SelectDryerByUsernme" />
+    <FunctionImportMapping FunctionImportName="UpdateTotalWattsForUser2" FunctionName="db_Co2HomeSaversModel.Store.UpdateTotalWattsForUser2" />
+    <FunctionImportMapping FunctionImportName="UpdateTotalWattsForUser3" FunctionName="db_Co2HomeSaversModel.Store.UpdateTotalWattsForUser3" />
+    <FunctionImportMapping FunctionImportName="SelectMicrowavesByUsernme" FunctionName="db_Co2HomeSaversModel.Store.SelectMicrowavesByUsernme" />
+    <FunctionImportMapping FunctionImportName="UpdateTotalWattsForUser4" FunctionName="db_Co2HomeSaversModel.Store.UpdateTotalWattsForUser4" />
+    <FunctionImportMapping FunctionImportName="SelectOvensByUsernme" FunctionName="db_Co2HomeSaversModel.Store.SelectOvensByUsernme" />
+    <FunctionImportMapping FunctionImportName="UpdateTotalWattsForUser5" FunctionName="db_Co2HomeSaversModel.Store.UpdateTotalWattsForUser5" />
+    <FunctionImportMapping FunctionImportName="SelectStovesByUsernme" FunctionName="db_Co2HomeSaversModel.Store.SelectStovesByUsernme" />
+    <FunctionImportMapping FunctionImportName="UpdateTotalWattsForUser6" FunctionName="db_Co2HomeSaversModel.Store.UpdateTotalWattsForUser6" />
+    <FunctionImportMapping FunctionImportName="SelectWashingMachineByUsernme" FunctionName="db_Co2HomeSaversModel.Store.SelectWashingMachineByUsernme" />
+    <FunctionImportMapping FunctionImportName="UpdateTotalWattsForUser7" FunctionName="db_Co2HomeSaversModel.Store.UpdateTotalWattsForUser7" />
+    <EntitySetMapping Name="tbl_AffilaiteLink">
+      <EntityTypeMapping TypeName="db_Co2HomeSaversModel.tbl_AffilaiteLink">
+        <MappingFragment StoreEntitySet="tbl_AffilaiteLink">
+          <ScalarProperty Name="Link" ColumnName="Link" />
+          <ScalarProperty Name="Appliance" ColumnName="Appliance" />
+          <ScalarProperty Name="AfflilateLinkID" ColumnName="AfflilateLinkID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Category">
+      <EntityTypeMapping TypeName="db_Co2HomeSaversModel.tbl_Category">
+        <MappingFragment StoreEntitySet="tbl_Category">
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Dishwashere">
+      <EntityTypeMapping TypeName="db_Co2HomeSaversModel.tbl_Dishwashere">
+        <MappingFragment StoreEntitySet="tbl_Dishwashere">
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="AffilaiteLink" ColumnName="AffilaiteLink" />
+          <ScalarProperty Name="TotalWatts" ColumnName="TotalWatts" />
+          <ScalarProperty Name="Wallt3" ColumnName="Wallt3" />
+          <ScalarProperty Name="Wallt2" ColumnName="Wallt2" />
+          <ScalarProperty Name="Wallt1" ColumnName="Wallt1" />
+          <ScalarProperty Name="Tip3" ColumnName="Tip3" />
+          <ScalarProperty Name="Tip2" ColumnName="Tip2" />
+          <ScalarProperty Name="Tip1" ColumnName="Tip1" />
+          <ScalarProperty Name="Model3" ColumnName="Model3" />
+          <ScalarProperty Name="Model2" ColumnName="Model2" />
+          <ScalarProperty Name="Model1" ColumnName="Model1" />
+          <ScalarProperty Name="Make3" ColumnName="Make3" />
+          <ScalarProperty Name="Make2" ColumnName="Make2" />
+          <ScalarProperty Name="Make1" ColumnName="Make1" />
+          <ScalarProperty Name="Appliance" ColumnName="Appliance" />
+          <ScalarProperty Name="NoOfDishwasher" ColumnName="NoOfDishwasher" />
+          <ScalarProperty Name="Usernme" ColumnName="Usernme" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="DishwasherID" ColumnName="DishwasherID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Dryer">
+      <EntityTypeMapping TypeName="db_Co2HomeSaversModel.tbl_Dryer">
+        <MappingFragment StoreEntitySet="tbl_Dryer">
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="AffilaiteLink" ColumnName="AffilaiteLink" />
+          <ScalarProperty Name="TotalWatts" ColumnName="TotalWatts" />
+          <ScalarProperty Name="Wallt3" ColumnName="Wallt3" />
+          <ScalarProperty Name="Wallt2" ColumnName="Wallt2" />
+          <ScalarProperty Name="Wallt1" ColumnName="Wallt1" />
+          <ScalarProperty Name="Tip3" ColumnName="Tip3" />
+          <ScalarProperty Name="Tip2" ColumnName="Tip2" />
+          <ScalarProperty Name="Tip1" ColumnName="Tip1" />
+          <ScalarProperty Name="Model3" ColumnName="Model3" />
+          <ScalarProperty Name="Model2" ColumnName="Model2" />
+          <ScalarProperty Name="Model1" ColumnName="Model1" />
+          <ScalarProperty Name="Make3" ColumnName="Make3" />
+          <ScalarProperty Name="Make2" ColumnName="Make2" />
+          <ScalarProperty Name="Make1" ColumnName="Make1" />
+          <ScalarProperty Name="Appliance" ColumnName="Appliance" />
+          <ScalarProperty Name="NoOfDryer" ColumnName="NoOfDryer" />
+          <ScalarProperty Name="Usernme" ColumnName="Usernme" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="DryerID" ColumnName="DryerID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Freezer">
+      <EntityTypeMapping TypeName="db_Co2HomeSaversModel.tbl_Freezer">
+        <MappingFragment StoreEntitySet="tbl_Freezer">
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="AffilaiteLink" ColumnName="AffilaiteLink" />
+          <ScalarProperty Name="TotalWatts" ColumnName="TotalWatts" />
+          <ScalarProperty Name="Wallt3" ColumnName="Wallt3" />
+          <ScalarProperty Name="Wallt2" ColumnName="Wallt2" />
+          <ScalarProperty Name="Wallt1" ColumnName="Wallt1" />
+          <ScalarProperty Name="Tip3" ColumnName="Tip3" />
+          <ScalarProperty Name="Tip2" ColumnName="Tip2" />
+          <ScalarProperty Name="Tip1" ColumnName="Tip1" />
+          <ScalarProperty Name="Model3" ColumnName="Model3" />
+          <ScalarProperty Name="Model2" ColumnName="Model2" />
+          <ScalarProperty Name="Model1" ColumnName="Model1" />
+          <ScalarProperty Name="Make3" ColumnName="Make3" />
+          <ScalarProperty Name="Make2" ColumnName="Make2" />
+          <ScalarProperty Name="Make1" ColumnName="Make1" />
+          <ScalarProperty Name="Appliance" ColumnName="Appliance" />
+          <ScalarProperty Name="NoOfFreezers" ColumnName="NoOfFreezers" />
+          <ScalarProperty Name="Usernme" ColumnName="Usernme" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="FreezerID" ColumnName="FreezerID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Microwave">
+      <EntityTypeMapping TypeName="db_Co2HomeSaversModel.tbl_Microwave">
+        <MappingFragment StoreEntitySet="tbl_Microwave">
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="AffilaiteLink" ColumnName="AffilaiteLink" />
+          <ScalarProperty Name="TotalWatts" ColumnName="TotalWatts" />
+          <ScalarProperty Name="Wallt3" ColumnName="Wallt3" />
+          <ScalarProperty Name="Wallt2" ColumnName="Wallt2" />
+          <ScalarProperty Name="Wallt1" ColumnName="Wallt1" />
+          <ScalarProperty Name="Tip3" ColumnName="Tip3" />
+          <ScalarProperty Name="Tip2" ColumnName="Tip2" />
+          <ScalarProperty Name="Tip1" ColumnName="Tip1" />
+          <ScalarProperty Name="Model3" ColumnName="Model3" />
+          <ScalarProperty Name="Model2" ColumnName="Model2" />
+          <ScalarProperty Name="Model1" ColumnName="Model1" />
+          <ScalarProperty Name="Make3" ColumnName="Make3" />
+          <ScalarProperty Name="Make2" ColumnName="Make2" />
+          <ScalarProperty Name="Make1" ColumnName="Make1" />
+          <ScalarProperty Name="Appliance" ColumnName="Appliance" />
+          <ScalarProperty Name="NoOfMicrowaves" ColumnName="NoOfMicrowaves" />
+          <ScalarProperty Name="Usernme" ColumnName="Usernme" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="MicrowaveID" ColumnName="MicrowaveID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Oven">
+      <EntityTypeMapping TypeName="db_Co2HomeSaversModel.tbl_Oven">
+        <MappingFragment StoreEntitySet="tbl_Oven">
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="AffilaiteLink" ColumnName="AffilaiteLink" />
+          <ScalarProperty Name="TotalWatts" ColumnName="TotalWatts" />
+          <ScalarProperty Name="Wallt3" ColumnName="Wallt3" />
+          <ScalarProperty Name="Wallt2" ColumnName="Wallt2" />
+          <ScalarProperty Name="Wallt1" ColumnName="Wallt1" />
+          <ScalarProperty Name="Tip3" ColumnName="Tip3" />
+          <ScalarProperty Name="Tip2" ColumnName="Tip2" />
+          <ScalarProperty Name="Tip1" ColumnName="Tip1" />
+          <ScalarProperty Name="Model3" ColumnName="Model3" />
+          <ScalarProperty Name="Model2" ColumnName="Model2" />
+          <ScalarProperty Name="Model1" ColumnName="Model1" />
+          <ScalarProperty Name="Make3" ColumnName="Make3" />
+          <ScalarProperty Name="Make2" ColumnName="Make2" />
+          <ScalarProperty Name="Make1" ColumnName="Make1" />
+          <ScalarProperty Name="Appliance" ColumnName="Appliance" />
+          <ScalarProperty Name="NoOfOvens" ColumnName="NoOfOvens" />
+          <ScalarProperty Name="Usernme" ColumnName="Usernme" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="OvenID" ColumnName="OvenID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Refrigilator">
+      <EntityTypeMapping TypeName="db_Co2HomeSaversModel.tbl_Refrigilator">
+        <MappingFragment StoreEntitySet="tbl_Refrigilator">
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="AffilaiteLink" ColumnName="AffilaiteLink" />
+          <ScalarProperty Name="TotalWatts" ColumnName="TotalWatts" />
+          <ScalarProperty Name="Wallt3" ColumnName="Wallt3" />
+          <ScalarProperty Name="Wallt2" ColumnName="Wallt2" />
+          <ScalarProperty Name="Wallt1" ColumnName="Wallt1" />
+          <ScalarProperty Name="Tip3" ColumnName="Tip3" />
+          <ScalarProperty Name="Tip2" ColumnName="Tip2" />
+          <ScalarProperty Name="Tip1" ColumnName="Tip1" />
+          <ScalarProperty Name="Model3" ColumnName="Model3" />
+          <ScalarProperty Name="Model2" ColumnName="Model2" />
+          <ScalarProperty Name="Model1" ColumnName="Model1" />
+          <ScalarProperty Name="Make3" ColumnName="Make3" />
+          <ScalarProperty Name="Make2" ColumnName="Make2" />
+          <ScalarProperty Name="Make1" ColumnName="Make1" />
+          <ScalarProperty Name="Appliance" ColumnName="Appliance" />
+          <ScalarProperty Name="NoOfRefrigilators" ColumnName="NoOfRefrigilators" />
+          <ScalarProperty Name="Usernme" ColumnName="Usernme" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="RefrigilatorID" ColumnName="RefrigilatorID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_ResutImages">
+      <EntityTypeMapping TypeName="db_Co2HomeSaversModel.tbl_ResutImages">
+        <MappingFragment StoreEntitySet="tbl_ResutImages">
+          <ScalarProperty Name="ImageAddress" ColumnName="ImageAddress" />
+          <ScalarProperty Name="Appliance" ColumnName="Appliance" />
+          <ScalarProperty Name="ResutImagesID" ColumnName="ResutImagesID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Stove">
+      <EntityTypeMapping TypeName="db_Co2HomeSaversModel.tbl_Stove">
+        <MappingFragment StoreEntitySet="tbl_Stove">
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="AffilaiteLink" ColumnName="AffilaiteLink" />
+          <ScalarProperty Name="TotalWatts" ColumnName="TotalWatts" />
+          <ScalarProperty Name="Wallt3" ColumnName="Wallt3" />
+          <ScalarProperty Name="Wallt2" ColumnName="Wallt2" />
+          <ScalarProperty Name="Wallt1" ColumnName="Wallt1" />
+          <ScalarProperty Name="Tip3" ColumnName="Tip3" />
+          <ScalarProperty Name="Tip2" ColumnName="Tip2" />
+          <ScalarProperty Name="Tip1" ColumnName="Tip1" />
+          <ScalarProperty Name="Model3" ColumnName="Model3" />
+          <ScalarProperty Name="Model2" ColumnName="Model2" />
+          <ScalarProperty Name="Model1" ColumnName="Model1" />
+          <ScalarProperty Name="Make3" ColumnName="Make3" />
+          <ScalarProperty Name="Make2" ColumnName="Make2" />
+          <ScalarProperty Name="Make1" ColumnName="Make1" />
+          <ScalarProperty Name="Appliance" ColumnName="Appliance" />
+          <ScalarProperty Name="NoOfStoves" ColumnName="NoOfStoves" />
+          <ScalarProperty Name="Usernme" ColumnName="Usernme" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="StoveID" ColumnName="StoveID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_User">
+      <EntityTypeMapping TypeName="db_Co2HomeSaversModel.tbl_User">
+        <MappingFragment StoreEntitySet="tbl_User">
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_WashingMachine">
+      <EntityTypeMapping TypeName="db_Co2HomeSaversModel.tbl_WashingMachine">
+        <MappingFragment StoreEntitySet="tbl_WashingMachine">
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="AffilaiteLink" ColumnName="AffilaiteLink" />
+          <ScalarProperty Name="TotalWatts" ColumnName="TotalWatts" />
+          <ScalarProperty Name="Wallt3" ColumnName="Wallt3" />
+          <ScalarProperty Name="Wallt2" ColumnName="Wallt2" />
+          <ScalarProperty Name="Wallt1" ColumnName="Wallt1" />
+          <ScalarProperty Name="Tip3" ColumnName="Tip3" />
+          <ScalarProperty Name="Tip2" ColumnName="Tip2" />
+          <ScalarProperty Name="Tip1" ColumnName="Tip1" />
+          <ScalarProperty Name="Model3" ColumnName="Model3" />
+          <ScalarProperty Name="Model2" ColumnName="Model2" />
+          <ScalarProperty Name="Model1" ColumnName="Model1" />
+          <ScalarProperty Name="Make3" ColumnName="Make3" />
+          <ScalarProperty Name="Make2" ColumnName="Make2" />
+          <ScalarProperty Name="Make1" ColumnName="Make1" />
+          <ScalarProperty Name="Appliance" ColumnName="Appliance" />
+          <ScalarProperty Name="NoOfWashingMachine" ColumnName="NoOfWashingMachine" />
+          <ScalarProperty Name="Usernme" ColumnName="Usernme" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="WashingMachineID" ColumnName="WashingMachineID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_WaterHeater">
+      <EntityTypeMapping TypeName="db_Co2HomeSaversModel.tbl_WaterHeater">
+        <MappingFragment StoreEntitySet="tbl_WaterHeater">
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="AffilaiteLink" ColumnName="AffilaiteLink" />
+          <ScalarProperty Name="TotalWatts" ColumnName="TotalWatts" />
+          <ScalarProperty Name="Wallt3" ColumnName="Wallt3" />
+          <ScalarProperty Name="Wallt2" ColumnName="Wallt2" />
+          <ScalarProperty Name="Wallt1" ColumnName="Wallt1" />
+          <ScalarProperty Name="Tip3" ColumnName="Tip3" />
+          <ScalarProperty Name="Tip2" ColumnName="Tip2" />
+          <ScalarProperty Name="Tip1" ColumnName="Tip1" />
+          <ScalarProperty Name="Model3" ColumnName="Model3" />
+          <ScalarProperty Name="Model2" ColumnName="Model2" />
+          <ScalarProperty Name="Model1" ColumnName="Model1" />
+          <ScalarProperty Name="Make3" ColumnName="Make3" />
+          <ScalarProperty Name="Make2" ColumnName="Make2" />
+          <ScalarProperty Name="Make1" ColumnName="Make1" />
+          <ScalarProperty Name="Appliance" ColumnName="Appliance" />
+          <ScalarProperty Name="NoOfWaterHeaters" ColumnName="NoOfWaterHeaters" />
+          <ScalarProperty Name="Usernme" ColumnName="Usernme" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="RefrigilatorID" ColumnName="RefrigilatorID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="SelectWaterHeaterByUsernme" FunctionName="db_Co2HomeSaversModel.Store.SelectWaterHeaterByUsernme" />
+    <FunctionImportMapping FunctionImportName="UpdateTotalWattsForUser9" FunctionName="db_Co2HomeSaversModel.Store.UpdateTotalWattsForUser9" />
+    <EntitySetMapping Name="tbl_Television">
+      <EntityTypeMapping TypeName="db_Co2HomeSaversModel.tbl_Television">
+        <MappingFragment StoreEntitySet="tbl_Television">
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="AffilaiteLink" ColumnName="AffilaiteLink" />
+          <ScalarProperty Name="TotalWatts" ColumnName="TotalWatts" />
+          <ScalarProperty Name="Wallt3" ColumnName="Wallt3" />
+          <ScalarProperty Name="Wallt2" ColumnName="Wallt2" />
+          <ScalarProperty Name="Wallt1" ColumnName="Wallt1" />
+          <ScalarProperty Name="Tip3" ColumnName="Tip3" />
+          <ScalarProperty Name="Tip2" ColumnName="Tip2" />
+          <ScalarProperty Name="Tip1" ColumnName="Tip1" />
+          <ScalarProperty Name="Model3" ColumnName="Model3" />
+          <ScalarProperty Name="Model2" ColumnName="Model2" />
+          <ScalarProperty Name="Model1" ColumnName="Model1" />
+          <ScalarProperty Name="Make3" ColumnName="Make3" />
+          <ScalarProperty Name="Make2" ColumnName="Make2" />
+          <ScalarProperty Name="Make1" ColumnName="Make1" />
+          <ScalarProperty Name="Appliance" ColumnName="Appliance" />
+          <ScalarProperty Name="NoOfTelevisions" ColumnName="NoOfTelevisions" />
+          <ScalarProperty Name="Usernme" ColumnName="Usernme" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="TelevisionID" ColumnName="TelevisionID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="SelectTelevisionByUsernme" FunctionName="db_Co2HomeSaversModel.Store.SelectTelevisionByUsernme" />
+    <FunctionImportMapping FunctionImportName="UpdateTotalWattsForTV" FunctionName="db_Co2HomeSaversModel.Store.UpdateTotalWattsForTV" />
+    <EntitySetMapping Name="tbl_Computer">
+      <EntityTypeMapping TypeName="db_Co2HomeSaversModel.tbl_Computer">
+        <MappingFragment StoreEntitySet="tbl_Computer">
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="AffilaiteLink" ColumnName="AffilaiteLink" />
+          <ScalarProperty Name="TotalWatts" ColumnName="TotalWatts" />
+          <ScalarProperty Name="Wallt3" ColumnName="Wallt3" />
+          <ScalarProperty Name="Wallt2" ColumnName="Wallt2" />
+          <ScalarProperty Name="Wallt1" ColumnName="Wallt1" />
+          <ScalarProperty Name="Tip3" ColumnName="Tip3" />
+          <ScalarProperty Name="Tip2" ColumnName="Tip2" />
+          <ScalarProperty Name="Tip1" ColumnName="Tip1" />
+          <ScalarProperty Name="Model3" ColumnName="Model3" />
+          <ScalarProperty Name="Model2" ColumnName="Model2" />
+          <ScalarProperty Name="Model1" ColumnName="Model1" />
+          <ScalarProperty Name="Make3" ColumnName="Make3" />
+          <ScalarProperty Name="Make2" ColumnName="Make2" />
+          <ScalarProperty Name="Make1" ColumnName="Make1" />
+          <ScalarProperty Name="Appliance" ColumnName="Appliance" />
+          <ScalarProperty Name="NoOfComputers" ColumnName="NoOfComputers" />
+          <ScalarProperty Name="Usernme" ColumnName="Usernme" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="ComputerID" ColumnName="ComputerID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="SelectComputerByUsernme" FunctionName="db_Co2HomeSaversModel.Store.SelectComputerByUsernme" />
+    <FunctionImportMapping FunctionImportName="UpdateTotalWattsForComputer" FunctionName="db_Co2HomeSaversModel.Store.UpdateTotalWattsForComputer" />
+    <EntitySetMapping Name="tbl_Laptop">
+      <EntityTypeMapping TypeName="db_Co2HomeSaversModel.tbl_Laptop">
+        <MappingFragment StoreEntitySet="tbl_Laptop">
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="AffilaiteLink" ColumnName="AffilaiteLink" />
+          <ScalarProperty Name="TotalWatts" ColumnName="TotalWatts" />
+          <ScalarProperty Name="Wallt3" ColumnName="Wallt3" />
+          <ScalarProperty Name="Wallt2" ColumnName="Wallt2" />
+          <ScalarProperty Name="Wallt1" ColumnName="Wallt1" />
+          <ScalarProperty Name="Tip3" ColumnName="Tip3" />
+          <ScalarProperty Name="Tip2" ColumnName="Tip2" />
+          <ScalarProperty Name="Tip1" ColumnName="Tip1" />
+          <ScalarProperty Name="Model3" ColumnName="Model3" />
+          <ScalarProperty Name="Model2" ColumnName="Model2" />
+          <ScalarProperty Name="Model1" ColumnName="Model1" />
+          <ScalarProperty Name="Make3" ColumnName="Make3" />
+          <ScalarProperty Name="Make2" ColumnName="Make2" />
+          <ScalarProperty Name="Make1" ColumnName="Make1" />
+          <ScalarProperty Name="Appliance" ColumnName="Appliance" />
+          <ScalarProperty Name="NoOfLaptops" ColumnName="NoOfLaptops" />
+          <ScalarProperty Name="Usernme" ColumnName="Usernme" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="LaptopID" ColumnName="LaptopID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="SelectLaptopByUsernme" FunctionName="db_Co2HomeSaversModel.Store.SelectLaptopByUsernme" />
+    <FunctionImportMapping FunctionImportName="UpdateTotalWattsForLaptop" FunctionName="db_Co2HomeSaversModel.Store.UpdateTotalWattsForLaptop" />
+    <EntitySetMapping Name="tbl_Smartphone">
+      <EntityTypeMapping TypeName="db_Co2HomeSaversModel.tbl_Smartphone">
+        <MappingFragment StoreEntitySet="tbl_Smartphone">
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="AffilaiteLink" ColumnName="AffilaiteLink" />
+          <ScalarProperty Name="TotalWatts" ColumnName="TotalWatts" />
+          <ScalarProperty Name="Wallt3" ColumnName="Wallt3" />
+          <ScalarProperty Name="Wallt2" ColumnName="Wallt2" />
+          <ScalarProperty Name="Wallt1" ColumnName="Wallt1" />
+          <ScalarProperty Name="Tip3" ColumnName="Tip3" />
+          <ScalarProperty Name="Tip2" ColumnName="Tip2" />
+          <ScalarProperty Name="Tip1" ColumnName="Tip1" />
+          <ScalarProperty Name="Model3" ColumnName="Model3" />
+          <ScalarProperty Name="Model2" ColumnName="Model2" />
+          <ScalarProperty Name="Model1" ColumnName="Model1" />
+          <ScalarProperty Name="Make3" ColumnName="Make3" />
+          <ScalarProperty Name="Make2" ColumnName="Make2" />
+          <ScalarProperty Name="Make1" ColumnName="Make1" />
+          <ScalarProperty Name="Appliance" ColumnName="Appliance" />
+          <ScalarProperty Name="NoOfSmartphones" ColumnName="NoOfSmartphones" />
+          <ScalarProperty Name="Usernme" ColumnName="Usernme" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="SmartphoneID" ColumnName="SmartphoneID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="SelectSmartphoneByUsernme" FunctionName="db_Co2HomeSaversModel.Store.SelectSmartphoneByUsernme" />
+    <FunctionImportMapping FunctionImportName="UpdateTotalWattsForSmartphone" FunctionName="db_Co2HomeSaversModel.Store.UpdateTotalWattsForSmartphone" />
+    <EntitySetMapping Name="tbl_SmartSpeaker">
+      <EntityTypeMapping TypeName="db_Co2HomeSaversModel.tbl_SmartSpeaker">
+        <MappingFragment StoreEntitySet="tbl_SmartSpeaker">
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="AffilaiteLink" ColumnName="AffilaiteLink" />
+          <ScalarProperty Name="TotalWatts" ColumnName="TotalWatts" />
+          <ScalarProperty Name="Wallt3" ColumnName="Wallt3" />
+          <ScalarProperty Name="Wallt2" ColumnName="Wallt2" />
+          <ScalarProperty Name="Wallt1" ColumnName="Wallt1" />
+          <ScalarProperty Name="Tip3" ColumnName="Tip3" />
+          <ScalarProperty Name="Tip2" ColumnName="Tip2" />
+          <ScalarProperty Name="Tip1" ColumnName="Tip1" />
+          <ScalarProperty Name="Model3" ColumnName="Model3" />
+          <ScalarProperty Name="Model2" ColumnName="Model2" />
+          <ScalarProperty Name="Model1" ColumnName="Model1" />
+          <ScalarProperty Name="Make3" ColumnName="Make3" />
+          <ScalarProperty Name="Make2" ColumnName="Make2" />
+          <ScalarProperty Name="Make1" ColumnName="Make1" />
+          <ScalarProperty Name="Appliance" ColumnName="Appliance" />
+          <ScalarProperty Name="NoOfSmartSpeakers" ColumnName="NoOfSmartSpeakers" />
+          <ScalarProperty Name="Usernme" ColumnName="Usernme" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="SmartSpeakerID" ColumnName="SmartSpeakerID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="SelectSmartSpeakerByUsernme" FunctionName="db_Co2HomeSaversModel.Store.SelectSmartSpeakerByUsernme" />
+    <FunctionImportMapping FunctionImportName="UpdateTotalWattsForSmartSpeaker" FunctionName="db_Co2HomeSaversModel.Store.UpdateTotalWattsForSmartSpeaker" />
+    <EntitySetMapping Name="tbl_GamingConsole">
+      <EntityTypeMapping TypeName="db_Co2HomeSaversModel.tbl_GamingConsole">
+        <MappingFragment StoreEntitySet="tbl_GamingConsole">
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="AffilaiteLink" ColumnName="AffilaiteLink" />
+          <ScalarProperty Name="TotalWatts" ColumnName="TotalWatts" />
+          <ScalarProperty Name="Wallt3" ColumnName="Wallt3" />
+          <ScalarProperty Name="Wallt2" ColumnName="Wallt2" />
+          <ScalarProperty Name="Wallt1" ColumnName="Wallt1" />
+          <ScalarProperty Name="Tip3" ColumnName="Tip3" />
+          <ScalarProperty Name="Tip2" ColumnName="Tip2" />
+          <ScalarProperty Name="Tip1" ColumnName="Tip1" />
+          <ScalarProperty Name="Model3" ColumnName="Model3" />
+          <ScalarProperty Name="Model2" ColumnName="Model2" />
+          <ScalarProperty Name="Model1" ColumnName="Model1" />
+          <ScalarProperty Name="Make3" ColumnName="Make3" />
+          <ScalarProperty Name="Make2" ColumnName="Make2" />
+          <ScalarProperty Name="Make1" ColumnName="Make1" />
+          <ScalarProperty Name="Appliance" ColumnName="Appliance" />
+          <ScalarProperty Name="NoOfGamingConsoles" ColumnName="NoOfGamingConsoles" />
+          <ScalarProperty Name="Usernme" ColumnName="Usernme" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="GamingConsoleID" ColumnName="GamingConsoleID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="SelectGamingConsoleByUsernme" FunctionName="db_Co2HomeSaversModel.Store.SelectGamingConsoleByUsernme" />
+    <FunctionImportMapping FunctionImportName="UpdateTotalWattsForGamingConsole" FunctionName="db_Co2HomeSaversModel.Store.UpdateTotalWattsForGamingConsole" />
+    <EntitySetMapping Name="tbl_Router">
+      <EntityTypeMapping TypeName="db_Co2HomeSaversModel.tbl_Router">
+        <MappingFragment StoreEntitySet="tbl_Router">
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="AffilaiteLink" ColumnName="AffilaiteLink" />
+          <ScalarProperty Name="TotalWatts" ColumnName="TotalWatts" />
+          <ScalarProperty Name="Wallt3" ColumnName="Wallt3" />
+          <ScalarProperty Name="Wallt2" ColumnName="Wallt2" />
+          <ScalarProperty Name="Wallt1" ColumnName="Wallt1" />
+          <ScalarProperty Name="Tip3" ColumnName="Tip3" />
+          <ScalarProperty Name="Tip2" ColumnName="Tip2" />
+          <ScalarProperty Name="Tip1" ColumnName="Tip1" />
+          <ScalarProperty Name="Model3" ColumnName="Model3" />
+          <ScalarProperty Name="Model2" ColumnName="Model2" />
+          <ScalarProperty Name="Model1" ColumnName="Model1" />
+          <ScalarProperty Name="Make3" ColumnName="Make3" />
+          <ScalarProperty Name="Make2" ColumnName="Make2" />
+          <ScalarProperty Name="Make1" ColumnName="Make1" />
+          <ScalarProperty Name="Appliance" ColumnName="Appliance" />
+          <ScalarProperty Name="NoOfRouters" ColumnName="NoOfRouters" />
+          <ScalarProperty Name="Usernme" ColumnName="Usernme" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="RouterID" ColumnName="RouterID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="SelectRouterByUsernme" FunctionName="db_Co2HomeSaversModel.Store.SelectRouterByUsernme" />
+    <FunctionImportMapping FunctionImportName="UpdateTotalWattsForRouter" FunctionName="db_Co2HomeSaversModel.Store.UpdateTotalWattsForRouter" />
+    <EntitySetMapping Name="tbl_Modem">
+      <EntityTypeMapping TypeName="db_Co2HomeSaversModel.tbl_Modem">
+        <MappingFragment StoreEntitySet="tbl_Modem">
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="AffilaiteLink" ColumnName="AffilaiteLink" />
+          <ScalarProperty Name="TotalWatts" ColumnName="TotalWatts" />
+          <ScalarProperty Name="Wallt3" ColumnName="Wallt3" />
+          <ScalarProperty Name="Wallt2" ColumnName="Wallt2" />
+          <ScalarProperty Name="Wallt1" ColumnName="Wallt1" />
+          <ScalarProperty Name="Tip3" ColumnName="Tip3" />
+          <ScalarProperty Name="Tip2" ColumnName="Tip2" />
+          <ScalarProperty Name="Tip1" ColumnName="Tip1" />
+          <ScalarProperty Name="Model3" ColumnName="Model3" />
+          <ScalarProperty Name="Model2" ColumnName="Model2" />
+          <ScalarProperty Name="Model1" ColumnName="Model1" />
+          <ScalarProperty Name="Make3" ColumnName="Make3" />
+          <ScalarProperty Name="Make2" ColumnName="Make2" />
+          <ScalarProperty Name="Make1" ColumnName="Make1" />
+          <ScalarProperty Name="Appliance" ColumnName="Appliance" />
+          <ScalarProperty Name="NoOfModems" ColumnName="NoOfModems" />
+          <ScalarProperty Name="Usernme" ColumnName="Usernme" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="ModemID" ColumnName="ModemID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="SelectModemByUsernme" FunctionName="db_Co2HomeSaversModel.Store.SelectModemByUsernme" />
+    <FunctionImportMapping FunctionImportName="UpdateTotalWattsForModem" FunctionName="db_Co2HomeSaversModel.Store.UpdateTotalWattsForModem" />
+    <EntitySetMapping Name="tbl_Shower">
+      <EntityTypeMapping TypeName="db_Co2HomeSaversModel.tbl_Shower">
+        <MappingFragment StoreEntitySet="tbl_Shower">
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="AffilaiteLink" ColumnName="AffilaiteLink" />
+          <ScalarProperty Name="TotalWatts" ColumnName="TotalWatts" />
+          <ScalarProperty Name="Wallt3" ColumnName="Wallt3" />
+          <ScalarProperty Name="Wallt2" ColumnName="Wallt2" />
+          <ScalarProperty Name="Wallt1" ColumnName="Wallt1" />
+          <ScalarProperty Name="Tip3" ColumnName="Tip3" />
+          <ScalarProperty Name="Tip2" ColumnName="Tip2" />
+          <ScalarProperty Name="Tip1" ColumnName="Tip1" />
+          <ScalarProperty Name="Model3" ColumnName="Model3" />
+          <ScalarProperty Name="Model2" ColumnName="Model2" />
+          <ScalarProperty Name="Model1" ColumnName="Model1" />
+          <ScalarProperty Name="Make3" ColumnName="Make3" />
+          <ScalarProperty Name="Make2" ColumnName="Make2" />
+          <ScalarProperty Name="Make1" ColumnName="Make1" />
+          <ScalarProperty Name="Appliance" ColumnName="Appliance" />
+          <ScalarProperty Name="NoOfShowers" ColumnName="NoOfShowers" />
+          <ScalarProperty Name="Usernme" ColumnName="Usernme" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="ShowerID" ColumnName="ShowerID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Bathtubr">
+      <EntityTypeMapping TypeName="db_Co2HomeSaversModel.tbl_Bathtubr">
+        <MappingFragment StoreEntitySet="tbl_Bathtubr">
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="AffilaiteLink" ColumnName="AffilaiteLink" />
+          <ScalarProperty Name="TotalWatts" ColumnName="TotalWatts" />
+          <ScalarProperty Name="Wallt3" ColumnName="Wallt3" />
+          <ScalarProperty Name="Wallt2" ColumnName="Wallt2" />
+          <ScalarProperty Name="Wallt1" ColumnName="Wallt1" />
+          <ScalarProperty Name="Tip3" ColumnName="Tip3" />
+          <ScalarProperty Name="Tip2" ColumnName="Tip2" />
+          <ScalarProperty Name="Tip1" ColumnName="Tip1" />
+          <ScalarProperty Name="Model3" ColumnName="Model3" />
+          <ScalarProperty Name="Model2" ColumnName="Model2" />
+          <ScalarProperty Name="Model1" ColumnName="Model1" />
+          <ScalarProperty Name="Make3" ColumnName="Make3" />
+          <ScalarProperty Name="Make2" ColumnName="Make2" />
+          <ScalarProperty Name="Make1" ColumnName="Make1" />
+          <ScalarProperty Name="Appliance" ColumnName="Appliance" />
+          <ScalarProperty Name="NoOfBathtubs" ColumnName="NoOfBathtubs" />
+          <ScalarProperty Name="Usernme" ColumnName="Usernme" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="BathtubID" ColumnName="BathtubID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="SelectShowerByUsernme" FunctionName="db_Co2HomeSaversModel.Store.SelectShowerByUsernme" />
+    <FunctionImportMapping FunctionImportName="UpdateTotalWattsForShower" FunctionName="db_Co2HomeSaversModel.Store.UpdateTotalWattsForShower" />
+    <EntitySetMapping Name="tbl_Sink">
+      <EntityTypeMapping TypeName="db_Co2HomeSaversModel.tbl_Sink">
+        <MappingFragment StoreEntitySet="tbl_Sink">
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="AffilaiteLink" ColumnName="AffilaiteLink" />
+          <ScalarProperty Name="TotalWatts" ColumnName="TotalWatts" />
+          <ScalarProperty Name="Wallt3" ColumnName="Wallt3" />
+          <ScalarProperty Name="Wallt2" ColumnName="Wallt2" />
+          <ScalarProperty Name="Wallt1" ColumnName="Wallt1" />
+          <ScalarProperty Name="Tip3" ColumnName="Tip3" />
+          <ScalarProperty Name="Tip2" ColumnName="Tip2" />
+          <ScalarProperty Name="Tip1" ColumnName="Tip1" />
+          <ScalarProperty Name="Model3" ColumnName="Model3" />
+          <ScalarProperty Name="Model2" ColumnName="Model2" />
+          <ScalarProperty Name="Model1" ColumnName="Model1" />
+          <ScalarProperty Name="Make3" ColumnName="Make3" />
+          <ScalarProperty Name="Make2" ColumnName="Make2" />
+          <ScalarProperty Name="Make1" ColumnName="Make1" />
+          <ScalarProperty Name="Appliance" ColumnName="Appliance" />
+          <ScalarProperty Name="NoOfSinks" ColumnName="NoOfSinks" />
+          <ScalarProperty Name="Usernme" ColumnName="Usernme" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="SinkID" ColumnName="SinkID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="SelectSinkByUsernme" FunctionName="db_Co2HomeSaversModel.Store.SelectSinkByUsernme" />
+    <FunctionImportMapping FunctionImportName="UpdateTotalWattsForSink" FunctionName="db_Co2HomeSaversModel.Store.UpdateTotalWattsForSink" />
+    <EntitySetMapping Name="tbl_Toilet">
+      <EntityTypeMapping TypeName="db_Co2HomeSaversModel.tbl_Toilet">
+        <MappingFragment StoreEntitySet="tbl_Toilet">
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="AffilaiteLink" ColumnName="AffilaiteLink" />
+          <ScalarProperty Name="TotalWatts" ColumnName="TotalWatts" />
+          <ScalarProperty Name="Wallt3" ColumnName="Wallt3" />
+          <ScalarProperty Name="Wallt2" ColumnName="Wallt2" />
+          <ScalarProperty Name="Wallt1" ColumnName="Wallt1" />
+          <ScalarProperty Name="Tip3" ColumnName="Tip3" />
+          <ScalarProperty Name="Tip2" ColumnName="Tip2" />
+          <ScalarProperty Name="Tip1" ColumnName="Tip1" />
+          <ScalarProperty Name="Model3" ColumnName="Model3" />
+          <ScalarProperty Name="Model2" ColumnName="Model2" />
+          <ScalarProperty Name="Model1" ColumnName="Model1" />
+          <ScalarProperty Name="Make3" ColumnName="Make3" />
+          <ScalarProperty Name="Make2" ColumnName="Make2" />
+          <ScalarProperty Name="Make1" ColumnName="Make1" />
+          <ScalarProperty Name="Appliance" ColumnName="Appliance" />
+          <ScalarProperty Name="NoOfToilets" ColumnName="NoOfToilets" />
+          <ScalarProperty Name="Usernme" ColumnName="Usernme" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="ToiletID" ColumnName="ToiletID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="SelectToiletByUsernme" FunctionName="db_Co2HomeSaversModel.Store.SelectToiletByUsernme" />
+    <FunctionImportMapping FunctionImportName="UpdateTotalWattsForToilet" FunctionName="db_Co2HomeSaversModel.Store.UpdateTotalWattsForToilet" />
+    <EntitySetMapping Name="tbl_Waterdispenser">
+      <EntityTypeMapping TypeName="db_Co2HomeSaversModel.tbl_Waterdispenser">
+        <MappingFragment StoreEntitySet="tbl_Waterdispenser">
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="AffilaiteLink" ColumnName="AffilaiteLink" />
+          <ScalarProperty Name="TotalWatts" ColumnName="TotalWatts" />
+          <ScalarProperty Name="Wallt3" ColumnName="Wallt3" />
+          <ScalarProperty Name="Wallt2" ColumnName="Wallt2" />
+          <ScalarProperty Name="Wallt1" ColumnName="Wallt1" />
+          <ScalarProperty Name="Tip3" ColumnName="Tip3" />
+          <ScalarProperty Name="Tip2" ColumnName="Tip2" />
+          <ScalarProperty Name="Tip1" ColumnName="Tip1" />
+          <ScalarProperty Name="Model3" ColumnName="Model3" />
+          <ScalarProperty Name="Model2" ColumnName="Model2" />
+          <ScalarProperty Name="Model1" ColumnName="Model1" />
+          <ScalarProperty Name="Make3" ColumnName="Make3" />
+          <ScalarProperty Name="Make2" ColumnName="Make2" />
+          <ScalarProperty Name="Make1" ColumnName="Make1" />
+          <ScalarProperty Name="Appliance" ColumnName="Appliance" />
+          <ScalarProperty Name="NoOfWaterdispensers" ColumnName="NoOfWaterdispensers" />
+          <ScalarProperty Name="Usernme" ColumnName="Usernme" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="WaterdispenserID" ColumnName="WaterdispenserID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="SelectWaterdispenserByUsernme" FunctionName="db_Co2HomeSaversModel.Store.SelectWaterdispenserByUsernme" />
+    <FunctionImportMapping FunctionImportName="UpdateTotalWattsForWaterdispenser" FunctionName="db_Co2HomeSaversModel.Store.UpdateTotalWattsForWaterdispenser" />
+    <EntitySetMapping Name="tbl_Humidifier">
+      <EntityTypeMapping TypeName="db_Co2HomeSaversModel.tbl_Humidifier">
+        <MappingFragment StoreEntitySet="tbl_Humidifier">
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="AffilaiteLink" ColumnName="AffilaiteLink" />
+          <ScalarProperty Name="TotalWatts" ColumnName="TotalWatts" />
+          <ScalarProperty Name="Wallt3" ColumnName="Wallt3" />
+          <ScalarProperty Name="Wallt2" ColumnName="Wallt2" />
+          <ScalarProperty Name="Wallt1" ColumnName="Wallt1" />
+          <ScalarProperty Name="Tip3" ColumnName="Tip3" />
+          <ScalarProperty Name="Tip2" ColumnName="Tip2" />
+          <ScalarProperty Name="Tip1" ColumnName="Tip1" />
+          <ScalarProperty Name="Model3" ColumnName="Model3" />
+          <ScalarProperty Name="Model2" ColumnName="Model2" />
+          <ScalarProperty Name="Model1" ColumnName="Model1" />
+          <ScalarProperty Name="Make3" ColumnName="Make3" />
+          <ScalarProperty Name="Make2" ColumnName="Make2" />
+          <ScalarProperty Name="Make1" ColumnName="Make1" />
+          <ScalarProperty Name="Appliance" ColumnName="Appliance" />
+          <ScalarProperty Name="NoOfHumidifiers" ColumnName="NoOfHumidifiers" />
+          <ScalarProperty Name="Usernme" ColumnName="Usernme" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="HumidifierID" ColumnName="HumidifierID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="SelectHumidifierByUsernme" FunctionName="db_Co2HomeSaversModel.Store.SelectHumidifierByUsernme" />
+    <FunctionImportMapping FunctionImportName="UpdateTotalWattsForHumidifier" FunctionName="db_Co2HomeSaversModel.Store.UpdateTotalWattsForHumidifier" />
+    <EntitySetMapping Name="tbl_Outdoorsprinklersystem">
+      <EntityTypeMapping TypeName="db_Co2HomeSaversModel.tbl_Outdoorsprinklersystem">
+        <MappingFragment StoreEntitySet="tbl_Outdoorsprinklersystem">
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="AffilaiteLink" ColumnName="AffilaiteLink" />
+          <ScalarProperty Name="TotalWatts" ColumnName="TotalWatts" />
+          <ScalarProperty Name="Wallt3" ColumnName="Wallt3" />
+          <ScalarProperty Name="Wallt2" ColumnName="Wallt2" />
+          <ScalarProperty Name="Wallt1" ColumnName="Wallt1" />
+          <ScalarProperty Name="Tip3" ColumnName="Tip3" />
+          <ScalarProperty Name="Tip2" ColumnName="Tip2" />
+          <ScalarProperty Name="Tip1" ColumnName="Tip1" />
+          <ScalarProperty Name="Model3" ColumnName="Model3" />
+          <ScalarProperty Name="Model2" ColumnName="Model2" />
+          <ScalarProperty Name="Model1" ColumnName="Model1" />
+          <ScalarProperty Name="Make3" ColumnName="Make3" />
+          <ScalarProperty Name="Make2" ColumnName="Make2" />
+          <ScalarProperty Name="Make1" ColumnName="Make1" />
+          <ScalarProperty Name="Appliance" ColumnName="Appliance" />
+          <ScalarProperty Name="NoOfOutdoorsprinklersystems" ColumnName="NoOfOutdoorsprinklersystems" />
+          <ScalarProperty Name="Usernme" ColumnName="Usernme" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="OutdoorsprinklersystemID" ColumnName="OutdoorsprinklersystemID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="SelectOutdoorsprinklersystemByUsernme" FunctionName="db_Co2HomeSaversModel.Store.SelectOutdoorsprinklersystemByUsernme" />
+    <FunctionImportMapping FunctionImportName="UpdateTotalWattsForOutdoorsprinklersystem" FunctionName="db_Co2HomeSaversModel.Store.UpdateTotalWattsForOutdoorsprinklersystem" />
+    <EntitySetMapping Name="tbl_Pool">
+      <EntityTypeMapping TypeName="db_Co2HomeSaversModel.tbl_Pool">
+        <MappingFragment StoreEntitySet="tbl_Pool">
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="AffilaiteLink" ColumnName="AffilaiteLink" />
+          <ScalarProperty Name="TotalWatts" ColumnName="TotalWatts" />
+          <ScalarProperty Name="Wallt3" ColumnName="Wallt3" />
+          <ScalarProperty Name="Wallt2" ColumnName="Wallt2" />
+          <ScalarProperty Name="Wallt1" ColumnName="Wallt1" />
+          <ScalarProperty Name="Tip3" ColumnName="Tip3" />
+          <ScalarProperty Name="Tip2" ColumnName="Tip2" />
+          <ScalarProperty Name="Tip1" ColumnName="Tip1" />
+          <ScalarProperty Name="Model3" ColumnName="Model3" />
+          <ScalarProperty Name="Model2" ColumnName="Model2" />
+          <ScalarProperty Name="Model1" ColumnName="Model1" />
+          <ScalarProperty Name="Make3" ColumnName="Make3" />
+          <ScalarProperty Name="Make2" ColumnName="Make2" />
+          <ScalarProperty Name="Make1" ColumnName="Make1" />
+          <ScalarProperty Name="Appliance" ColumnName="Appliance" />
+          <ScalarProperty Name="NoOfPools" ColumnName="NoOfPools" />
+          <ScalarProperty Name="Usernme" ColumnName="Usernme" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="PoolID" ColumnName="PoolID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="SelectPoolByUsernme" FunctionName="db_Co2HomeSaversModel.Store.SelectPoolByUsernme" />
+    <FunctionImportMapping FunctionImportName="UpdateTotalWattsForPool" FunctionName="db_Co2HomeSaversModel.Store.UpdateTotalWattsForPool" />
+    <EntitySetMapping Name="tbl_Jacuzzi">
+      <EntityTypeMapping TypeName="db_Co2HomeSaversModel.tbl_Jacuzzi">
+        <MappingFragment StoreEntitySet="tbl_Jacuzzi">
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="AffilaiteLink" ColumnName="AffilaiteLink" />
+          <ScalarProperty Name="TotalWatts" ColumnName="TotalWatts" />
+          <ScalarProperty Name="Wallt3" ColumnName="Wallt3" />
+          <ScalarProperty Name="Wallt2" ColumnName="Wallt2" />
+          <ScalarProperty Name="Wallt1" ColumnName="Wallt1" />
+          <ScalarProperty Name="Tip3" ColumnName="Tip3" />
+          <ScalarProperty Name="Tip2" ColumnName="Tip2" />
+          <ScalarProperty Name="Tip1" ColumnName="Tip1" />
+          <ScalarProperty Name="Model3" ColumnName="Model3" />
+          <ScalarProperty Name="Model2" ColumnName="Model2" />
+          <ScalarProperty Name="Model1" ColumnName="Model1" />
+          <ScalarProperty Name="Make3" ColumnName="Make3" />
+          <ScalarProperty Name="Make2" ColumnName="Make2" />
+          <ScalarProperty Name="Make1" ColumnName="Make1" />
+          <ScalarProperty Name="Appliance" ColumnName="Appliance" />
+          <ScalarProperty Name="NoOfJacuzzis" ColumnName="NoOfJacuzzis" />
+          <ScalarProperty Name="Usernme" ColumnName="Usernme" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="JacuzziID" ColumnName="JacuzziID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="SelectJacuzziByUsernme" FunctionName="db_Co2HomeSaversModel.Store.SelectJacuzziByUsernme" />
+    <FunctionImportMapping FunctionImportName="UpdateTotalWattsForJacuzzi" FunctionName="db_Co2HomeSaversModel.Store.UpdateTotalWattsForJacuzzi" />
+    <EntitySetMapping Name="tbl_Bidet">
+      <EntityTypeMapping TypeName="db_Co2HomeSaversModel.tbl_Bidet">
+        <MappingFragment StoreEntitySet="tbl_Bidet">
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="AffilaiteLink" ColumnName="AffilaiteLink" />
+          <ScalarProperty Name="TotalWatts" ColumnName="TotalWatts" />
+          <ScalarProperty Name="Wallt3" ColumnName="Wallt3" />
+          <ScalarProperty Name="Wallt2" ColumnName="Wallt2" />
+          <ScalarProperty Name="Wallt1" ColumnName="Wallt1" />
+          <ScalarProperty Name="Tip3" ColumnName="Tip3" />
+          <ScalarProperty Name="Tip2" ColumnName="Tip2" />
+          <ScalarProperty Name="Tip1" ColumnName="Tip1" />
+          <ScalarProperty Name="Model3" ColumnName="Model3" />
+          <ScalarProperty Name="Model2" ColumnName="Model2" />
+          <ScalarProperty Name="Model1" ColumnName="Model1" />
+          <ScalarProperty Name="Make3" ColumnName="Make3" />
+          <ScalarProperty Name="Make2" ColumnName="Make2" />
+          <ScalarProperty Name="Make1" ColumnName="Make1" />
+          <ScalarProperty Name="Appliance" ColumnName="Appliance" />
+          <ScalarProperty Name="NoOfBidets" ColumnName="NoOfBidets" />
+          <ScalarProperty Name="Usernme" ColumnName="Usernme" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="BidetID" ColumnName="BidetID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="SelectBidetByUsernme" FunctionName="db_Co2HomeSaversModel.Store.SelectBidetByUsernme" />
+    <FunctionImportMapping FunctionImportName="UpdateTotalWattsForBidet" FunctionName="db_Co2HomeSaversModel.Store.UpdateTotalWattsForBidet" />
+    <EntitySetMapping Name="tbl_Showerhead">
+      <EntityTypeMapping TypeName="db_Co2HomeSaversModel.tbl_Showerhead">
+        <MappingFragment StoreEntitySet="tbl_Showerhead">
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="AffilaiteLink" ColumnName="AffilaiteLink" />
+          <ScalarProperty Name="TotalWatts" ColumnName="TotalWatts" />
+          <ScalarProperty Name="Wallt3" ColumnName="Wallt3" />
+          <ScalarProperty Name="Wallt2" ColumnName="Wallt2" />
+          <ScalarProperty Name="Wallt1" ColumnName="Wallt1" />
+          <ScalarProperty Name="Tip3" ColumnName="Tip3" />
+          <ScalarProperty Name="Tip2" ColumnName="Tip2" />
+          <ScalarProperty Name="Tip1" ColumnName="Tip1" />
+          <ScalarProperty Name="Model3" ColumnName="Model3" />
+          <ScalarProperty Name="Model2" ColumnName="Model2" />
+          <ScalarProperty Name="Model1" ColumnName="Model1" />
+          <ScalarProperty Name="Make3" ColumnName="Make3" />
+          <ScalarProperty Name="Make2" ColumnName="Make2" />
+          <ScalarProperty Name="Make1" ColumnName="Make1" />
+          <ScalarProperty Name="Appliance" ColumnName="Appliance" />
+          <ScalarProperty Name="NoOfShowerheads" ColumnName="NoOfShowerheads" />
+          <ScalarProperty Name="Usernme" ColumnName="Usernme" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="ShowerheadID" ColumnName="ShowerheadID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="SelectShowerheadByUsernme" FunctionName="db_Co2HomeSaversModel.Store.SelectShowerheadByUsernme" />
+    <FunctionImportMapping FunctionImportName="UpdateTotalWattsForShowerhead" FunctionName="db_Co2HomeSaversModel.Store.UpdateTotalWattsForShowerhead" />
+    <EntitySetMapping Name="tbl_Faucet">
+      <EntityTypeMapping TypeName="db_Co2HomeSaversModel.tbl_Faucet">
+        <MappingFragment StoreEntitySet="tbl_Faucet">
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="AffilaiteLink" ColumnName="AffilaiteLink" />
+          <ScalarProperty Name="TotalWatts" ColumnName="TotalWatts" />
+          <ScalarProperty Name="Wallt3" ColumnName="Wallt3" />
+          <ScalarProperty Name="Wallt2" ColumnName="Wallt2" />
+          <ScalarProperty Name="Wallt1" ColumnName="Wallt1" />
+          <ScalarProperty Name="Tip3" ColumnName="Tip3" />
+          <ScalarProperty Name="Tip2" ColumnName="Tip2" />
+          <ScalarProperty Name="Tip1" ColumnName="Tip1" />
+          <ScalarProperty Name="Model3" ColumnName="Model3" />
+          <ScalarProperty Name="Model2" ColumnName="Model2" />
+          <ScalarProperty Name="Model1" ColumnName="Model1" />
+          <ScalarProperty Name="Make3" ColumnName="Make3" />
+          <ScalarProperty Name="Make2" ColumnName="Make2" />
+          <ScalarProperty Name="Make1" ColumnName="Make1" />
+          <ScalarProperty Name="Appliance" ColumnName="Appliance" />
+          <ScalarProperty Name="NoOfFaucets" ColumnName="NoOfFaucets" />
+          <ScalarProperty Name="Usernme" ColumnName="Usernme" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="FaucetID" ColumnName="FaucetID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="SelectFaucetByUsernme" FunctionName="db_Co2HomeSaversModel.Store.SelectFaucetByUsernme" />
+    <FunctionImportMapping FunctionImportName="UpdateTotalWattsForFaucet" FunctionName="db_Co2HomeSaversModel.Store.UpdateTotalWattsForFaucet" />
+    <EntitySetMapping Name="tbl_Lawnsprinklersystem">
+      <EntityTypeMapping TypeName="db_Co2HomeSaversModel.tbl_Lawnsprinklersystem">
+        <MappingFragment StoreEntitySet="tbl_Lawnsprinklersystem">
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="AffilaiteLink" ColumnName="AffilaiteLink" />
+          <ScalarProperty Name="TotalWatts" ColumnName="TotalWatts" />
+          <ScalarProperty Name="Wallt3" ColumnName="Wallt3" />
+          <ScalarProperty Name="Wallt2" ColumnName="Wallt2" />
+          <ScalarProperty Name="Wallt1" ColumnName="Wallt1" />
+          <ScalarProperty Name="Tip3" ColumnName="Tip3" />
+          <ScalarProperty Name="Tip2" ColumnName="Tip2" />
+          <ScalarProperty Name="Tip1" ColumnName="Tip1" />
+          <ScalarProperty Name="Model3" ColumnName="Model3" />
+          <ScalarProperty Name="Model2" ColumnName="Model2" />
+          <ScalarProperty Name="Model1" ColumnName="Model1" />
+          <ScalarProperty Name="Make3" ColumnName="Make3" />
+          <ScalarProperty Name="Make2" ColumnName="Make2" />
+          <ScalarProperty Name="Make1" ColumnName="Make1" />
+          <ScalarProperty Name="Appliance" ColumnName="Appliance" />
+          <ScalarProperty Name="NoOfLawnsprinklersystems" ColumnName="NoOfLawnsprinklersystems" />
+          <ScalarProperty Name="Usernme" ColumnName="Usernme" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="LawnsprinklersystemID" ColumnName="LawnsprinklersystemID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="SelectLawnsprinklersystemByUsernme" FunctionName="db_Co2HomeSaversModel.Store.SelectLawnsprinklersystemByUsernme" />
+    <FunctionImportMapping FunctionImportName="UpdateTotalWattsForLawnsprinklersystem" FunctionName="db_Co2HomeSaversModel.Store.UpdateTotalWattsForLawnsprinklersystem" />
+    <EntitySetMapping Name="tbl_WRefrigilator">
+      <EntityTypeMapping TypeName="db_Co2HomeSaversModel.tbl_WRefrigilator">
+        <MappingFragment StoreEntitySet="tbl_WRefrigilator">
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="AffilaiteLink" ColumnName="AffilaiteLink" />
+          <ScalarProperty Name="TotalWatts" ColumnName="TotalWatts" />
+          <ScalarProperty Name="Wallt3" ColumnName="Wallt3" />
+          <ScalarProperty Name="Wallt2" ColumnName="Wallt2" />
+          <ScalarProperty Name="Wallt1" ColumnName="Wallt1" />
+          <ScalarProperty Name="Tip3" ColumnName="Tip3" />
+          <ScalarProperty Name="Tip2" ColumnName="Tip2" />
+          <ScalarProperty Name="Tip1" ColumnName="Tip1" />
+          <ScalarProperty Name="Model3" ColumnName="Model3" />
+          <ScalarProperty Name="Model2" ColumnName="Model2" />
+          <ScalarProperty Name="Model1" ColumnName="Model1" />
+          <ScalarProperty Name="Make3" ColumnName="Make3" />
+          <ScalarProperty Name="Make2" ColumnName="Make2" />
+          <ScalarProperty Name="Make1" ColumnName="Make1" />
+          <ScalarProperty Name="Appliance" ColumnName="Appliance" />
+          <ScalarProperty Name="NoOfWRefrigilators" ColumnName="NoOfWRefrigilators" />
+          <ScalarProperty Name="Usernme" ColumnName="Usernme" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="WRefrigilatorID" ColumnName="WRefrigilatorID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="SelectWRefrigilatorByUsernme" FunctionName="db_Co2HomeSaversModel.Store.SelectWRefrigilatorByUsernme" />
+    <FunctionImportMapping FunctionImportName="UpdateTotalWattsForWRefrigilator" FunctionName="db_Co2HomeSaversModel.Store.UpdateTotalWattsForWRefrigilator" />
+    <EntitySetMapping Name="tbl_Cooktop">
+      <EntityTypeMapping TypeName="db_Co2HomeSaversModel.tbl_Cooktop">
+        <MappingFragment StoreEntitySet="tbl_Cooktop">
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="AffilaiteLink" ColumnName="AffilaiteLink" />
+          <ScalarProperty Name="TotalWatts" ColumnName="TotalWatts" />
+          <ScalarProperty Name="Wallt3" ColumnName="Wallt3" />
+          <ScalarProperty Name="Wallt2" ColumnName="Wallt2" />
+          <ScalarProperty Name="Wallt1" ColumnName="Wallt1" />
+          <ScalarProperty Name="Tip3" ColumnName="Tip3" />
+          <ScalarProperty Name="Tip2" ColumnName="Tip2" />
+          <ScalarProperty Name="Tip1" ColumnName="Tip1" />
+          <ScalarProperty Name="Model3" ColumnName="Model3" />
+          <ScalarProperty Name="Model2" ColumnName="Model2" />
+          <ScalarProperty Name="Model1" ColumnName="Model1" />
+          <ScalarProperty Name="Make3" ColumnName="Make3" />
+          <ScalarProperty Name="Make2" ColumnName="Make2" />
+          <ScalarProperty Name="Make1" ColumnName="Make1" />
+          <ScalarProperty Name="Appliance" ColumnName="Appliance" />
+          <ScalarProperty Name="NoOfCooktops" ColumnName="NoOfCooktops" />
+          <ScalarProperty Name="Usernme" ColumnName="Usernme" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="CooktopID" ColumnName="CooktopID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="SelectCooktopByUsernme" FunctionName="db_Co2HomeSaversModel.Store.SelectCooktopByUsernme" />
+    <FunctionImportMapping FunctionImportName="UpdateTotalWattsForCooktop" FunctionName="db_Co2HomeSaversModel.Store.UpdateTotalWattsForCooktop" />
+    <EntitySetMapping Name="tbl_GasDryer">
+      <EntityTypeMapping TypeName="db_Co2HomeSaversModel.tbl_GasDryer">
+        <MappingFragment StoreEntitySet="tbl_GasDryer">
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="AffilaiteLink" ColumnName="AffilaiteLink" />
+          <ScalarProperty Name="TotalWatts" ColumnName="TotalWatts" />
+          <ScalarProperty Name="Wallt3" ColumnName="Wallt3" />
+          <ScalarProperty Name="Wallt2" ColumnName="Wallt2" />
+          <ScalarProperty Name="Wallt1" ColumnName="Wallt1" />
+          <ScalarProperty Name="Tip3" ColumnName="Tip3" />
+          <ScalarProperty Name="Tip2" ColumnName="Tip2" />
+          <ScalarProperty Name="Tip1" ColumnName="Tip1" />
+          <ScalarProperty Name="Model3" ColumnName="Model3" />
+          <ScalarProperty Name="Model2" ColumnName="Model2" />
+          <ScalarProperty Name="Model1" ColumnName="Model1" />
+          <ScalarProperty Name="Make3" ColumnName="Make3" />
+          <ScalarProperty Name="Make2" ColumnName="Make2" />
+          <ScalarProperty Name="Make1" ColumnName="Make1" />
+          <ScalarProperty Name="Appliance" ColumnName="Appliance" />
+          <ScalarProperty Name="NoOfGasDryers" ColumnName="NoOfGasDryers" />
+          <ScalarProperty Name="Usernme" ColumnName="Usernme" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="GasDryerID" ColumnName="GasDryerID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="SelectGasDryerByUsernme" FunctionName="db_Co2HomeSaversModel.Store.SelectGasDryerByUsernme" />
+    <FunctionImportMapping FunctionImportName="UpdateTotalWattsForGasDryer" FunctionName="db_Co2HomeSaversModel.Store.UpdateTotalWattsForGasDryer" />
+    <EntitySetMapping Name="tbl_Barbecue">
+      <EntityTypeMapping TypeName="db_Co2HomeSaversModel.tbl_Barbecue">
+        <MappingFragment StoreEntitySet="tbl_Barbecue">
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="AffilaiteLink" ColumnName="AffilaiteLink" />
+          <ScalarProperty Name="TotalWatts" ColumnName="TotalWatts" />
+          <ScalarProperty Name="Wallt3" ColumnName="Wallt3" />
+          <ScalarProperty Name="Wallt2" ColumnName="Wallt2" />
+          <ScalarProperty Name="Wallt1" ColumnName="Wallt1" />
+          <ScalarProperty Name="Tip3" ColumnName="Tip3" />
+          <ScalarProperty Name="Tip2" ColumnName="Tip2" />
+          <ScalarProperty Name="Tip1" ColumnName="Tip1" />
+          <ScalarProperty Name="Model3" ColumnName="Model3" />
+          <ScalarProperty Name="Model2" ColumnName="Model2" />
+          <ScalarProperty Name="Model1" ColumnName="Model1" />
+          <ScalarProperty Name="Make3" ColumnName="Make3" />
+          <ScalarProperty Name="Make2" ColumnName="Make2" />
+          <ScalarProperty Name="Make1" ColumnName="Make1" />
+          <ScalarProperty Name="Appliance" ColumnName="Appliance" />
+          <ScalarProperty Name="NoOfBarbecues" ColumnName="NoOfBarbecues" />
+          <ScalarProperty Name="Usernme" ColumnName="Usernme" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="BarbecueID" ColumnName="BarbecueID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="SelectBarbecueByUsernme" FunctionName="db_Co2HomeSaversModel.Store.SelectBarbecueByUsernme" />
+    <FunctionImportMapping FunctionImportName="UpdateTotalWattsForBarbecue" FunctionName="db_Co2HomeSaversModel.Store.UpdateTotalWattsForBarbecue" />
+    <EntitySetMapping Name="tbl_Generator">
+      <EntityTypeMapping TypeName="db_Co2HomeSaversModel.tbl_Generator">
+        <MappingFragment StoreEntitySet="tbl_Generator">
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="AffilaiteLink" ColumnName="AffilaiteLink" />
+          <ScalarProperty Name="TotalWatts" ColumnName="TotalWatts" />
+          <ScalarProperty Name="Wallt3" ColumnName="Wallt3" />
+          <ScalarProperty Name="Wallt2" ColumnName="Wallt2" />
+          <ScalarProperty Name="Wallt1" ColumnName="Wallt1" />
+          <ScalarProperty Name="Tip3" ColumnName="Tip3" />
+          <ScalarProperty Name="Tip2" ColumnName="Tip2" />
+          <ScalarProperty Name="Tip1" ColumnName="Tip1" />
+          <ScalarProperty Name="Model3" ColumnName="Model3" />
+          <ScalarProperty Name="Model2" ColumnName="Model2" />
+          <ScalarProperty Name="Model1" ColumnName="Model1" />
+          <ScalarProperty Name="Make3" ColumnName="Make3" />
+          <ScalarProperty Name="Make2" ColumnName="Make2" />
+          <ScalarProperty Name="Make1" ColumnName="Make1" />
+          <ScalarProperty Name="Appliance" ColumnName="Appliance" />
+          <ScalarProperty Name="NoOfGenerators" ColumnName="NoOfGenerators" />
+          <ScalarProperty Name="Usernme" ColumnName="Usernme" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="GeneratorID" ColumnName="GeneratorID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="SelectGeneratorByUsernme" FunctionName="db_Co2HomeSaversModel.Store.SelectGeneratorByUsernme" />
+    <FunctionImportMapping FunctionImportName="UpdateTotalWattsForGenerator" FunctionName="db_Co2HomeSaversModel.Store.UpdateTotalWattsForGenerator" />
+    <EntitySetMapping Name="tbl_GasOven">
+      <EntityTypeMapping TypeName="db_Co2HomeSaversModel.tbl_GasOven">
+        <MappingFragment StoreEntitySet="tbl_GasOven">
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="AffilaiteLink" ColumnName="AffilaiteLink" />
+          <ScalarProperty Name="TotalWatts" ColumnName="TotalWatts" />
+          <ScalarProperty Name="Wallt3" ColumnName="Wallt3" />
+          <ScalarProperty Name="Wallt2" ColumnName="Wallt2" />
+          <ScalarProperty Name="Wallt1" ColumnName="Wallt1" />
+          <ScalarProperty Name="Tip3" ColumnName="Tip3" />
+          <ScalarProperty Name="Tip2" ColumnName="Tip2" />
+          <ScalarProperty Name="Tip1" ColumnName="Tip1" />
+          <ScalarProperty Name="Model3" ColumnName="Model3" />
+          <ScalarProperty Name="Model2" ColumnName="Model2" />
+          <ScalarProperty Name="Model1" ColumnName="Model1" />
+          <ScalarProperty Name="Make3" ColumnName="Make3" />
+          <ScalarProperty Name="Make2" ColumnName="Make2" />
+          <ScalarProperty Name="Make1" ColumnName="Make1" />
+          <ScalarProperty Name="Appliance" ColumnName="Appliance" />
+          <ScalarProperty Name="NoOfGasOvens" ColumnName="NoOfGasOvens" />
+          <ScalarProperty Name="Usernme" ColumnName="Usernme" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="GasOvenID" ColumnName="GasOvenID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="SelectGasOvenByUsernme" FunctionName="db_Co2HomeSaversModel.Store.SelectGasOvenByUsernme" />
+    <FunctionImportMapping FunctionImportName="UpdateTotalWattsForGasOven" FunctionName="db_Co2HomeSaversModel.Store.UpdateTotalWattsForGasOven" />
+    <EntitySetMapping Name="tbl_Programmablethermostat">
+      <EntityTypeMapping TypeName="db_Co2HomeSaversModel.tbl_Programmablethermostat">
+        <MappingFragment StoreEntitySet="tbl_Programmablethermostat">
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="AffilaiteLink" ColumnName="AffilaiteLink" />
+          <ScalarProperty Name="TotalWatts" ColumnName="TotalWatts" />
+          <ScalarProperty Name="Wallt3" ColumnName="Wallt3" />
+          <ScalarProperty Name="Wallt2" ColumnName="Wallt2" />
+          <ScalarProperty Name="Wallt1" ColumnName="Wallt1" />
+          <ScalarProperty Name="Tip3" ColumnName="Tip3" />
+          <ScalarProperty Name="Tip2" ColumnName="Tip2" />
+          <ScalarProperty Name="Tip1" ColumnName="Tip1" />
+          <ScalarProperty Name="Model3" ColumnName="Model3" />
+          <ScalarProperty Name="Model2" ColumnName="Model2" />
+          <ScalarProperty Name="Model1" ColumnName="Model1" />
+          <ScalarProperty Name="Make3" ColumnName="Make3" />
+          <ScalarProperty Name="Make2" ColumnName="Make2" />
+          <ScalarProperty Name="Make1" ColumnName="Make1" />
+          <ScalarProperty Name="Appliance" ColumnName="Appliance" />
+          <ScalarProperty Name="NoOfProgrammablethermostats" ColumnName="NoOfProgrammablethermostats" />
+          <ScalarProperty Name="Usernme" ColumnName="Usernme" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="ProgrammablethermostatID" ColumnName="ProgrammablethermostatID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="SelectProgrammablethermostatByUsernme" FunctionName="db_Co2HomeSaversModel.Store.SelectProgrammablethermostatByUsernme" />
+    <FunctionImportMapping FunctionImportName="UpdateTotalWattsForProgrammablethermostat" FunctionName="db_Co2HomeSaversModel.Store.UpdateTotalWattsForProgrammablethermostat" />
+    <EntitySetMapping Name="tbl_Solarpanels">
+      <EntityTypeMapping TypeName="db_Co2HomeSaversModel.tbl_Solarpanels">
+        <MappingFragment StoreEntitySet="tbl_Solarpanels">
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="AffilaiteLink" ColumnName="AffilaiteLink" />
+          <ScalarProperty Name="TotalWatts" ColumnName="TotalWatts" />
+          <ScalarProperty Name="Wallt3" ColumnName="Wallt3" />
+          <ScalarProperty Name="Wallt2" ColumnName="Wallt2" />
+          <ScalarProperty Name="Wallt1" ColumnName="Wallt1" />
+          <ScalarProperty Name="Tip3" ColumnName="Tip3" />
+          <ScalarProperty Name="Tip2" ColumnName="Tip2" />
+          <ScalarProperty Name="Tip1" ColumnName="Tip1" />
+          <ScalarProperty Name="Model3" ColumnName="Model3" />
+          <ScalarProperty Name="Model2" ColumnName="Model2" />
+          <ScalarProperty Name="Model1" ColumnName="Model1" />
+          <ScalarProperty Name="Make3" ColumnName="Make3" />
+          <ScalarProperty Name="Make2" ColumnName="Make2" />
+          <ScalarProperty Name="Make1" ColumnName="Make1" />
+          <ScalarProperty Name="Appliance" ColumnName="Appliance" />
+          <ScalarProperty Name="NoOfSolarpanels" ColumnName="NoOfSolarpanels" />
+          <ScalarProperty Name="Usernme" ColumnName="Usernme" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="SolarpanelstID" ColumnName="SolarpanelstID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="SelectSolarpanelsByUsernme" FunctionName="db_Co2HomeSaversModel.Store.SelectSolarpanelsByUsernme" />
+    <FunctionImportMapping FunctionImportName="UpdateTotalWattsForSolarpanels" FunctionName="db_Co2HomeSaversModel.Store.UpdateTotalWattsForSolarpanels" />
+    <EntitySetMapping Name="tbl_Smartpowerstrip">
+      <EntityTypeMapping TypeName="db_Co2HomeSaversModel.tbl_Smartpowerstrip">
+        <MappingFragment StoreEntitySet="tbl_Smartpowerstrip">
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="AffilaiteLink" ColumnName="AffilaiteLink" />
+          <ScalarProperty Name="TotalWatts" ColumnName="TotalWatts" />
+          <ScalarProperty Name="Wallt3" ColumnName="Wallt3" />
+          <ScalarProperty Name="Wallt2" ColumnName="Wallt2" />
+          <ScalarProperty Name="Wallt1" ColumnName="Wallt1" />
+          <ScalarProperty Name="Tip3" ColumnName="Tip3" />
+          <ScalarProperty Name="Tip2" ColumnName="Tip2" />
+          <ScalarProperty Name="Tip1" ColumnName="Tip1" />
+          <ScalarProperty Name="Model3" ColumnName="Model3" />
+          <ScalarProperty Name="Model2" ColumnName="Model2" />
+          <ScalarProperty Name="Model1" ColumnName="Model1" />
+          <ScalarProperty Name="Make3" ColumnName="Make3" />
+          <ScalarProperty Name="Make2" ColumnName="Make2" />
+          <ScalarProperty Name="Make1" ColumnName="Make1" />
+          <ScalarProperty Name="Appliance" ColumnName="Appliance" />
+          <ScalarProperty Name="NoOfSmartpowerstrips" ColumnName="NoOfSmartpowerstrips" />
+          <ScalarProperty Name="Usernme" ColumnName="Usernme" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="SmartpowerstripID" ColumnName="SmartpowerstripID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="SelectSmartpowerstripByUsernme" FunctionName="db_Co2HomeSaversModel.Store.SelectSmartpowerstripByUsernme" />
+    <FunctionImportMapping FunctionImportName="UpdateTotalWattsForSmartpowerstrip" FunctionName="db_Co2HomeSaversModel.Store.UpdateTotalWattsForSmartpowerstrip" />
+    <EntitySetMapping Name="tbl_Electriccarcharger">
+      <EntityTypeMapping TypeName="db_Co2HomeSaversModel.tbl_Electriccarcharger">
+        <MappingFragment StoreEntitySet="tbl_Electriccarcharger">
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="AffilaiteLink" ColumnName="AffilaiteLink" />
+          <ScalarProperty Name="TotalWatts" ColumnName="TotalWatts" />
+          <ScalarProperty Name="Wallt3" ColumnName="Wallt3" />
+          <ScalarProperty Name="Wallt2" ColumnName="Wallt2" />
+          <ScalarProperty Name="Wallt1" ColumnName="Wallt1" />
+          <ScalarProperty Name="Tip3" ColumnName="Tip3" />
+          <ScalarProperty Name="Tip2" ColumnName="Tip2" />
+          <ScalarProperty Name="Tip1" ColumnName="Tip1" />
+          <ScalarProperty Name="Model3" ColumnName="Model3" />
+          <ScalarProperty Name="Model2" ColumnName="Model2" />
+          <ScalarProperty Name="Model1" ColumnName="Model1" />
+          <ScalarProperty Name="Make3" ColumnName="Make3" />
+          <ScalarProperty Name="Make2" ColumnName="Make2" />
+          <ScalarProperty Name="Make1" ColumnName="Make1" />
+          <ScalarProperty Name="Appliance" ColumnName="Appliance" />
+          <ScalarProperty Name="NoOfElectriccarchargers" ColumnName="NoOfElectriccarchargers" />
+          <ScalarProperty Name="Usernme" ColumnName="Usernme" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="ElectriccarchargerID" ColumnName="ElectriccarchargerID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="SelectElectriccarchargerByUsernme" FunctionName="db_Co2HomeSaversModel.Store.SelectElectriccarchargerByUsernme" />
+    <FunctionImportMapping FunctionImportName="UpdateTotalWattsForElectriccarcharger" FunctionName="db_Co2HomeSaversModel.Store.UpdateTotalWattsForElectriccarcharger" />
+    <EntitySetMapping Name="tbl_healthiestlightbulbs">
+      <EntityTypeMapping TypeName="db_Co2HomeSaversModel.tbl_healthiestlightbulbs">
+        <MappingFragment StoreEntitySet="tbl_healthiestlightbulbs">
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="AffilaiteLink" ColumnName="AffilaiteLink" />
+          <ScalarProperty Name="TotalWatts" ColumnName="TotalWatts" />
+          <ScalarProperty Name="Wallt3" ColumnName="Wallt3" />
+          <ScalarProperty Name="Wallt2" ColumnName="Wallt2" />
+          <ScalarProperty Name="Wallt1" ColumnName="Wallt1" />
+          <ScalarProperty Name="Tip3" ColumnName="Tip3" />
+          <ScalarProperty Name="Tip2" ColumnName="Tip2" />
+          <ScalarProperty Name="Tip1" ColumnName="Tip1" />
+          <ScalarProperty Name="Model3" ColumnName="Model3" />
+          <ScalarProperty Name="Model2" ColumnName="Model2" />
+          <ScalarProperty Name="Model1" ColumnName="Model1" />
+          <ScalarProperty Name="Make3" ColumnName="Make3" />
+          <ScalarProperty Name="Make2" ColumnName="Make2" />
+          <ScalarProperty Name="Make1" ColumnName="Make1" />
+          <ScalarProperty Name="Appliance" ColumnName="Appliance" />
+          <ScalarProperty Name="NoOfhealthiestlightbulbs" ColumnName="NoOfhealthiestlightbulbs" />
+          <ScalarProperty Name="Usernme" ColumnName="Usernme" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="ElectriccarchargerID" ColumnName="ElectriccarchargerID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="SelecthealthiestlightbulbsByUsernme" FunctionName="db_Co2HomeSaversModel.Store.SelecthealthiestlightbulbsByUsernme" />
+    <EntitySetMapping Name="tbl_WaterAC">
+      <EntityTypeMapping TypeName="db_Co2HomeSaversModel.tbl_WaterAC">
+        <MappingFragment StoreEntitySet="tbl_WaterAC">
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="AffilaiteLink" ColumnName="AffilaiteLink" />
+          <ScalarProperty Name="TotalWatts" ColumnName="TotalWatts" />
+          <ScalarProperty Name="Wallt3" ColumnName="Wallt3" />
+          <ScalarProperty Name="Wallt2" ColumnName="Wallt2" />
+          <ScalarProperty Name="Wallt1" ColumnName="Wallt1" />
+          <ScalarProperty Name="Tip3" ColumnName="Tip3" />
+          <ScalarProperty Name="Tip2" ColumnName="Tip2" />
+          <ScalarProperty Name="Tip1" ColumnName="Tip1" />
+          <ScalarProperty Name="Model3" ColumnName="Model3" />
+          <ScalarProperty Name="Model2" ColumnName="Model2" />
+          <ScalarProperty Name="Model1" ColumnName="Model1" />
+          <ScalarProperty Name="Make3" ColumnName="Make3" />
+          <ScalarProperty Name="Make2" ColumnName="Make2" />
+          <ScalarProperty Name="Make1" ColumnName="Make1" />
+          <ScalarProperty Name="Appliance" ColumnName="Appliance" />
+          <ScalarProperty Name="NoOfWaterACs" ColumnName="NoOfWaterACs" />
+          <ScalarProperty Name="Usernme" ColumnName="Usernme" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="WaterACID" ColumnName="WaterACID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="SelectWaterACByUsernme" FunctionName="db_Co2HomeSaversModel.Store.SelectWaterACByUsernme" />
+    <FunctionImportMapping FunctionImportName="UpdateTotalWattsForWaterAC" FunctionName="db_Co2HomeSaversModel.Store.UpdateTotalWattsForWaterAC" />
+    <EntitySetMapping Name="tbl_Furnance">
+      <EntityTypeMapping TypeName="db_Co2HomeSaversModel.tbl_Furnance">
+        <MappingFragment StoreEntitySet="tbl_Furnance">
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="AffilaiteLink" ColumnName="AffilaiteLink" />
+          <ScalarProperty Name="TotalWatts" ColumnName="TotalWatts" />
+          <ScalarProperty Name="Wallt3" ColumnName="Wallt3" />
+          <ScalarProperty Name="Wallt2" ColumnName="Wallt2" />
+          <ScalarProperty Name="Wallt1" ColumnName="Wallt1" />
+          <ScalarProperty Name="Tip3" ColumnName="Tip3" />
+          <ScalarProperty Name="Tip2" ColumnName="Tip2" />
+          <ScalarProperty Name="Tip1" ColumnName="Tip1" />
+          <ScalarProperty Name="Model3" ColumnName="Model3" />
+          <ScalarProperty Name="Model2" ColumnName="Model2" />
+          <ScalarProperty Name="Model1" ColumnName="Model1" />
+          <ScalarProperty Name="Make3" ColumnName="Make3" />
+          <ScalarProperty Name="Make2" ColumnName="Make2" />
+          <ScalarProperty Name="Make1" ColumnName="Make1" />
+          <ScalarProperty Name="Appliance" ColumnName="Appliance" />
+          <ScalarProperty Name="NoOfFurnance" ColumnName="NoOfFurnance" />
+          <ScalarProperty Name="Usernme" ColumnName="Usernme" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="FurnanceID" ColumnName="FurnanceID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="SelectFurnanceByUsernme" FunctionName="db_Co2HomeSaversModel.Store.SelectFurnanceByUsernme" />
+    <FunctionImportMapping FunctionImportName="UpdateTotalWattsForFurnance" FunctionName="db_Co2HomeSaversModel.Store.UpdateTotalWattsForFurnance" />
+    <EntitySetMapping Name="tbl_Fireplace">
+      <EntityTypeMapping TypeName="db_Co2HomeSaversModel.tbl_Fireplace">
+        <MappingFragment StoreEntitySet="tbl_Fireplace">
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="AffilaiteLink" ColumnName="AffilaiteLink" />
+          <ScalarProperty Name="TotalWatts" ColumnName="TotalWatts" />
+          <ScalarProperty Name="Wallt3" ColumnName="Wallt3" />
+          <ScalarProperty Name="Wallt2" ColumnName="Wallt2" />
+          <ScalarProperty Name="Wallt1" ColumnName="Wallt1" />
+          <ScalarProperty Name="Tip3" ColumnName="Tip3" />
+          <ScalarProperty Name="Tip2" ColumnName="Tip2" />
+          <ScalarProperty Name="Tip1" ColumnName="Tip1" />
+          <ScalarProperty Name="Model3" ColumnName="Model3" />
+          <ScalarProperty Name="Model2" ColumnName="Model2" />
+          <ScalarProperty Name="Model1" ColumnName="Model1" />
+          <ScalarProperty Name="Make3" ColumnName="Make3" />
+          <ScalarProperty Name="Make2" ColumnName="Make2" />
+          <ScalarProperty Name="Make1" ColumnName="Make1" />
+          <ScalarProperty Name="Appliance" ColumnName="Appliance" />
+          <ScalarProperty Name="NoOfFireplace" ColumnName="NoOfFireplace" />
+          <ScalarProperty Name="Usernme" ColumnName="Usernme" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="FireplaceID" ColumnName="FireplaceID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="SelectFireplaceByUsernme" FunctionName="db_Co2HomeSaversModel.Store.SelectFireplaceByUsernme" />
+    <FunctionImportMapping FunctionImportName="UpdateTotalWattsForFireplace" FunctionName="db_Co2HomeSaversModel.Store.UpdateTotalWattsForFireplace" />
+    <FunctionImportMapping FunctionImportName="SelectDishwasherByUsernme1" FunctionName="db_Co2HomeSaversModel.Store.SelectDishwasherByUsernme" />
+    <FunctionImportMapping FunctionImportName="UpdateTotalWattsForUser81" FunctionName="db_Co2HomeSaversModel.Store.UpdateTotalWattsForUser8" />
+    <FunctionImportMapping FunctionImportName="SelectBathtubByUsernme1" FunctionName="db_Co2HomeSaversModel.Store.SelectBathtubByUsernme" />
+    <FunctionImportMapping FunctionImportName="UpdateTotalWattsForBathtub1" FunctionName="db_Co2HomeSaversModel.Store.UpdateTotalWattsForBathtub" />
+    <FunctionImportMapping FunctionImportName="GetWattsRecordsForKitchenResults" FunctionName="db_Co2HomeSaversModel.Store.GetWattsRecordsForKitchenResults">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="db_Co2HomeSaversModel.GetWattsRecordsForKitchenResults_Result">
+          <ScalarProperty Name="Appliance" ColumnName="Appliance" />
+          <ScalarProperty Name="TotalWatts" ColumnName="TotalWatts" />
+          <ScalarProperty Name="Tip1" ColumnName="Tip1" />
+          <ScalarProperty Name="Tip2" ColumnName="Tip2" />
+          <ScalarProperty Name="Tip3" ColumnName="Tip3" />
+          <ScalarProperty Name="AffilaiteLink" ColumnName="AffilaiteLink" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetWattsRecordsForHeatingAndCoolingAppliancesPage" FunctionName="db_Co2HomeSaversModel.Store.GetWattsRecordsForHeatingAndCoolingAppliancesPage">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="db_Co2HomeSaversModel.GetWattsRecordsForHeatingAndCoolingAppliancesPage_Result">
+          <ScalarProperty Name="Appliance" ColumnName="Appliance" />
+          <ScalarProperty Name="TotalWatts" ColumnName="TotalWatts" />
+          <ScalarProperty Name="Tip1" ColumnName="Tip1" />
+          <ScalarProperty Name="Tip2" ColumnName="Tip2" />
+          <ScalarProperty Name="Tip3" ColumnName="Tip3" />
+          <ScalarProperty Name="AffilaiteLink" ColumnName="AffilaiteLink" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetWattsRecordsForHomeEntertainmentAppliance" FunctionName="db_Co2HomeSaversModel.Store.GetWattsRecordsForHomeEntertainmentAppliance">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="db_Co2HomeSaversModel.GetWattsRecordsForHomeEntertainmentAppliance_Result">
+          <ScalarProperty Name="Appliance" ColumnName="Appliance" />
+          <ScalarProperty Name="TotalWatts" ColumnName="TotalWatts" />
+          <ScalarProperty Name="Tip1" ColumnName="Tip1" />
+          <ScalarProperty Name="Tip2" ColumnName="Tip2" />
+          <ScalarProperty Name="Tip3" ColumnName="Tip3" />
+          <ScalarProperty Name="AffilaiteLink" ColumnName="AffilaiteLink" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetWattsRecordsForWaterAppliance" FunctionName="db_Co2HomeSaversModel.Store.GetWattsRecordsForWaterAppliance">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="db_Co2HomeSaversModel.GetWattsRecordsForWaterAppliance_Result">
+          <ScalarProperty Name="Appliance" ColumnName="Appliance" />
+          <ScalarProperty Name="TotalWatts" ColumnName="TotalWatts" />
+          <ScalarProperty Name="Tip1" ColumnName="Tip1" />
+          <ScalarProperty Name="Tip2" ColumnName="Tip2" />
+          <ScalarProperty Name="Tip3" ColumnName="Tip3" />
+          <ScalarProperty Name="AffilaiteLink" ColumnName="AffilaiteLink" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetWattsRecordsForGasAppliance" FunctionName="db_Co2HomeSaversModel.Store.GetWattsRecordsForGasAppliance">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="db_Co2HomeSaversModel.GetWattsRecordsForGasAppliance_Result">
+          <ScalarProperty Name="Appliance" ColumnName="Appliance" />
+          <ScalarProperty Name="TotalWatts" ColumnName="TotalWatts" />
+          <ScalarProperty Name="Tip1" ColumnName="Tip1" />
+          <ScalarProperty Name="Tip2" ColumnName="Tip2" />
+          <ScalarProperty Name="Tip3" ColumnName="Tip3" />
+          <ScalarProperty Name="AffilaiteLink" ColumnName="AffilaiteLink" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetWattsRecordsForAlternateElectricityAppliancePage" FunctionName="db_Co2HomeSaversModel.Store.GetWattsRecordsForAlternateElectricityAppliancePage">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="db_Co2HomeSaversModel.GetWattsRecordsForAlternateElectricityAppliancePage_Result">
+          <ScalarProperty Name="Appliance" ColumnName="Appliance" />
+          <ScalarProperty Name="TotalWatts" ColumnName="TotalWatts" />
+          <ScalarProperty Name="Tip1" ColumnName="Tip1" />
+          <ScalarProperty Name="Tip2" ColumnName="Tip2" />
+          <ScalarProperty Name="Tip3" ColumnName="Tip3" />
+          <ScalarProperty Name="AffilaiteLink" ColumnName="AffilaiteLink" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetWattsRecordsForAlternateElectricityAppliancePages" FunctionName="db_Co2HomeSaversModel.Store.GetWattsRecordsForAlternateElectricityAppliancePages">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="db_Co2HomeSaversModel.GetWattsRecordsForAlternateElectricityAppliancePages_Result">
+          <ScalarProperty Name="Appliance" ColumnName="Appliance" />
+          <ScalarProperty Name="TotalWatts" ColumnName="TotalWatts" />
+          <ScalarProperty Name="Tip1" ColumnName="Tip1" />
+          <ScalarProperty Name="Tip2" ColumnName="Tip2" />
+          <ScalarProperty Name="Tip3" ColumnName="Tip3" />
+          <ScalarProperty Name="AffilaiteLink" ColumnName="AffilaiteLink" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="db_Co2HomeSaversModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="definition" ColumnName="definition" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="db_Co2HomeSaversModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="db_Co2HomeSaversModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="db_Co2HomeSaversModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="db_Co2HomeSaversModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="db_Co2HomeSaversModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="db_Co2HomeSaversModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="db_Co2HomeSaversModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="db_Co2HomeSaversModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="db_Co2HomeSaversModel.Store.sp_upgraddiagrams" />
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,2713 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="db_Co2HomeSaversModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="db_Co2HomeSaversEntities1" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="InsertUsernameAndReturn" ReturnType="Collection(String)" />
+    <FunctionImport Name="InsertRefrigilator">
+      <Parameter Name="Username" Mode="In" Type="String" />
+      <Parameter Name="NoOfRefrigilators" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SelectRefrigilatorsByUsernme" ReturnType="Collection(Int32)">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetLowestTotalWattsRecords" ReturnType="Collection(db_Co2HomeSaversModel.GetLowestTotalWattsRecords_Result)">
+      <Parameter Name="username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetSecondLowestTotalWattsRecords" ReturnType="Collection(db_Co2HomeSaversModel.GetSecondLowestTotalWattsRecords_Result)">
+      <Parameter Name="username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetThirdHighestTotalWattsRecords" ReturnType="Collection(db_Co2HomeSaversModel.GetThirdHighestTotalWattsRecords_Result)">
+      <Parameter Name="username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetWattsRecords" ReturnType="Collection(db_Co2HomeSaversModel.GetWattsRecords_Result)">
+      <Parameter Name="username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateRefrigeratorTips">
+      <Parameter Name="username" Mode="In" Type="String" />
+      <Parameter Name="NewTip1Value" Mode="In" Type="String" />
+      <Parameter Name="NewTip2Value" Mode="In" Type="String" />
+      <Parameter Name="NewTip3Value" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateRefrigilatorTips">
+      <Parameter Name="Username" Mode="In" Type="String" />
+      <Parameter Name="NewTip1" Mode="In" Type="String" />
+      <Parameter Name="NewTip2" Mode="In" Type="String" />
+      <Parameter Name="NewTip3" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateTotalWattsForUser">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SelectFreezersByUsernme" ReturnType="Collection(Int32)">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SelectDryerByUsernme" ReturnType="Collection(Int32)">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateTotalWattsForUser2">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateTotalWattsForUser3">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SelectMicrowavesByUsernme" ReturnType="Collection(Int32)">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateTotalWattsForUser4">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SelectOvensByUsernme" ReturnType="Collection(Int32)">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateTotalWattsForUser5">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SelectStovesByUsernme" ReturnType="Collection(Int32)">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateTotalWattsForUser6">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SelectWashingMachineByUsernme" ReturnType="Collection(Int32)">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateTotalWattsForUser7">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SelectDishwasherByUsernme" ReturnType="Collection(Int32)">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateTotalWattsForUser8">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetWattsRecords1" ReturnType="Collection(db_Co2HomeSaversModel.GetWattsRecords1_Result)">
+      <Parameter Name="username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetWattsRecords2" ReturnType="Collection(db_Co2HomeSaversModel.GetWattsRecords2_Result)">
+      <Parameter Name="username" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="tbl_AffilaiteLink" EntityType="db_Co2HomeSaversModel.tbl_AffilaiteLink" />
+    <EntitySet Name="tbl_Category" EntityType="db_Co2HomeSaversModel.tbl_Category" />
+    <EntitySet Name="tbl_Dishwashere" EntityType="db_Co2HomeSaversModel.tbl_Dishwashere" />
+    <EntitySet Name="tbl_Dryer" EntityType="db_Co2HomeSaversModel.tbl_Dryer" />
+    <EntitySet Name="tbl_Freezer" EntityType="db_Co2HomeSaversModel.tbl_Freezer" />
+    <EntitySet Name="tbl_Microwave" EntityType="db_Co2HomeSaversModel.tbl_Microwave" />
+    <EntitySet Name="tbl_Oven" EntityType="db_Co2HomeSaversModel.tbl_Oven" />
+    <EntitySet Name="tbl_Refrigilator" EntityType="db_Co2HomeSaversModel.tbl_Refrigilator" />
+    <EntitySet Name="tbl_ResutImages" EntityType="db_Co2HomeSaversModel.tbl_ResutImages" />
+    <EntitySet Name="tbl_Stove" EntityType="db_Co2HomeSaversModel.tbl_Stove" />
+    <EntitySet Name="tbl_User" EntityType="db_Co2HomeSaversModel.tbl_User" />
+    <EntitySet Name="tbl_WashingMachine" EntityType="db_Co2HomeSaversModel.tbl_WashingMachine" />
+    <AssociationSet Name="FK__tbl_Dishw__Categ__671F4F74" Association="db_Co2HomeSaversModel.FK__tbl_Dishw__Categ__671F4F74">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_Dishwashere" EntitySet="tbl_Dishwashere" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbl_Dryer__Categ__4F47C5E3" Association="db_Co2HomeSaversModel.FK__tbl_Dryer__Categ__4F47C5E3">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_Dryer" EntitySet="tbl_Dryer" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbl_Freez__Categ__4A8310C6" Association="db_Co2HomeSaversModel.FK__tbl_Freez__Categ__4A8310C6">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_Freezer" EntitySet="tbl_Freezer" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbl_Micro__Categ__540C7B00" Association="db_Co2HomeSaversModel.FK__tbl_Micro__Categ__540C7B00">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_Microwave" EntitySet="tbl_Microwave" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbl_Oven__Catego__58D1301D" Association="db_Co2HomeSaversModel.FK__tbl_Oven__Catego__58D1301D">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_Oven" EntitySet="tbl_Oven" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbl_Refri__Categ__02FC7413" Association="db_Co2HomeSaversModel.FK__tbl_Refri__Categ__02FC7413">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_Refrigilator" EntitySet="tbl_Refrigilator" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbl_Stove__Categ__5D95E53A" Association="db_Co2HomeSaversModel.FK__tbl_Stove__Categ__5D95E53A">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_Stove" EntitySet="tbl_Stove" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbl_Washi__Categ__625A9A57" Association="db_Co2HomeSaversModel.FK__tbl_Washi__Categ__625A9A57">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_WashingMachine" EntitySet="tbl_WashingMachine" />
+    </AssociationSet>
+    <FunctionImport Name="GetWattsRecords3" ReturnType="Collection(db_Co2HomeSaversModel.GetWattsRecords3_Result)">
+      <Parameter Name="username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetWattsRecords4" ReturnType="Collection(db_Co2HomeSaversModel.GetWattsRecords4_Result)">
+      <Parameter Name="username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetWattsRecords5" ReturnType="Collection(db_Co2HomeSaversModel.GetWattsRecords5_Result)">
+      <Parameter Name="username" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="tbl_WaterHeater" EntityType="db_Co2HomeSaversModel.tbl_WaterHeater" />
+    <AssociationSet Name="FK__tbl_Water__Categ__0B5CAFEA" Association="db_Co2HomeSaversModel.FK__tbl_Water__Categ__0B5CAFEA">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_WaterHeater" EntitySet="tbl_WaterHeater" />
+    </AssociationSet>
+    <FunctionImport Name="SelectWaterHeaterByUsernme" ReturnType="Collection(Int32)">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateTotalWattsForUser9">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="tbl_Television" EntityType="db_Co2HomeSaversModel.tbl_Television" />
+    <AssociationSet Name="FK__tbl_Telev__Categ__10216507" Association="db_Co2HomeSaversModel.FK__tbl_Telev__Categ__10216507">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_Television" EntitySet="tbl_Television" />
+    </AssociationSet>
+    <FunctionImport Name="SelectTelevisionByUsernme" ReturnType="Collection(Int32)">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateTotalWattsForTV">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="tbl_Computer" EntityType="db_Co2HomeSaversModel.tbl_Computer" />
+    <AssociationSet Name="FK__tbl_Compu__Categ__14E61A24" Association="db_Co2HomeSaversModel.FK__tbl_Compu__Categ__14E61A24">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_Computer" EntitySet="tbl_Computer" />
+    </AssociationSet>
+    <FunctionImport Name="SelectComputerByUsernme" ReturnType="Collection(Int32)">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateTotalWattsForComputer">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="tbl_Laptop" EntityType="db_Co2HomeSaversModel.tbl_Laptop" />
+    <AssociationSet Name="FK__tbl_Lapto__Categ__19AACF41" Association="db_Co2HomeSaversModel.FK__tbl_Lapto__Categ__19AACF41">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_Laptop" EntitySet="tbl_Laptop" />
+    </AssociationSet>
+    <FunctionImport Name="SelectLaptopByUsernme" ReturnType="Collection(Int32)">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateTotalWattsForLaptop">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="tbl_Smartphone" EntityType="db_Co2HomeSaversModel.tbl_Smartphone" />
+    <AssociationSet Name="FK__tbl_Smart__Categ__1E6F845E" Association="db_Co2HomeSaversModel.FK__tbl_Smart__Categ__1E6F845E">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_Smartphone" EntitySet="tbl_Smartphone" />
+    </AssociationSet>
+    <FunctionImport Name="SelectSmartphoneByUsernme" ReturnType="Collection(Int32)">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateTotalWattsForSmartphone">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="tbl_SmartSpeaker" EntityType="db_Co2HomeSaversModel.tbl_SmartSpeaker" />
+    <AssociationSet Name="FK__tbl_Smart__Categ__2334397B" Association="db_Co2HomeSaversModel.FK__tbl_Smart__Categ__2334397B">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_SmartSpeaker" EntitySet="tbl_SmartSpeaker" />
+    </AssociationSet>
+    <FunctionImport Name="SelectSmartSpeakerByUsernme" ReturnType="Collection(Int32)">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateTotalWattsForSmartSpeaker">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="tbl_GamingConsole" EntityType="db_Co2HomeSaversModel.tbl_GamingConsole" />
+    <AssociationSet Name="FK__tbl_Gamin__Categ__27F8EE98" Association="db_Co2HomeSaversModel.FK__tbl_Gamin__Categ__27F8EE98">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_GamingConsole" EntitySet="tbl_GamingConsole" />
+    </AssociationSet>
+    <FunctionImport Name="SelectGamingConsoleByUsernme" ReturnType="Collection(Int32)">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateTotalWattsForGamingConsole">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="tbl_Router" EntityType="db_Co2HomeSaversModel.tbl_Router" />
+    <AssociationSet Name="FK__tbl_Route__Categ__2CBDA3B5" Association="db_Co2HomeSaversModel.FK__tbl_Route__Categ__2CBDA3B5">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_Router" EntitySet="tbl_Router" />
+    </AssociationSet>
+    <FunctionImport Name="SelectRouterByUsernme" ReturnType="Collection(Int32)">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateTotalWattsForRouter">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="tbl_Modem" EntityType="db_Co2HomeSaversModel.tbl_Modem" />
+    <AssociationSet Name="FK__tbl_Modem__Categ__318258D2" Association="db_Co2HomeSaversModel.FK__tbl_Modem__Categ__318258D2">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_Modem" EntitySet="tbl_Modem" />
+    </AssociationSet>
+    <FunctionImport Name="SelectModemByUsernme" ReturnType="Collection(Int32)">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateTotalWattsForModem">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="tbl_Shower" EntityType="db_Co2HomeSaversModel.tbl_Shower" />
+    <AssociationSet Name="FK__tbl_Showe__Categ__36470DEF" Association="db_Co2HomeSaversModel.FK__tbl_Showe__Categ__36470DEF">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_Shower" EntitySet="tbl_Shower" />
+    </AssociationSet>
+    <EntitySet Name="tbl_Bathtubr" EntityType="db_Co2HomeSaversModel.tbl_Bathtubr" />
+    <AssociationSet Name="FK__tbl_Batht__Categ__3B0BC30C" Association="db_Co2HomeSaversModel.FK__tbl_Batht__Categ__3B0BC30C">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_Bathtubr" EntitySet="tbl_Bathtubr" />
+    </AssociationSet>
+    <FunctionImport Name="SelectBathtubByUsernme">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SelectShowerByUsernme" ReturnType="Collection(Int32)">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateTotalWattsForBathtub">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateTotalWattsForShower">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="tbl_Sink" EntityType="db_Co2HomeSaversModel.tbl_Sink" />
+    <AssociationSet Name="FK__tbl_Sink__Catego__3FD07829" Association="db_Co2HomeSaversModel.FK__tbl_Sink__Catego__3FD07829">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_Sink" EntitySet="tbl_Sink" />
+    </AssociationSet>
+    <FunctionImport Name="SelectSinkByUsernme" ReturnType="Collection(Int32)">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateTotalWattsForSink">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="tbl_Toilet" EntityType="db_Co2HomeSaversModel.tbl_Toilet" />
+    <AssociationSet Name="FK__tbl_Toile__Categ__44952D46" Association="db_Co2HomeSaversModel.FK__tbl_Toile__Categ__44952D46">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_Toilet" EntitySet="tbl_Toilet" />
+    </AssociationSet>
+    <FunctionImport Name="SelectToiletByUsernme" ReturnType="Collection(Int32)">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateTotalWattsForToilet">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="tbl_Waterdispenser" EntityType="db_Co2HomeSaversModel.tbl_Waterdispenser" />
+    <AssociationSet Name="FK__tbl_Water__Categ__4959E263" Association="db_Co2HomeSaversModel.FK__tbl_Water__Categ__4959E263">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_Waterdispenser" EntitySet="tbl_Waterdispenser" />
+    </AssociationSet>
+    <FunctionImport Name="SelectWaterdispenserByUsernme" ReturnType="Collection(Int32)">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateTotalWattsForWaterdispenser">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="tbl_Humidifier" EntityType="db_Co2HomeSaversModel.tbl_Humidifier" />
+    <AssociationSet Name="FK__tbl_Humid__Categ__4E1E9780" Association="db_Co2HomeSaversModel.FK__tbl_Humid__Categ__4E1E9780">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_Humidifier" EntitySet="tbl_Humidifier" />
+    </AssociationSet>
+    <FunctionImport Name="SelectHumidifierByUsernme" ReturnType="Collection(Int32)">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateTotalWattsForHumidifier">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="tbl_Outdoorsprinklersystem" EntityType="db_Co2HomeSaversModel.tbl_Outdoorsprinklersystem" />
+    <AssociationSet Name="FK__tbl_Outdo__Categ__52E34C9D" Association="db_Co2HomeSaversModel.FK__tbl_Outdo__Categ__52E34C9D">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_Outdoorsprinklersystem" EntitySet="tbl_Outdoorsprinklersystem" />
+    </AssociationSet>
+    <FunctionImport Name="SelectOutdoorsprinklersystemByUsernme" ReturnType="Collection(Int32)">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateTotalWattsForOutdoorsprinklersystem">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="tbl_Pool" EntityType="db_Co2HomeSaversModel.tbl_Pool" />
+    <AssociationSet Name="FK__tbl_Pool__Catego__57A801BA" Association="db_Co2HomeSaversModel.FK__tbl_Pool__Catego__57A801BA">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_Pool" EntitySet="tbl_Pool" />
+    </AssociationSet>
+    <FunctionImport Name="SelectPoolByUsernme" ReturnType="Collection(Int32)">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateTotalWattsForPool">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="tbl_Jacuzzi" EntityType="db_Co2HomeSaversModel.tbl_Jacuzzi" />
+    <AssociationSet Name="FK__tbl_Jacuz__Categ__5C6CB6D7" Association="db_Co2HomeSaversModel.FK__tbl_Jacuz__Categ__5C6CB6D7">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_Jacuzzi" EntitySet="tbl_Jacuzzi" />
+    </AssociationSet>
+    <FunctionImport Name="SelectJacuzziByUsernme" ReturnType="Collection(Int32)">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateTotalWattsForJacuzzi">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="tbl_Bidet" EntityType="db_Co2HomeSaversModel.tbl_Bidet" />
+    <AssociationSet Name="FK__tbl_Bidet__Categ__61316BF4" Association="db_Co2HomeSaversModel.FK__tbl_Bidet__Categ__61316BF4">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_Bidet" EntitySet="tbl_Bidet" />
+    </AssociationSet>
+    <FunctionImport Name="SelectBidetByUsernme" ReturnType="Collection(Int32)">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateTotalWattsForBidet">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="tbl_Showerhead" EntityType="db_Co2HomeSaversModel.tbl_Showerhead" />
+    <AssociationSet Name="FK__tbl_Showe__Categ__65F62111" Association="db_Co2HomeSaversModel.FK__tbl_Showe__Categ__65F62111">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_Showerhead" EntitySet="tbl_Showerhead" />
+    </AssociationSet>
+    <FunctionImport Name="SelectShowerheadByUsernme" ReturnType="Collection(Int32)">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateTotalWattsForShowerhead">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="tbl_Faucet" EntityType="db_Co2HomeSaversModel.tbl_Faucet" />
+    <AssociationSet Name="FK__tbl_Fauce__Categ__6ABAD62E" Association="db_Co2HomeSaversModel.FK__tbl_Fauce__Categ__6ABAD62E">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_Faucet" EntitySet="tbl_Faucet" />
+    </AssociationSet>
+    <FunctionImport Name="SelectFaucetByUsernme" ReturnType="Collection(Int32)">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateTotalWattsForFaucet">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="tbl_Lawnsprinklersystem" EntityType="db_Co2HomeSaversModel.tbl_Lawnsprinklersystem" />
+    <AssociationSet Name="FK__tbl_Lawns__Categ__7073AF84" Association="db_Co2HomeSaversModel.FK__tbl_Lawns__Categ__7073AF84">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_Lawnsprinklersystem" EntitySet="tbl_Lawnsprinklersystem" />
+    </AssociationSet>
+    <FunctionImport Name="SelectLawnsprinklersystemByUsernme" ReturnType="Collection(Int32)">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateTotalWattsForLawnsprinklersystem">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="tbl_WRefrigilator" EntityType="db_Co2HomeSaversModel.tbl_WRefrigilator" />
+    <AssociationSet Name="FK__tbl_WRefr__Categ__753864A1" Association="db_Co2HomeSaversModel.FK__tbl_WRefr__Categ__753864A1">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_WRefrigilator" EntitySet="tbl_WRefrigilator" />
+    </AssociationSet>
+    <FunctionImport Name="SelectWRefrigilatorByUsernme" ReturnType="Collection(Int32)">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateTotalWattsForWRefrigilator">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="tbl_Cooktop" EntityType="db_Co2HomeSaversModel.tbl_Cooktop" />
+    <AssociationSet Name="FK__tbl_Cookt__Categ__79FD19BE" Association="db_Co2HomeSaversModel.FK__tbl_Cookt__Categ__79FD19BE">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_Cooktop" EntitySet="tbl_Cooktop" />
+    </AssociationSet>
+    <FunctionImport Name="SelectCooktopByUsernme" ReturnType="Collection(Int32)">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateTotalWattsForCooktop">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="tbl_GasDryer" EntityType="db_Co2HomeSaversModel.tbl_GasDryer" />
+    <AssociationSet Name="FK__tbl_GasDr__Categ__7EC1CEDB" Association="db_Co2HomeSaversModel.FK__tbl_GasDr__Categ__7EC1CEDB">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_GasDryer" EntitySet="tbl_GasDryer" />
+    </AssociationSet>
+    <FunctionImport Name="SelectGasDryerByUsernme" ReturnType="Collection(Int32)">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateTotalWattsForGasDryer">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="tbl_Barbecue" EntityType="db_Co2HomeSaversModel.tbl_Barbecue" />
+    <AssociationSet Name="FK__tbl_Barbe__Categ__038683F8" Association="db_Co2HomeSaversModel.FK__tbl_Barbe__Categ__038683F8">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_Barbecue" EntitySet="tbl_Barbecue" />
+    </AssociationSet>
+    <FunctionImport Name="SelectBarbecueByUsernme" ReturnType="Collection(Int32)">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateTotalWattsForBarbecue">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="tbl_Generator" EntityType="db_Co2HomeSaversModel.tbl_Generator" />
+    <AssociationSet Name="FK__tbl_Gener__Categ__084B3915" Association="db_Co2HomeSaversModel.FK__tbl_Gener__Categ__084B3915">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_Generator" EntitySet="tbl_Generator" />
+    </AssociationSet>
+    <FunctionImport Name="SelectGeneratorByUsernme" ReturnType="Collection(Int32)">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateTotalWattsForGenerator">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="tbl_GasOven" EntityType="db_Co2HomeSaversModel.tbl_GasOven" />
+    <AssociationSet Name="FK__tbl_GasOv__Categ__0D0FEE32" Association="db_Co2HomeSaversModel.FK__tbl_GasOv__Categ__0D0FEE32">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_GasOven" EntitySet="tbl_GasOven" />
+    </AssociationSet>
+    <FunctionImport Name="SelectGasOvenByUsernme" ReturnType="Collection(Int32)">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateTotalWattsForGasOven">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="tbl_Programmablethermostat" EntityType="db_Co2HomeSaversModel.tbl_Programmablethermostat" />
+    <AssociationSet Name="FK__tbl_Progr__Categ__11D4A34F" Association="db_Co2HomeSaversModel.FK__tbl_Progr__Categ__11D4A34F">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_Programmablethermostat" EntitySet="tbl_Programmablethermostat" />
+    </AssociationSet>
+    <FunctionImport Name="SelectProgrammablethermostatByUsernme" ReturnType="Collection(Int32)">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateTotalWattsForProgrammablethermostat">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="tbl_Solarpanels" EntityType="db_Co2HomeSaversModel.tbl_Solarpanels" />
+    <AssociationSet Name="FK__tbl_Solar__Categ__1699586C" Association="db_Co2HomeSaversModel.FK__tbl_Solar__Categ__1699586C">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_Solarpanels" EntitySet="tbl_Solarpanels" />
+    </AssociationSet>
+    <FunctionImport Name="SelectSolarpanelsByUsernme" ReturnType="Collection(Int32)">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateTotalWattsForSolarpanels">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="tbl_Smartpowerstrip" EntityType="db_Co2HomeSaversModel.tbl_Smartpowerstrip" />
+    <AssociationSet Name="FK__tbl_Smart__Categ__1B5E0D89" Association="db_Co2HomeSaversModel.FK__tbl_Smart__Categ__1B5E0D89">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_Smartpowerstrip" EntitySet="tbl_Smartpowerstrip" />
+    </AssociationSet>
+    <FunctionImport Name="SelectSmartpowerstripByUsernme" ReturnType="Collection(Int32)">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateTotalWattsForSmartpowerstrip">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="tbl_Electriccarcharger" EntityType="db_Co2HomeSaversModel.tbl_Electriccarcharger" />
+    <AssociationSet Name="FK__tbl_Elect__Categ__2022C2A6" Association="db_Co2HomeSaversModel.FK__tbl_Elect__Categ__2022C2A6">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_Electriccarcharger" EntitySet="tbl_Electriccarcharger" />
+    </AssociationSet>
+    <FunctionImport Name="SelectElectriccarchargerByUsernme" ReturnType="Collection(Int32)">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateTotalWattsForElectriccarcharger">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="tbl_healthiestlightbulbs" EntityType="db_Co2HomeSaversModel.tbl_healthiestlightbulbs" />
+    <AssociationSet Name="FK__tbl_healt__Categ__28B808A7" Association="db_Co2HomeSaversModel.FK__tbl_healt__Categ__28B808A7">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_healthiestlightbulbs" EntitySet="tbl_healthiestlightbulbs" />
+    </AssociationSet>
+    <FunctionImport Name="SelecthealthiestlightbulbsByUsernme" ReturnType="Collection(Int32)">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="tbl_WaterAC" EntityType="db_Co2HomeSaversModel.tbl_WaterAC" />
+    <AssociationSet Name="FK__tbl_Water__Categ__2D7CBDC4" Association="db_Co2HomeSaversModel.FK__tbl_Water__Categ__2D7CBDC4">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_WaterAC" EntitySet="tbl_WaterAC" />
+    </AssociationSet>
+    <FunctionImport Name="SelectWaterACByUsernme" ReturnType="Collection(Int32)">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateTotalWattsForWaterAC">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="tbl_Furnance" EntityType="db_Co2HomeSaversModel.tbl_Furnance" />
+    <AssociationSet Name="FK__tbl_Furna__Categ__324172E1" Association="db_Co2HomeSaversModel.FK__tbl_Furna__Categ__324172E1">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_Furnance" EntitySet="tbl_Furnance" />
+    </AssociationSet>
+    <FunctionImport Name="SelectFurnanceByUsernme" ReturnType="Collection(Int32)">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateTotalWattsForFurnance">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="tbl_Fireplace" EntityType="db_Co2HomeSaversModel.tbl_Fireplace" />
+    <AssociationSet Name="FK__tbl_Firep__Categ__370627FE" Association="db_Co2HomeSaversModel.FK__tbl_Firep__Categ__370627FE">
+      <End Role="tbl_Category" EntitySet="tbl_Category" />
+      <End Role="tbl_Fireplace" EntitySet="tbl_Fireplace" />
+    </AssociationSet>
+    <FunctionImport Name="SelectFireplaceByUsernme" ReturnType="Collection(Int32)">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateTotalWattsForFireplace">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetWattsRecordsForAlternateElectricityAppliances" ReturnType="Collection(db_Co2HomeSaversModel.GetWattsRecordsForAlternateElectricityAppliances_Result)">
+      <Parameter Name="username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetWattsRecordsForGasAppliances" ReturnType="Collection(db_Co2HomeSaversModel.GetWattsRecordsForGasAppliances_Result)">
+      <Parameter Name="username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetWattsRecordsForHeatingAndCooling" ReturnType="Collection(db_Co2HomeSaversModel.GetWattsRecordsForHeatingAndCooling_Result)">
+      <Parameter Name="username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetWattsRecordsForHomeEntertainment" ReturnType="Collection(db_Co2HomeSaversModel.GetWattsRecordsForHomeEntertainment_Result)">
+      <Parameter Name="username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetWattsRecordsForWaterAppliances" ReturnType="Collection(db_Co2HomeSaversModel.GetWattsRecordsForWaterAppliances_Result)">
+      <Parameter Name="username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetWattsRecords6" ReturnType="Collection(db_Co2HomeSaversModel.GetWattsRecords6_Result)">
+      <Parameter Name="username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetWattsRecords7" ReturnType="Collection(db_Co2HomeSaversModel.GetWattsRecords7_Result)">
+      <Parameter Name="username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetWattsRecordsForKitchen" ReturnType="Collection(db_Co2HomeSaversModel.GetWattsRecordsForKitchen_Result)">
+      <Parameter Name="username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SelectDishwasherByUsernme1" ReturnType="Collection(Int32)">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateTotalWattsForUser81">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetWattsRecordsForHeatingAndCoolingAppliances" ReturnType="Collection(db_Co2HomeSaversModel.GetWattsRecordsForHeatingAndCoolingAppliances_Result)">
+      <Parameter Name="username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetWattsRecordsForHomeEntertainmentAppliances" ReturnType="Collection(db_Co2HomeSaversModel.GetWattsRecordsForHomeEntertainmentAppliances_Result)">
+      <Parameter Name="username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SelectBathtubByUsernme1" ReturnType="Collection(Int32)">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateTotalWattsForBathtub1">
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetWattsRecordsForWaterAppliances1" ReturnType="Collection(db_Co2HomeSaversModel.GetWattsRecordsForWaterAppliances1_Result)">
+      <Parameter Name="username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetWattsRecordsForGasAppliances1" ReturnType="Collection(db_Co2HomeSaversModel.GetWattsRecordsForGasAppliances1_Result)">
+      <Parameter Name="username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetWattsRecordsForAlternateElectricity" ReturnType="Collection(db_Co2HomeSaversModel.GetWattsRecordsForAlternateElectricity_Result)">
+      <Parameter Name="username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetWattsRecordsForKitchen1" ReturnType="Collection(db_Co2HomeSaversModel.GetWattsRecordsForKitchen1_Result)">
+      <Parameter Name="username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetWattsRecords8" ReturnType="Collection(db_Co2HomeSaversModel.GetWattsRecords8_Result)">
+      <Parameter Name="username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetWattsRecords9" ReturnType="Collection(db_Co2HomeSaversModel.GetWattsRecords9_Result)">
+      <Parameter Name="username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetWattsRecordsForKitchenResult" ReturnType="Collection(db_Co2HomeSaversModel.GetWattsRecordsForKitchenResult_Result)">
+      <Parameter Name="username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetWattsRecordsForKitchenResults" ReturnType="Collection(db_Co2HomeSaversModel.GetWattsRecordsForKitchenResults_Result)">
+      <Parameter Name="username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetWattsRecordsForHeatingAndCoolingAppliance" ReturnType="Collection(db_Co2HomeSaversModel.GetWattsRecordsForHeatingAndCoolingAppliance_Result)">
+      <Parameter Name="username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetWattsRecordsForHeatingAndCoolingAppliance1" ReturnType="Collection(db_Co2HomeSaversModel.GetWattsRecordsForHeatingAndCoolingAppliance1_Result)">
+      <Parameter Name="username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetWattsRecordsForHeatingAndCooling1" ReturnType="Collection(db_Co2HomeSaversModel.GetWattsRecordsForHeatingAndCooling1_Result)">
+      <Parameter Name="username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetWattsRecordsForHeatingAndCoolingAppliancesPage" ReturnType="Collection(db_Co2HomeSaversModel.GetWattsRecordsForHeatingAndCoolingAppliancesPage_Result)">
+      <Parameter Name="username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetWattsRecordsForHomeEntertainmentAppliance" ReturnType="Collection(db_Co2HomeSaversModel.GetWattsRecordsForHomeEntertainmentAppliance_Result)">
+      <Parameter Name="username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetWattsRecordsForWaterAppliance" ReturnType="Collection(db_Co2HomeSaversModel.GetWattsRecordsForWaterAppliance_Result)">
+      <Parameter Name="username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetWattsRecordsForGasAppliance" ReturnType="Collection(db_Co2HomeSaversModel.GetWattsRecordsForGasAppliance_Result)">
+      <Parameter Name="username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetWattsRecordsForAlternateElectricityAppliancePage" ReturnType="Collection(db_Co2HomeSaversModel.GetWattsRecordsForAlternateElectricityAppliancePage_Result)">
+      <Parameter Name="username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetWattsRecordsForAlternateElectricityAppliancePages" ReturnType="Collection(db_Co2HomeSaversModel.GetWattsRecordsForAlternateElectricityAppliancePages_Result)">
+      <Parameter Name="username" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="sysdiagrams" EntityType="db_Co2HomeSaversModel.sysdiagram" />
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(db_Co2HomeSaversModel.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(db_Co2HomeSaversModel.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+  </EntityContainer>
+  <ComplexType Name="GetLowestTotalWattsRecords_Result">
+    <Property Type="String" Name="Appliance" Nullable="false" MaxLength="12" />
+    <Property Type="Decimal" Name="TotalWatts" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="String" Name="Tip1" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Tip2" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Tip3" Nullable="true" MaxLength="150" />
+  </ComplexType>
+  <ComplexType Name="GetSecondLowestTotalWattsRecords_Result">
+    <Property Type="String" Name="Appliance" Nullable="false" MaxLength="12" />
+    <Property Type="Decimal" Name="TotalWatts" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="String" Name="Tip1" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Tip2" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Tip3" Nullable="true" MaxLength="150" />
+  </ComplexType>
+  <ComplexType Name="GetThirdHighestTotalWattsRecords_Result">
+    <Property Type="String" Name="Appliance" Nullable="false" MaxLength="12" />
+    <Property Type="Decimal" Name="TotalWatts" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="String" Name="Tip1" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Tip2" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Tip3" Nullable="true" MaxLength="150" />
+  </ComplexType>
+  <ComplexType Name="GetWattsRecords_Result">
+    <Property Type="String" Name="Appliance" Nullable="false" MaxLength="12" />
+    <Property Type="Decimal" Name="TotalWatts" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="String" Name="Tip1" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Tip2" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Tip3" Nullable="true" MaxLength="150" />
+  </ComplexType>
+  <ComplexType Name="GetWattsRecords1_Result">
+    <Property Type="String" Name="Appliance" Nullable="false" MaxLength="14" />
+    <Property Type="String" Name="TotalWatts" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Tip1" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Tip2" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Tip3" Nullable="true" MaxLength="150" />
+  </ComplexType>
+  <ComplexType Name="GetWattsRecords2_Result">
+    <Property Type="String" Name="Appliance" Nullable="false" MaxLength="14" />
+    <Property Type="String" Name="TotalWatts" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Tip1" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Tip2" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Tip3" Nullable="true" MaxLength="150" />
+  </ComplexType>
+  <EntityType Name="tbl_AffilaiteLink">
+    <Key>
+      <PropertyRef Name="AfflilateLinkID" />
+    </Key>
+    <Property Name="AfflilateLinkID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Appliance" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Link" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tbl_Category">
+    <Key>
+      <PropertyRef Name="CategoryID" />
+    </Key>
+    <Property Name="CategoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Category" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tbl_Dishwashere" Relationship="db_Co2HomeSaversModel.FK__tbl_Dishw__Categ__671F4F74" FromRole="tbl_Category" ToRole="tbl_Dishwashere" />
+    <NavigationProperty Name="tbl_Dryer" Relationship="db_Co2HomeSaversModel.FK__tbl_Dryer__Categ__4F47C5E3" FromRole="tbl_Category" ToRole="tbl_Dryer" />
+    <NavigationProperty Name="tbl_Freezer" Relationship="db_Co2HomeSaversModel.FK__tbl_Freez__Categ__4A8310C6" FromRole="tbl_Category" ToRole="tbl_Freezer" />
+    <NavigationProperty Name="tbl_Microwave" Relationship="db_Co2HomeSaversModel.FK__tbl_Micro__Categ__540C7B00" FromRole="tbl_Category" ToRole="tbl_Microwave" />
+    <NavigationProperty Name="tbl_Oven" Relationship="db_Co2HomeSaversModel.FK__tbl_Oven__Catego__58D1301D" FromRole="tbl_Category" ToRole="tbl_Oven" />
+    <NavigationProperty Name="tbl_Refrigilator" Relationship="db_Co2HomeSaversModel.FK__tbl_Refri__Categ__02FC7413" FromRole="tbl_Category" ToRole="tbl_Refrigilator" />
+    <NavigationProperty Name="tbl_Stove" Relationship="db_Co2HomeSaversModel.FK__tbl_Stove__Categ__5D95E53A" FromRole="tbl_Category" ToRole="tbl_Stove" />
+    <NavigationProperty Name="tbl_WashingMachine" Relationship="db_Co2HomeSaversModel.FK__tbl_Washi__Categ__625A9A57" FromRole="tbl_Category" ToRole="tbl_WashingMachine" />
+    <NavigationProperty Name="tbl_WaterHeater" Relationship="db_Co2HomeSaversModel.FK__tbl_Water__Categ__0B5CAFEA" FromRole="tbl_Category" ToRole="tbl_WaterHeater" />
+    <NavigationProperty Name="tbl_Television" Relationship="db_Co2HomeSaversModel.FK__tbl_Telev__Categ__10216507" FromRole="tbl_Category" ToRole="tbl_Television" />
+    <NavigationProperty Name="tbl_Computer" Relationship="db_Co2HomeSaversModel.FK__tbl_Compu__Categ__14E61A24" FromRole="tbl_Category" ToRole="tbl_Computer" />
+    <NavigationProperty Name="tbl_Laptop" Relationship="db_Co2HomeSaversModel.FK__tbl_Lapto__Categ__19AACF41" FromRole="tbl_Category" ToRole="tbl_Laptop" />
+    <NavigationProperty Name="tbl_Smartphone" Relationship="db_Co2HomeSaversModel.FK__tbl_Smart__Categ__1E6F845E" FromRole="tbl_Category" ToRole="tbl_Smartphone" />
+    <NavigationProperty Name="tbl_SmartSpeaker" Relationship="db_Co2HomeSaversModel.FK__tbl_Smart__Categ__2334397B" FromRole="tbl_Category" ToRole="tbl_SmartSpeaker" />
+    <NavigationProperty Name="tbl_GamingConsole" Relationship="db_Co2HomeSaversModel.FK__tbl_Gamin__Categ__27F8EE98" FromRole="tbl_Category" ToRole="tbl_GamingConsole" />
+    <NavigationProperty Name="tbl_Router" Relationship="db_Co2HomeSaversModel.FK__tbl_Route__Categ__2CBDA3B5" FromRole="tbl_Category" ToRole="tbl_Router" />
+    <NavigationProperty Name="tbl_Modem" Relationship="db_Co2HomeSaversModel.FK__tbl_Modem__Categ__318258D2" FromRole="tbl_Category" ToRole="tbl_Modem" />
+    <NavigationProperty Name="tbl_Shower" Relationship="db_Co2HomeSaversModel.FK__tbl_Showe__Categ__36470DEF" FromRole="tbl_Category" ToRole="tbl_Shower" />
+    <NavigationProperty Name="tbl_Bathtubr" Relationship="db_Co2HomeSaversModel.FK__tbl_Batht__Categ__3B0BC30C" FromRole="tbl_Category" ToRole="tbl_Bathtubr" />
+    <NavigationProperty Name="tbl_Sink" Relationship="db_Co2HomeSaversModel.FK__tbl_Sink__Catego__3FD07829" FromRole="tbl_Category" ToRole="tbl_Sink" />
+    <NavigationProperty Name="tbl_Toilet" Relationship="db_Co2HomeSaversModel.FK__tbl_Toile__Categ__44952D46" FromRole="tbl_Category" ToRole="tbl_Toilet" />
+    <NavigationProperty Name="tbl_Waterdispenser" Relationship="db_Co2HomeSaversModel.FK__tbl_Water__Categ__4959E263" FromRole="tbl_Category" ToRole="tbl_Waterdispenser" />
+    <NavigationProperty Name="tbl_Humidifier" Relationship="db_Co2HomeSaversModel.FK__tbl_Humid__Categ__4E1E9780" FromRole="tbl_Category" ToRole="tbl_Humidifier" />
+    <NavigationProperty Name="tbl_Outdoorsprinklersystem" Relationship="db_Co2HomeSaversModel.FK__tbl_Outdo__Categ__52E34C9D" FromRole="tbl_Category" ToRole="tbl_Outdoorsprinklersystem" />
+    <NavigationProperty Name="tbl_Pool" Relationship="db_Co2HomeSaversModel.FK__tbl_Pool__Catego__57A801BA" FromRole="tbl_Category" ToRole="tbl_Pool" />
+    <NavigationProperty Name="tbl_Jacuzzi" Relationship="db_Co2HomeSaversModel.FK__tbl_Jacuz__Categ__5C6CB6D7" FromRole="tbl_Category" ToRole="tbl_Jacuzzi" />
+    <NavigationProperty Name="tbl_Bidet" Relationship="db_Co2HomeSaversModel.FK__tbl_Bidet__Categ__61316BF4" FromRole="tbl_Category" ToRole="tbl_Bidet" />
+    <NavigationProperty Name="tbl_Showerhead" Relationship="db_Co2HomeSaversModel.FK__tbl_Showe__Categ__65F62111" FromRole="tbl_Category" ToRole="tbl_Showerhead" />
+    <NavigationProperty Name="tbl_Faucet" Relationship="db_Co2HomeSaversModel.FK__tbl_Fauce__Categ__6ABAD62E" FromRole="tbl_Category" ToRole="tbl_Faucet" />
+    <NavigationProperty Name="tbl_Lawnsprinklersystem" Relationship="db_Co2HomeSaversModel.FK__tbl_Lawns__Categ__7073AF84" FromRole="tbl_Category" ToRole="tbl_Lawnsprinklersystem" />
+    <NavigationProperty Name="tbl_WRefrigilator" Relationship="db_Co2HomeSaversModel.FK__tbl_WRefr__Categ__753864A1" FromRole="tbl_Category" ToRole="tbl_WRefrigilator" />
+    <NavigationProperty Name="tbl_Cooktop" Relationship="db_Co2HomeSaversModel.FK__tbl_Cookt__Categ__79FD19BE" FromRole="tbl_Category" ToRole="tbl_Cooktop" />
+    <NavigationProperty Name="tbl_GasDryer" Relationship="db_Co2HomeSaversModel.FK__tbl_GasDr__Categ__7EC1CEDB" FromRole="tbl_Category" ToRole="tbl_GasDryer" />
+    <NavigationProperty Name="tbl_Barbecue" Relationship="db_Co2HomeSaversModel.FK__tbl_Barbe__Categ__038683F8" FromRole="tbl_Category" ToRole="tbl_Barbecue" />
+    <NavigationProperty Name="tbl_Generator" Relationship="db_Co2HomeSaversModel.FK__tbl_Gener__Categ__084B3915" FromRole="tbl_Category" ToRole="tbl_Generator" />
+    <NavigationProperty Name="tbl_GasOven" Relationship="db_Co2HomeSaversModel.FK__tbl_GasOv__Categ__0D0FEE32" FromRole="tbl_Category" ToRole="tbl_GasOven" />
+    <NavigationProperty Name="tbl_Programmablethermostat" Relationship="db_Co2HomeSaversModel.FK__tbl_Progr__Categ__11D4A34F" FromRole="tbl_Category" ToRole="tbl_Programmablethermostat" />
+    <NavigationProperty Name="tbl_Solarpanels" Relationship="db_Co2HomeSaversModel.FK__tbl_Solar__Categ__1699586C" FromRole="tbl_Category" ToRole="tbl_Solarpanels" />
+    <NavigationProperty Name="tbl_Smartpowerstrip" Relationship="db_Co2HomeSaversModel.FK__tbl_Smart__Categ__1B5E0D89" FromRole="tbl_Category" ToRole="tbl_Smartpowerstrip" />
+    <NavigationProperty Name="tbl_Electriccarcharger" Relationship="db_Co2HomeSaversModel.FK__tbl_Elect__Categ__2022C2A6" FromRole="tbl_Category" ToRole="tbl_Electriccarcharger" />
+    <NavigationProperty Name="tbl_healthiestlightbulbs" Relationship="db_Co2HomeSaversModel.FK__tbl_healt__Categ__28B808A7" FromRole="tbl_Category" ToRole="tbl_healthiestlightbulbs" />
+    <NavigationProperty Name="tbl_WaterAC" Relationship="db_Co2HomeSaversModel.FK__tbl_Water__Categ__2D7CBDC4" FromRole="tbl_Category" ToRole="tbl_WaterAC" />
+    <NavigationProperty Name="tbl_Furnance" Relationship="db_Co2HomeSaversModel.FK__tbl_Furna__Categ__324172E1" FromRole="tbl_Category" ToRole="tbl_Furnance" />
+    <NavigationProperty Name="tbl_Fireplace" Relationship="db_Co2HomeSaversModel.FK__tbl_Firep__Categ__370627FE" FromRole="tbl_Category" ToRole="tbl_Fireplace" />
+  </EntityType>
+  <EntityType Name="tbl_Dishwashere">
+    <Key>
+      <PropertyRef Name="DishwasherID" />
+    </Key>
+    <Property Name="DishwasherID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryID" Type="Int32" />
+    <Property Name="Usernme" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="NoOfDishwasher" Type="Int32" />
+    <Property Name="Appliance" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="TotalWatts" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tbl_Category" Relationship="db_Co2HomeSaversModel.FK__tbl_Dishw__Categ__671F4F74" FromRole="tbl_Dishwashere" ToRole="tbl_Category" />
+  </EntityType>
+  <EntityType Name="tbl_Dryer">
+    <Key>
+      <PropertyRef Name="DryerID" />
+    </Key>
+    <Property Name="DryerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryID" Type="Int32" />
+    <Property Name="Usernme" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="NoOfDryer" Type="Int32" />
+    <Property Name="Appliance" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="TotalWatts" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tbl_Category" Relationship="db_Co2HomeSaversModel.FK__tbl_Dryer__Categ__4F47C5E3" FromRole="tbl_Dryer" ToRole="tbl_Category" />
+  </EntityType>
+  <EntityType Name="tbl_Freezer">
+    <Key>
+      <PropertyRef Name="FreezerID" />
+    </Key>
+    <Property Name="FreezerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryID" Type="Int32" />
+    <Property Name="Usernme" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="NoOfFreezers" Type="Int32" />
+    <Property Name="Appliance" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="TotalWatts" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tbl_Category" Relationship="db_Co2HomeSaversModel.FK__tbl_Freez__Categ__4A8310C6" FromRole="tbl_Freezer" ToRole="tbl_Category" />
+  </EntityType>
+  <EntityType Name="tbl_Microwave">
+    <Key>
+      <PropertyRef Name="MicrowaveID" />
+    </Key>
+    <Property Name="MicrowaveID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryID" Type="Int32" />
+    <Property Name="Usernme" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="NoOfMicrowaves" Type="Int32" />
+    <Property Name="Appliance" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="TotalWatts" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tbl_Category" Relationship="db_Co2HomeSaversModel.FK__tbl_Micro__Categ__540C7B00" FromRole="tbl_Microwave" ToRole="tbl_Category" />
+  </EntityType>
+  <EntityType Name="tbl_Oven">
+    <Key>
+      <PropertyRef Name="OvenID" />
+    </Key>
+    <Property Name="OvenID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryID" Type="Int32" />
+    <Property Name="Usernme" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="NoOfOvens" Type="Int32" />
+    <Property Name="Appliance" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="TotalWatts" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tbl_Category" Relationship="db_Co2HomeSaversModel.FK__tbl_Oven__Catego__58D1301D" FromRole="tbl_Oven" ToRole="tbl_Category" />
+  </EntityType>
+  <EntityType Name="tbl_Refrigilator">
+    <Key>
+      <PropertyRef Name="RefrigilatorID" />
+    </Key>
+    <Property Name="RefrigilatorID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryID" Type="Int32" />
+    <Property Name="Usernme" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="NoOfRefrigilators" Type="Int32" />
+    <Property Name="Appliance" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="TotalWatts" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tbl_Category" Relationship="db_Co2HomeSaversModel.FK__tbl_Refri__Categ__02FC7413" FromRole="tbl_Refrigilator" ToRole="tbl_Category" />
+  </EntityType>
+  <EntityType Name="tbl_ResutImages">
+    <Key>
+      <PropertyRef Name="ResutImagesID" />
+    </Key>
+    <Property Name="ResutImagesID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Appliance" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="ImageAddress" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tbl_Stove">
+    <Key>
+      <PropertyRef Name="StoveID" />
+    </Key>
+    <Property Name="StoveID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryID" Type="Int32" />
+    <Property Name="Usernme" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="NoOfStoves" Type="Int32" />
+    <Property Name="Appliance" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="TotalWatts" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tbl_Category" Relationship="db_Co2HomeSaversModel.FK__tbl_Stove__Categ__5D95E53A" FromRole="tbl_Stove" ToRole="tbl_Category" />
+  </EntityType>
+  <EntityType Name="tbl_User">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Username" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tbl_WashingMachine">
+    <Key>
+      <PropertyRef Name="WashingMachineID" />
+    </Key>
+    <Property Name="WashingMachineID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryID" Type="Int32" />
+    <Property Name="Usernme" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="NoOfWashingMachine" Type="Int32" />
+    <Property Name="Appliance" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="TotalWatts" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tbl_Category" Relationship="db_Co2HomeSaversModel.FK__tbl_Washi__Categ__625A9A57" FromRole="tbl_WashingMachine" ToRole="tbl_Category" />
+  </EntityType>
+  <Association Name="FK__tbl_Dishw__Categ__671F4F74">
+    <End Type="db_Co2HomeSaversModel.tbl_Category" Role="tbl_Category" Multiplicity="0..1" />
+    <End Type="db_Co2HomeSaversModel.tbl_Dishwashere" Role="tbl_Dishwashere" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_Dishwashere">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbl_Dryer__Categ__4F47C5E3">
+    <End Type="db_Co2HomeSaversModel.tbl_Category" Role="tbl_Category" Multiplicity="0..1" />
+    <End Type="db_Co2HomeSaversModel.tbl_Dryer" Role="tbl_Dryer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_Dryer">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbl_Freez__Categ__4A8310C6">
+    <End Type="db_Co2HomeSaversModel.tbl_Category" Role="tbl_Category" Multiplicity="0..1" />
+    <End Type="db_Co2HomeSaversModel.tbl_Freezer" Role="tbl_Freezer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_Freezer">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbl_Micro__Categ__540C7B00">
+    <End Type="db_Co2HomeSaversModel.tbl_Category" Role="tbl_Category" Multiplicity="0..1" />
+    <End Type="db_Co2HomeSaversModel.tbl_Microwave" Role="tbl_Microwave" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_Microwave">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbl_Oven__Catego__58D1301D">
+    <End Type="db_Co2HomeSaversModel.tbl_Category" Role="tbl_Category" Multiplicity="0..1" />
+    <End Type="db_Co2HomeSaversModel.tbl_Oven" Role="tbl_Oven" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_Oven">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbl_Refri__Categ__02FC7413">
+    <End Type="db_Co2HomeSaversModel.tbl_Category" Role="tbl_Category" Multiplicity="0..1" />
+    <End Type="db_Co2HomeSaversModel.tbl_Refrigilator" Role="tbl_Refrigilator" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_Refrigilator">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbl_Stove__Categ__5D95E53A">
+    <End Type="db_Co2HomeSaversModel.tbl_Category" Role="tbl_Category" Multiplicity="0..1" />
+    <End Type="db_Co2HomeSaversModel.tbl_Stove" Role="tbl_Stove" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_Stove">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbl_Washi__Categ__625A9A57">
+    <End Type="db_Co2HomeSaversModel.tbl_Category" Role="tbl_Category" Multiplicity="0..1" />
+    <End Type="db_Co2HomeSaversModel.tbl_WashingMachine" Role="tbl_WashingMachine" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_WashingMachine">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="GetWattsRecords3_Result">
+    <Property Type="String" Name="Appliance" Nullable="false" MaxLength="14" />
+    <Property Type="String" Name="TotalWatts" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Tip1" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Tip2" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Tip3" Nullable="true" MaxLength="150" />
+  </ComplexType>
+  <ComplexType Name="GetWattsRecords4_Result">
+    <Property Type="String" Name="Appliance" Nullable="false" MaxLength="12" />
+    <Property Type="Decimal" Name="TotalWatts" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="String" Name="Tip1" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Tip2" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Tip3" Nullable="true" MaxLength="150" />
+  </ComplexType>
+  <ComplexType Name="GetWattsRecords5_Result">
+    <Property Type="String" Name="Appliance" Nullable="false" MaxLength="15" />
+    <Property Type="Decimal" Name="TotalWatts" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="String" Name="Tip1" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Tip2" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Tip3" Nullable="true" MaxLength="150" />
+  </ComplexType>
+  <EntityType Name="tbl_WaterHeater">
+    <Key>
+      <PropertyRef Name="RefrigilatorID" />
+    </Key>
+    <Property Name="RefrigilatorID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryID" Type="Int32" />
+    <Property Name="Usernme" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="NoOfWaterHeaters" Type="Int32" />
+    <Property Name="Appliance" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="TotalWatts" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tbl_Category" Relationship="db_Co2HomeSaversModel.FK__tbl_Water__Categ__0B5CAFEA" FromRole="tbl_WaterHeater" ToRole="tbl_Category" />
+  </EntityType>
+  <Association Name="FK__tbl_Water__Categ__0B5CAFEA">
+    <End Type="db_Co2HomeSaversModel.tbl_Category" Role="tbl_Category" Multiplicity="0..1" />
+    <End Type="db_Co2HomeSaversModel.tbl_WaterHeater" Role="tbl_WaterHeater" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_WaterHeater">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="tbl_Television">
+    <Key>
+      <PropertyRef Name="TelevisionID" />
+    </Key>
+    <Property Name="TelevisionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryID" Type="Int32" />
+    <Property Name="Usernme" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="NoOfTelevisions" Type="Int32" />
+    <Property Name="Appliance" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="TotalWatts" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tbl_Category" Relationship="db_Co2HomeSaversModel.FK__tbl_Telev__Categ__10216507" FromRole="tbl_Television" ToRole="tbl_Category" />
+  </EntityType>
+  <Association Name="FK__tbl_Telev__Categ__10216507">
+    <End Type="db_Co2HomeSaversModel.tbl_Category" Role="tbl_Category" Multiplicity="0..1" />
+    <End Type="db_Co2HomeSaversModel.tbl_Television" Role="tbl_Television" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_Television">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="tbl_Computer">
+    <Key>
+      <PropertyRef Name="ComputerID" />
+    </Key>
+    <Property Name="ComputerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryID" Type="Int32" />
+    <Property Name="Usernme" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="NoOfComputers" Type="Int32" />
+    <Property Name="Appliance" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="TotalWatts" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tbl_Category" Relationship="db_Co2HomeSaversModel.FK__tbl_Compu__Categ__14E61A24" FromRole="tbl_Computer" ToRole="tbl_Category" />
+  </EntityType>
+  <Association Name="FK__tbl_Compu__Categ__14E61A24">
+    <End Type="db_Co2HomeSaversModel.tbl_Category" Role="tbl_Category" Multiplicity="0..1" />
+    <End Type="db_Co2HomeSaversModel.tbl_Computer" Role="tbl_Computer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_Computer">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="tbl_Laptop">
+    <Key>
+      <PropertyRef Name="LaptopID" />
+    </Key>
+    <Property Name="LaptopID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryID" Type="Int32" />
+    <Property Name="Usernme" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="NoOfLaptops" Type="Int32" />
+    <Property Name="Appliance" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="TotalWatts" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tbl_Category" Relationship="db_Co2HomeSaversModel.FK__tbl_Lapto__Categ__19AACF41" FromRole="tbl_Laptop" ToRole="tbl_Category" />
+  </EntityType>
+  <Association Name="FK__tbl_Lapto__Categ__19AACF41">
+    <End Type="db_Co2HomeSaversModel.tbl_Category" Role="tbl_Category" Multiplicity="0..1" />
+    <End Type="db_Co2HomeSaversModel.tbl_Laptop" Role="tbl_Laptop" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_Laptop">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="tbl_Smartphone">
+    <Key>
+      <PropertyRef Name="SmartphoneID" />
+    </Key>
+    <Property Name="SmartphoneID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryID" Type="Int32" />
+    <Property Name="Usernme" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="NoOfSmartphones" Type="Int32" />
+    <Property Name="Appliance" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="TotalWatts" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tbl_Category" Relationship="db_Co2HomeSaversModel.FK__tbl_Smart__Categ__1E6F845E" FromRole="tbl_Smartphone" ToRole="tbl_Category" />
+  </EntityType>
+  <Association Name="FK__tbl_Smart__Categ__1E6F845E">
+    <End Type="db_Co2HomeSaversModel.tbl_Category" Role="tbl_Category" Multiplicity="0..1" />
+    <End Type="db_Co2HomeSaversModel.tbl_Smartphone" Role="tbl_Smartphone" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_Smartphone">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="tbl_SmartSpeaker">
+    <Key>
+      <PropertyRef Name="SmartSpeakerID" />
+    </Key>
+    <Property Name="SmartSpeakerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryID" Type="Int32" />
+    <Property Name="Usernme" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="NoOfSmartSpeakers" Type="Int32" />
+    <Property Name="Appliance" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="TotalWatts" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tbl_Category" Relationship="db_Co2HomeSaversModel.FK__tbl_Smart__Categ__2334397B" FromRole="tbl_SmartSpeaker" ToRole="tbl_Category" />
+  </EntityType>
+  <Association Name="FK__tbl_Smart__Categ__2334397B">
+    <End Type="db_Co2HomeSaversModel.tbl_Category" Role="tbl_Category" Multiplicity="0..1" />
+    <End Type="db_Co2HomeSaversModel.tbl_SmartSpeaker" Role="tbl_SmartSpeaker" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_SmartSpeaker">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="tbl_GamingConsole">
+    <Key>
+      <PropertyRef Name="GamingConsoleID" />
+    </Key>
+    <Property Name="GamingConsoleID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryID" Type="Int32" />
+    <Property Name="Usernme" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="NoOfGamingConsoles" Type="Int32" />
+    <Property Name="Appliance" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="TotalWatts" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tbl_Category" Relationship="db_Co2HomeSaversModel.FK__tbl_Gamin__Categ__27F8EE98" FromRole="tbl_GamingConsole" ToRole="tbl_Category" />
+  </EntityType>
+  <Association Name="FK__tbl_Gamin__Categ__27F8EE98">
+    <End Type="db_Co2HomeSaversModel.tbl_Category" Role="tbl_Category" Multiplicity="0..1" />
+    <End Type="db_Co2HomeSaversModel.tbl_GamingConsole" Role="tbl_GamingConsole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_GamingConsole">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="tbl_Router">
+    <Key>
+      <PropertyRef Name="RouterID" />
+    </Key>
+    <Property Name="RouterID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryID" Type="Int32" />
+    <Property Name="Usernme" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="NoOfRouters" Type="Int32" />
+    <Property Name="Appliance" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="TotalWatts" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tbl_Category" Relationship="db_Co2HomeSaversModel.FK__tbl_Route__Categ__2CBDA3B5" FromRole="tbl_Router" ToRole="tbl_Category" />
+  </EntityType>
+  <Association Name="FK__tbl_Route__Categ__2CBDA3B5">
+    <End Type="db_Co2HomeSaversModel.tbl_Category" Role="tbl_Category" Multiplicity="0..1" />
+    <End Type="db_Co2HomeSaversModel.tbl_Router" Role="tbl_Router" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_Router">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="tbl_Modem">
+    <Key>
+      <PropertyRef Name="ModemID" />
+    </Key>
+    <Property Name="ModemID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryID" Type="Int32" />
+    <Property Name="Usernme" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="NoOfModems" Type="Int32" />
+    <Property Name="Appliance" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="TotalWatts" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tbl_Category" Relationship="db_Co2HomeSaversModel.FK__tbl_Modem__Categ__318258D2" FromRole="tbl_Modem" ToRole="tbl_Category" />
+  </EntityType>
+  <Association Name="FK__tbl_Modem__Categ__318258D2">
+    <End Type="db_Co2HomeSaversModel.tbl_Category" Role="tbl_Category" Multiplicity="0..1" />
+    <End Type="db_Co2HomeSaversModel.tbl_Modem" Role="tbl_Modem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_Modem">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="tbl_Shower">
+    <Key>
+      <PropertyRef Name="ShowerID" />
+    </Key>
+    <Property Name="ShowerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryID" Type="Int32" />
+    <Property Name="Usernme" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="NoOfShowers" Type="Int32" />
+    <Property Name="Appliance" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="TotalWatts" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tbl_Category" Relationship="db_Co2HomeSaversModel.FK__tbl_Showe__Categ__36470DEF" FromRole="tbl_Shower" ToRole="tbl_Category" />
+  </EntityType>
+  <Association Name="FK__tbl_Showe__Categ__36470DEF">
+    <End Type="db_Co2HomeSaversModel.tbl_Category" Role="tbl_Category" Multiplicity="0..1" />
+    <End Type="db_Co2HomeSaversModel.tbl_Shower" Role="tbl_Shower" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_Shower">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="tbl_Bathtubr">
+    <Key>
+      <PropertyRef Name="BathtubID" />
+    </Key>
+    <Property Name="BathtubID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryID" Type="Int32" />
+    <Property Name="Usernme" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="NoOfBathtubs" Type="Int32" />
+    <Property Name="Appliance" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="TotalWatts" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tbl_Category" Relationship="db_Co2HomeSaversModel.FK__tbl_Batht__Categ__3B0BC30C" FromRole="tbl_Bathtubr" ToRole="tbl_Category" />
+  </EntityType>
+  <Association Name="FK__tbl_Batht__Categ__3B0BC30C">
+    <End Type="db_Co2HomeSaversModel.tbl_Category" Role="tbl_Category" Multiplicity="0..1" />
+    <End Type="db_Co2HomeSaversModel.tbl_Bathtubr" Role="tbl_Bathtubr" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_Bathtubr">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="tbl_Sink">
+    <Key>
+      <PropertyRef Name="SinkID" />
+    </Key>
+    <Property Name="SinkID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryID" Type="Int32" />
+    <Property Name="Usernme" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="NoOfSinks" Type="Int32" />
+    <Property Name="Appliance" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="TotalWatts" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tbl_Category" Relationship="db_Co2HomeSaversModel.FK__tbl_Sink__Catego__3FD07829" FromRole="tbl_Sink" ToRole="tbl_Category" />
+  </EntityType>
+  <Association Name="FK__tbl_Sink__Catego__3FD07829">
+    <End Type="db_Co2HomeSaversModel.tbl_Category" Role="tbl_Category" Multiplicity="0..1" />
+    <End Type="db_Co2HomeSaversModel.tbl_Sink" Role="tbl_Sink" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_Sink">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="tbl_Toilet">
+    <Key>
+      <PropertyRef Name="ToiletID" />
+    </Key>
+    <Property Name="ToiletID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryID" Type="Int32" />
+    <Property Name="Usernme" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="NoOfToilets" Type="Int32" />
+    <Property Name="Appliance" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="TotalWatts" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tbl_Category" Relationship="db_Co2HomeSaversModel.FK__tbl_Toile__Categ__44952D46" FromRole="tbl_Toilet" ToRole="tbl_Category" />
+  </EntityType>
+  <Association Name="FK__tbl_Toile__Categ__44952D46">
+    <End Type="db_Co2HomeSaversModel.tbl_Category" Role="tbl_Category" Multiplicity="0..1" />
+    <End Type="db_Co2HomeSaversModel.tbl_Toilet" Role="tbl_Toilet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_Toilet">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="tbl_Waterdispenser">
+    <Key>
+      <PropertyRef Name="WaterdispenserID" />
+    </Key>
+    <Property Name="WaterdispenserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryID" Type="Int32" />
+    <Property Name="Usernme" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="NoOfWaterdispensers" Type="Int32" />
+    <Property Name="Appliance" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="TotalWatts" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tbl_Category" Relationship="db_Co2HomeSaversModel.FK__tbl_Water__Categ__4959E263" FromRole="tbl_Waterdispenser" ToRole="tbl_Category" />
+  </EntityType>
+  <Association Name="FK__tbl_Water__Categ__4959E263">
+    <End Type="db_Co2HomeSaversModel.tbl_Category" Role="tbl_Category" Multiplicity="0..1" />
+    <End Type="db_Co2HomeSaversModel.tbl_Waterdispenser" Role="tbl_Waterdispenser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_Waterdispenser">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="tbl_Humidifier">
+    <Key>
+      <PropertyRef Name="HumidifierID" />
+    </Key>
+    <Property Name="HumidifierID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryID" Type="Int32" />
+    <Property Name="Usernme" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="NoOfHumidifiers" Type="Int32" />
+    <Property Name="Appliance" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="TotalWatts" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tbl_Category" Relationship="db_Co2HomeSaversModel.FK__tbl_Humid__Categ__4E1E9780" FromRole="tbl_Humidifier" ToRole="tbl_Category" />
+  </EntityType>
+  <Association Name="FK__tbl_Humid__Categ__4E1E9780">
+    <End Type="db_Co2HomeSaversModel.tbl_Category" Role="tbl_Category" Multiplicity="0..1" />
+    <End Type="db_Co2HomeSaversModel.tbl_Humidifier" Role="tbl_Humidifier" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_Humidifier">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="tbl_Outdoorsprinklersystem">
+    <Key>
+      <PropertyRef Name="OutdoorsprinklersystemID" />
+    </Key>
+    <Property Name="OutdoorsprinklersystemID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryID" Type="Int32" />
+    <Property Name="Usernme" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="NoOfOutdoorsprinklersystems" Type="Int32" />
+    <Property Name="Appliance" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="TotalWatts" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tbl_Category" Relationship="db_Co2HomeSaversModel.FK__tbl_Outdo__Categ__52E34C9D" FromRole="tbl_Outdoorsprinklersystem" ToRole="tbl_Category" />
+  </EntityType>
+  <Association Name="FK__tbl_Outdo__Categ__52E34C9D">
+    <End Type="db_Co2HomeSaversModel.tbl_Category" Role="tbl_Category" Multiplicity="0..1" />
+    <End Type="db_Co2HomeSaversModel.tbl_Outdoorsprinklersystem" Role="tbl_Outdoorsprinklersystem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_Outdoorsprinklersystem">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="tbl_Pool">
+    <Key>
+      <PropertyRef Name="PoolID" />
+    </Key>
+    <Property Name="PoolID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryID" Type="Int32" />
+    <Property Name="Usernme" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="NoOfPools" Type="Int32" />
+    <Property Name="Appliance" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="TotalWatts" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tbl_Category" Relationship="db_Co2HomeSaversModel.FK__tbl_Pool__Catego__57A801BA" FromRole="tbl_Pool" ToRole="tbl_Category" />
+  </EntityType>
+  <Association Name="FK__tbl_Pool__Catego__57A801BA">
+    <End Type="db_Co2HomeSaversModel.tbl_Category" Role="tbl_Category" Multiplicity="0..1" />
+    <End Type="db_Co2HomeSaversModel.tbl_Pool" Role="tbl_Pool" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_Pool">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="tbl_Jacuzzi">
+    <Key>
+      <PropertyRef Name="JacuzziID" />
+    </Key>
+    <Property Name="JacuzziID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryID" Type="Int32" />
+    <Property Name="Usernme" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="NoOfJacuzzis" Type="Int32" />
+    <Property Name="Appliance" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="TotalWatts" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tbl_Category" Relationship="db_Co2HomeSaversModel.FK__tbl_Jacuz__Categ__5C6CB6D7" FromRole="tbl_Jacuzzi" ToRole="tbl_Category" />
+  </EntityType>
+  <Association Name="FK__tbl_Jacuz__Categ__5C6CB6D7">
+    <End Type="db_Co2HomeSaversModel.tbl_Category" Role="tbl_Category" Multiplicity="0..1" />
+    <End Type="db_Co2HomeSaversModel.tbl_Jacuzzi" Role="tbl_Jacuzzi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_Jacuzzi">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="tbl_Bidet">
+    <Key>
+      <PropertyRef Name="BidetID" />
+    </Key>
+    <Property Name="BidetID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryID" Type="Int32" />
+    <Property Name="Usernme" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="NoOfBidets" Type="Int32" />
+    <Property Name="Appliance" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="TotalWatts" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tbl_Category" Relationship="db_Co2HomeSaversModel.FK__tbl_Bidet__Categ__61316BF4" FromRole="tbl_Bidet" ToRole="tbl_Category" />
+  </EntityType>
+  <Association Name="FK__tbl_Bidet__Categ__61316BF4">
+    <End Type="db_Co2HomeSaversModel.tbl_Category" Role="tbl_Category" Multiplicity="0..1" />
+    <End Type="db_Co2HomeSaversModel.tbl_Bidet" Role="tbl_Bidet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_Bidet">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="tbl_Showerhead">
+    <Key>
+      <PropertyRef Name="ShowerheadID" />
+    </Key>
+    <Property Name="ShowerheadID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryID" Type="Int32" />
+    <Property Name="Usernme" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="NoOfShowerheads" Type="Int32" />
+    <Property Name="Appliance" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="TotalWatts" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tbl_Category" Relationship="db_Co2HomeSaversModel.FK__tbl_Showe__Categ__65F62111" FromRole="tbl_Showerhead" ToRole="tbl_Category" />
+  </EntityType>
+  <Association Name="FK__tbl_Showe__Categ__65F62111">
+    <End Type="db_Co2HomeSaversModel.tbl_Category" Role="tbl_Category" Multiplicity="0..1" />
+    <End Type="db_Co2HomeSaversModel.tbl_Showerhead" Role="tbl_Showerhead" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_Showerhead">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="tbl_Faucet">
+    <Key>
+      <PropertyRef Name="FaucetID" />
+    </Key>
+    <Property Name="FaucetID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryID" Type="Int32" />
+    <Property Name="Usernme" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="NoOfFaucets" Type="Int32" />
+    <Property Name="Appliance" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="TotalWatts" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tbl_Category" Relationship="db_Co2HomeSaversModel.FK__tbl_Fauce__Categ__6ABAD62E" FromRole="tbl_Faucet" ToRole="tbl_Category" />
+  </EntityType>
+  <Association Name="FK__tbl_Fauce__Categ__6ABAD62E">
+    <End Type="db_Co2HomeSaversModel.tbl_Category" Role="tbl_Category" Multiplicity="0..1" />
+    <End Type="db_Co2HomeSaversModel.tbl_Faucet" Role="tbl_Faucet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_Faucet">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="tbl_Lawnsprinklersystem">
+    <Key>
+      <PropertyRef Name="LawnsprinklersystemID" />
+    </Key>
+    <Property Name="LawnsprinklersystemID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryID" Type="Int32" />
+    <Property Name="Usernme" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="NoOfLawnsprinklersystems" Type="Int32" />
+    <Property Name="Appliance" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="TotalWatts" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tbl_Category" Relationship="db_Co2HomeSaversModel.FK__tbl_Lawns__Categ__7073AF84" FromRole="tbl_Lawnsprinklersystem" ToRole="tbl_Category" />
+  </EntityType>
+  <Association Name="FK__tbl_Lawns__Categ__7073AF84">
+    <End Type="db_Co2HomeSaversModel.tbl_Category" Role="tbl_Category" Multiplicity="0..1" />
+    <End Type="db_Co2HomeSaversModel.tbl_Lawnsprinklersystem" Role="tbl_Lawnsprinklersystem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_Lawnsprinklersystem">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="tbl_WRefrigilator">
+    <Key>
+      <PropertyRef Name="WRefrigilatorID" />
+    </Key>
+    <Property Name="WRefrigilatorID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryID" Type="Int32" />
+    <Property Name="Usernme" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="NoOfWRefrigilators" Type="Int32" />
+    <Property Name="Appliance" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="TotalWatts" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tbl_Category" Relationship="db_Co2HomeSaversModel.FK__tbl_WRefr__Categ__753864A1" FromRole="tbl_WRefrigilator" ToRole="tbl_Category" />
+  </EntityType>
+  <Association Name="FK__tbl_WRefr__Categ__753864A1">
+    <End Type="db_Co2HomeSaversModel.tbl_Category" Role="tbl_Category" Multiplicity="0..1" />
+    <End Type="db_Co2HomeSaversModel.tbl_WRefrigilator" Role="tbl_WRefrigilator" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_WRefrigilator">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="tbl_Cooktop">
+    <Key>
+      <PropertyRef Name="CooktopID" />
+    </Key>
+    <Property Name="CooktopID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryID" Type="Int32" />
+    <Property Name="Usernme" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="NoOfCooktops" Type="Int32" />
+    <Property Name="Appliance" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="TotalWatts" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tbl_Category" Relationship="db_Co2HomeSaversModel.FK__tbl_Cookt__Categ__79FD19BE" FromRole="tbl_Cooktop" ToRole="tbl_Category" />
+  </EntityType>
+  <Association Name="FK__tbl_Cookt__Categ__79FD19BE">
+    <End Type="db_Co2HomeSaversModel.tbl_Category" Role="tbl_Category" Multiplicity="0..1" />
+    <End Type="db_Co2HomeSaversModel.tbl_Cooktop" Role="tbl_Cooktop" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_Cooktop">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="tbl_GasDryer">
+    <Key>
+      <PropertyRef Name="GasDryerID" />
+    </Key>
+    <Property Name="GasDryerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryID" Type="Int32" />
+    <Property Name="Usernme" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="NoOfGasDryers" Type="Int32" />
+    <Property Name="Appliance" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="TotalWatts" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tbl_Category" Relationship="db_Co2HomeSaversModel.FK__tbl_GasDr__Categ__7EC1CEDB" FromRole="tbl_GasDryer" ToRole="tbl_Category" />
+  </EntityType>
+  <Association Name="FK__tbl_GasDr__Categ__7EC1CEDB">
+    <End Type="db_Co2HomeSaversModel.tbl_Category" Role="tbl_Category" Multiplicity="0..1" />
+    <End Type="db_Co2HomeSaversModel.tbl_GasDryer" Role="tbl_GasDryer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_GasDryer">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="tbl_Barbecue">
+    <Key>
+      <PropertyRef Name="BarbecueID" />
+    </Key>
+    <Property Name="BarbecueID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryID" Type="Int32" />
+    <Property Name="Usernme" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="NoOfBarbecues" Type="Int32" />
+    <Property Name="Appliance" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="TotalWatts" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tbl_Category" Relationship="db_Co2HomeSaversModel.FK__tbl_Barbe__Categ__038683F8" FromRole="tbl_Barbecue" ToRole="tbl_Category" />
+  </EntityType>
+  <Association Name="FK__tbl_Barbe__Categ__038683F8">
+    <End Type="db_Co2HomeSaversModel.tbl_Category" Role="tbl_Category" Multiplicity="0..1" />
+    <End Type="db_Co2HomeSaversModel.tbl_Barbecue" Role="tbl_Barbecue" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_Barbecue">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="tbl_Generator">
+    <Key>
+      <PropertyRef Name="GeneratorID" />
+    </Key>
+    <Property Name="GeneratorID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryID" Type="Int32" />
+    <Property Name="Usernme" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="NoOfGenerators" Type="Int32" />
+    <Property Name="Appliance" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="TotalWatts" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tbl_Category" Relationship="db_Co2HomeSaversModel.FK__tbl_Gener__Categ__084B3915" FromRole="tbl_Generator" ToRole="tbl_Category" />
+  </EntityType>
+  <Association Name="FK__tbl_Gener__Categ__084B3915">
+    <End Type="db_Co2HomeSaversModel.tbl_Category" Role="tbl_Category" Multiplicity="0..1" />
+    <End Type="db_Co2HomeSaversModel.tbl_Generator" Role="tbl_Generator" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_Generator">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="tbl_GasOven">
+    <Key>
+      <PropertyRef Name="GasOvenID" />
+    </Key>
+    <Property Name="GasOvenID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryID" Type="Int32" />
+    <Property Name="Usernme" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="NoOfGasOvens" Type="Int32" />
+    <Property Name="Appliance" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="TotalWatts" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tbl_Category" Relationship="db_Co2HomeSaversModel.FK__tbl_GasOv__Categ__0D0FEE32" FromRole="tbl_GasOven" ToRole="tbl_Category" />
+  </EntityType>
+  <Association Name="FK__tbl_GasOv__Categ__0D0FEE32">
+    <End Type="db_Co2HomeSaversModel.tbl_Category" Role="tbl_Category" Multiplicity="0..1" />
+    <End Type="db_Co2HomeSaversModel.tbl_GasOven" Role="tbl_GasOven" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_GasOven">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="tbl_Programmablethermostat">
+    <Key>
+      <PropertyRef Name="ProgrammablethermostatID" />
+    </Key>
+    <Property Name="ProgrammablethermostatID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryID" Type="Int32" />
+    <Property Name="Usernme" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="NoOfProgrammablethermostats" Type="Int32" />
+    <Property Name="Appliance" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="TotalWatts" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tbl_Category" Relationship="db_Co2HomeSaversModel.FK__tbl_Progr__Categ__11D4A34F" FromRole="tbl_Programmablethermostat" ToRole="tbl_Category" />
+  </EntityType>
+  <Association Name="FK__tbl_Progr__Categ__11D4A34F">
+    <End Type="db_Co2HomeSaversModel.tbl_Category" Role="tbl_Category" Multiplicity="0..1" />
+    <End Type="db_Co2HomeSaversModel.tbl_Programmablethermostat" Role="tbl_Programmablethermostat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_Programmablethermostat">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="tbl_Solarpanels">
+    <Key>
+      <PropertyRef Name="SolarpanelstID" />
+    </Key>
+    <Property Name="SolarpanelstID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryID" Type="Int32" />
+    <Property Name="Usernme" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="NoOfSolarpanels" Type="Int32" />
+    <Property Name="Appliance" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="TotalWatts" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tbl_Category" Relationship="db_Co2HomeSaversModel.FK__tbl_Solar__Categ__1699586C" FromRole="tbl_Solarpanels" ToRole="tbl_Category" />
+  </EntityType>
+  <Association Name="FK__tbl_Solar__Categ__1699586C">
+    <End Type="db_Co2HomeSaversModel.tbl_Category" Role="tbl_Category" Multiplicity="0..1" />
+    <End Type="db_Co2HomeSaversModel.tbl_Solarpanels" Role="tbl_Solarpanels" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_Solarpanels">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="tbl_Smartpowerstrip">
+    <Key>
+      <PropertyRef Name="SmartpowerstripID" />
+    </Key>
+    <Property Name="SmartpowerstripID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryID" Type="Int32" />
+    <Property Name="Usernme" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="NoOfSmartpowerstrips" Type="Int32" />
+    <Property Name="Appliance" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="TotalWatts" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tbl_Category" Relationship="db_Co2HomeSaversModel.FK__tbl_Smart__Categ__1B5E0D89" FromRole="tbl_Smartpowerstrip" ToRole="tbl_Category" />
+  </EntityType>
+  <Association Name="FK__tbl_Smart__Categ__1B5E0D89">
+    <End Type="db_Co2HomeSaversModel.tbl_Category" Role="tbl_Category" Multiplicity="0..1" />
+    <End Type="db_Co2HomeSaversModel.tbl_Smartpowerstrip" Role="tbl_Smartpowerstrip" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_Smartpowerstrip">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="tbl_Electriccarcharger">
+    <Key>
+      <PropertyRef Name="ElectriccarchargerID" />
+    </Key>
+    <Property Name="ElectriccarchargerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryID" Type="Int32" />
+    <Property Name="Usernme" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="NoOfElectriccarchargers" Type="Int32" />
+    <Property Name="Appliance" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="TotalWatts" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tbl_Category" Relationship="db_Co2HomeSaversModel.FK__tbl_Elect__Categ__2022C2A6" FromRole="tbl_Electriccarcharger" ToRole="tbl_Category" />
+  </EntityType>
+  <Association Name="FK__tbl_Elect__Categ__2022C2A6">
+    <End Type="db_Co2HomeSaversModel.tbl_Category" Role="tbl_Category" Multiplicity="0..1" />
+    <End Type="db_Co2HomeSaversModel.tbl_Electriccarcharger" Role="tbl_Electriccarcharger" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_Electriccarcharger">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="tbl_healthiestlightbulbs">
+    <Key>
+      <PropertyRef Name="ElectriccarchargerID" />
+    </Key>
+    <Property Name="ElectriccarchargerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryID" Type="Int32" />
+    <Property Name="Usernme" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="NoOfhealthiestlightbulbs" Type="Int32" />
+    <Property Name="Appliance" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="TotalWatts" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tbl_Category" Relationship="db_Co2HomeSaversModel.FK__tbl_healt__Categ__28B808A7" FromRole="tbl_healthiestlightbulbs" ToRole="tbl_Category" />
+  </EntityType>
+  <Association Name="FK__tbl_healt__Categ__28B808A7">
+    <End Type="db_Co2HomeSaversModel.tbl_Category" Role="tbl_Category" Multiplicity="0..1" />
+    <End Type="db_Co2HomeSaversModel.tbl_healthiestlightbulbs" Role="tbl_healthiestlightbulbs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_healthiestlightbulbs">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="tbl_WaterAC">
+    <Key>
+      <PropertyRef Name="WaterACID" />
+    </Key>
+    <Property Name="WaterACID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryID" Type="Int32" />
+    <Property Name="Usernme" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="NoOfWaterACs" Type="Int32" />
+    <Property Name="Appliance" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="TotalWatts" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tbl_Category" Relationship="db_Co2HomeSaversModel.FK__tbl_Water__Categ__2D7CBDC4" FromRole="tbl_WaterAC" ToRole="tbl_Category" />
+  </EntityType>
+  <Association Name="FK__tbl_Water__Categ__2D7CBDC4">
+    <End Type="db_Co2HomeSaversModel.tbl_Category" Role="tbl_Category" Multiplicity="0..1" />
+    <End Type="db_Co2HomeSaversModel.tbl_WaterAC" Role="tbl_WaterAC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_WaterAC">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="tbl_Furnance">
+    <Key>
+      <PropertyRef Name="FurnanceID" />
+    </Key>
+    <Property Name="FurnanceID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryID" Type="Int32" />
+    <Property Name="Usernme" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="NoOfFurnance" Type="Int32" />
+    <Property Name="Appliance" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="TotalWatts" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tbl_Category" Relationship="db_Co2HomeSaversModel.FK__tbl_Furna__Categ__324172E1" FromRole="tbl_Furnance" ToRole="tbl_Category" />
+  </EntityType>
+  <Association Name="FK__tbl_Furna__Categ__324172E1">
+    <End Type="db_Co2HomeSaversModel.tbl_Category" Role="tbl_Category" Multiplicity="0..1" />
+    <End Type="db_Co2HomeSaversModel.tbl_Furnance" Role="tbl_Furnance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_Furnance">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="tbl_Fireplace">
+    <Key>
+      <PropertyRef Name="FireplaceID" />
+    </Key>
+    <Property Name="FireplaceID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryID" Type="Int32" />
+    <Property Name="Usernme" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="NoOfFireplace" Type="Int32" />
+    <Property Name="Appliance" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Make3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Model3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tip3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Wallt3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="TotalWatts" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AffilaiteLink" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tbl_Category" Relationship="db_Co2HomeSaversModel.FK__tbl_Firep__Categ__370627FE" FromRole="tbl_Fireplace" ToRole="tbl_Category" />
+  </EntityType>
+  <Association Name="FK__tbl_Firep__Categ__370627FE">
+    <End Type="db_Co2HomeSaversModel.tbl_Category" Role="tbl_Category" Multiplicity="0..1" />
+    <End Type="db_Co2HomeSaversModel.tbl_Fireplace" Role="tbl_Fireplace" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tbl_Fireplace">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="GetWattsRecordsForAlternateElectricityAppliances_Result">
+    <Property Type="String" Name="Appliance" Nullable="false" MaxLength="23" />
+    <Property Type="Decimal" Name="TotalWatts" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="String" Name="Tip1" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Tip2" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Tip3" Nullable="true" MaxLength="150" />
+  </ComplexType>
+  <ComplexType Name="GetWattsRecordsForGasAppliances_Result">
+    <Property Type="String" Name="Appliance" Nullable="false" MaxLength="9" />
+    <Property Type="Decimal" Name="TotalWatts" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="String" Name="Tip1" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Tip2" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Tip3" Nullable="true" MaxLength="150" />
+  </ComplexType>
+  <ComplexType Name="GetWattsRecordsForHeatingAndCooling_Result">
+    <Property Type="String" Name="Appliance" Nullable="false" MaxLength="29" />
+    <Property Type="Decimal" Name="TotalWatts" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="String" Name="Tip1" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Tip2" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Tip3" Nullable="true" MaxLength="150" />
+  </ComplexType>
+  <ComplexType Name="GetWattsRecordsForHomeEntertainment_Result">
+    <Property Type="String" Name="Appliance" Nullable="false" MaxLength="14" />
+    <Property Type="Decimal" Name="TotalWatts" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="String" Name="Tip1" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Tip2" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Tip3" Nullable="true" MaxLength="150" />
+  </ComplexType>
+  <ComplexType Name="GetWattsRecordsForWaterAppliances_Result">
+    <Property Type="String" Name="Appliance" Nullable="false" MaxLength="24" />
+    <Property Type="Decimal" Name="TotalWatts" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="String" Name="Tip1" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Tip2" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Tip3" Nullable="true" MaxLength="150" />
+  </ComplexType>
+  <ComplexType Name="GetWattsRecords6_Result">
+    <Property Type="String" Name="Appliance" Nullable="false" MaxLength="15" />
+    <Property Type="Decimal" Name="TotalWatts" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="String" Name="Tip1" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Tip2" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Tip3" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="AffilaiteLink" Nullable="true" MaxLength="150" />
+  </ComplexType>
+  <ComplexType Name="GetWattsRecords7_Result">
+    <Property Type="String" Name="Appliance" Nullable="false" MaxLength="15" />
+    <Property Type="Decimal" Name="TotalWatts" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="String" Name="Tip1" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Tip2" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Tip3" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="AffilaiteLink" Nullable="true" MaxLength="150" />
+  </ComplexType>
+  <ComplexType Name="GetWattsRecordsForKitchen_Result">
+    <Property Type="String" Name="Appliance" Nullable="false" MaxLength="15" />
+    <Property Type="Decimal" Name="TotalWatts" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="String" Name="Tip1" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Tip2" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Tip3" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="AffilaiteLink" Nullable="true" MaxLength="150" />
+  </ComplexType>
+  <ComplexType Name="GetWattsRecordsForHeatingAndCoolingAppliances_Result">
+    <Property Type="String" Name="Appliance" Nullable="false" MaxLength="29" />
+    <Property Type="Decimal" Name="TotalWatts" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="String" Name="Tip1" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Tip2" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Tip3" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="AffilaiteLink" Nullable="true" MaxLength="150" />
+  </ComplexType>
+  <ComplexType Name="GetWattsRecordsForHomeEntertainmentAppliances_Result">
+    <Property Type="String" Name="Appliance" Nullable="false" MaxLength="14" />
+    <Property Type="Decimal" Name="TotalWatts" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="String" Name="Tip1" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Tip2" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Tip3" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="AffilaiteLink" Nullable="true" MaxLength="150" />
+  </ComplexType>
+  <ComplexType Name="GetWattsRecordsForWaterAppliances1_Result">
+    <Property Type="String" Name="Appliance" Nullable="false" MaxLength="24" />
+    <Property Type="Decimal" Name="TotalWatts" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="String" Name="Tip1" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Tip2" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Tip3" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="AffilaiteLink" Nullable="true" MaxLength="150" />
+  </ComplexType>
+  <ComplexType Name="GetWattsRecordsForGasAppliances1_Result">
+    <Property Type="String" Name="Appliance" Nullable="false" MaxLength="9" />
+    <Property Type="Decimal" Name="TotalWatts" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="String" Name="Tip1" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Tip2" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Tip3" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="AffilaiteLink" Nullable="true" MaxLength="150" />
+  </ComplexType>
+  <ComplexType Name="GetWattsRecordsForAlternateElectricity_Result">
+    <Property Type="String" Name="Appliance" Nullable="false" MaxLength="23" />
+    <Property Type="Decimal" Name="TotalWatts" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="String" Name="Tip1" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Tip2" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Tip3" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="AffilaiteLink" Nullable="true" MaxLength="150" />
+  </ComplexType>
+  <ComplexType Name="GetWattsRecordsForKitchen1_Result">
+    <Property Type="String" Name="Appliance" Nullable="false" MaxLength="15" />
+    <Property Type="Decimal" Name="TotalWatts" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="String" Name="Tip1" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Tip2" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Tip3" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="AffilaiteLink" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Image" Nullable="true" MaxLength="150" />
+  </ComplexType>
+  <ComplexType Name="GetWattsRecords8_Result">
+    <Property Type="String" Name="Appliance" Nullable="false" MaxLength="15" />
+    <Property Type="Decimal" Name="TotalWatts" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="String" Name="Tip1" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Tip2" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Tip3" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="AffilaiteLink" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Image" Nullable="true" MaxLength="150" />
+  </ComplexType>
+  <ComplexType Name="GetWattsRecords9_Result">
+    <Property Type="String" Name="Appliance" Nullable="false" MaxLength="15" />
+    <Property Type="Decimal" Name="TotalWatts" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="String" Name="Tip1" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Tip2" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Tip3" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="AffilaiteLink" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Image" Nullable="true" MaxLength="150" />
+  </ComplexType>
+  <ComplexType Name="GetWattsRecordsForKitchenResult_Result">
+    <Property Type="String" Name="Appliance" Nullable="false" MaxLength="15" />
+    <Property Type="Decimal" Name="TotalWatts" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="String" Name="Tip1" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Tip2" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Tip3" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="AffilaiteLink" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Image" Nullable="true" MaxLength="150" />
+  </ComplexType>
+  <ComplexType Name="GetWattsRecordsForKitchenResults_Result">
+    <Property Type="String" Name="Appliance" Nullable="false" MaxLength="15" />
+    <Property Type="Decimal" Name="TotalWatts" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="String" Name="Tip1" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Tip2" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Tip3" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="AffilaiteLink" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Image" Nullable="true" MaxLength="150" />
+  </ComplexType>
+  <ComplexType Name="GetWattsRecordsForHeatingAndCoolingAppliance_Result">
+    <Property Type="String" Name="Appliance" Nullable="false" MaxLength="29" />
+    <Property Type="Decimal" Name="TotalWatts" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="String" Name="Tip1" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Tip2" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Tip3" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="AffilaiteLink" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Image" Nullable="true" MaxLength="150" />
+  </ComplexType>
+  <ComplexType Name="GetWattsRecordsForHeatingAndCoolingAppliance1_Result">
+    <Property Type="String" Name="Appliance" Nullable="false" MaxLength="15" />
+    <Property Type="Decimal" Name="TotalWatts" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="String" Name="Tip1" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Tip2" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Tip3" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="AffilaiteLink" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Image" Nullable="true" MaxLength="150" />
+  </ComplexType>
+  <ComplexType Name="GetWattsRecordsForHeatingAndCooling1_Result">
+    <Property Type="String" Name="Appliance" Nullable="false" MaxLength="15" />
+    <Property Type="Decimal" Name="TotalWatts" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="String" Name="Tip1" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Tip2" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Tip3" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="AffilaiteLink" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Image" Nullable="true" MaxLength="150" />
+  </ComplexType>
+  <ComplexType Name="GetWattsRecordsForHeatingAndCoolingAppliancesPage_Result">
+    <Property Type="String" Name="Appliance" Nullable="false" MaxLength="15" />
+    <Property Type="Decimal" Name="TotalWatts" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="String" Name="Tip1" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Tip2" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Tip3" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="AffilaiteLink" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Image" Nullable="true" MaxLength="150" />
+  </ComplexType>
+  <ComplexType Name="GetWattsRecordsForHomeEntertainmentAppliance_Result">
+    <Property Type="String" Name="Appliance" Nullable="false" MaxLength="14" />
+    <Property Type="Decimal" Name="TotalWatts" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="String" Name="Tip1" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Tip2" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Tip3" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="AffilaiteLink" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Image" Nullable="true" MaxLength="150" />
+  </ComplexType>
+  <ComplexType Name="GetWattsRecordsForWaterAppliance_Result">
+    <Property Type="String" Name="Appliance" Nullable="false" MaxLength="17" />
+    <Property Type="Decimal" Name="TotalWatts" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="String" Name="Tip1" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Tip2" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Tip3" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="AffilaiteLink" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Image" Nullable="true" MaxLength="150" />
+  </ComplexType>
+  <ComplexType Name="GetWattsRecordsForGasAppliance_Result">
+    <Property Type="String" Name="Appliance" Nullable="false" MaxLength="9" />
+    <Property Type="Decimal" Name="TotalWatts" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="String" Name="Tip1" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Tip2" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Tip3" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="AffilaiteLink" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Image" Nullable="true" MaxLength="150" />
+  </ComplexType>
+  <ComplexType Name="GetWattsRecordsForAlternateElectricityAppliancePage_Result">
+    <Property Type="String" Name="Appliance" Nullable="false" MaxLength="23" />
+    <Property Type="Decimal" Name="TotalWatts" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="String" Name="Tip1" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Tip2" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Tip3" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="AffilaiteLink" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Image" Nullable="true" MaxLength="150" />
+  </ComplexType>
+  <ComplexType Name="GetWattsRecordsForAlternateElectricityAppliancePages_Result">
+    <Property Type="String" Name="Appliance" Nullable="false" MaxLength="12" />
+    <Property Type="Decimal" Name="TotalWatts" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="String" Name="Tip1" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Tip2" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Tip3" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="AffilaiteLink" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Image" Nullable="true" MaxLength="150" />
+  </ComplexType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+</Schema>
